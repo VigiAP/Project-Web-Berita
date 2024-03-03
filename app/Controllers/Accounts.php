@@ -22,4 +22,22 @@ class Accounts extends BaseController
 
         echo view('/accounts/register', $data);
     }
+
+    public function forget()
+    {
+        $data = [
+            'title' => 'Forget Password | Pojok Berita',
+        ];
+
+        echo view('/accounts/forget', $data);
+    }
+
+    public function forgetToken()
+    {
+        $data = [
+            'title' => 'Forget Password | Pojok Berita',
+        ];
+
+        echo view('/accounts/forgetToken', $data);
+    }
 }

@@ -27,7 +27,7 @@
                     <input type="password" placeholder="Enter Password" class="w-full input input-bordered" />
                 </div>
                 <div class="flex justify-between">
-                    <a href="#" class="text-xs text-gray-500 hover:underline hover:text-blue-600">Forget Password?</a>
+                    <a href="<?= base_url('Accounts/forget'); ?>" class="text-xs text-gray-500 hover:underline hover:text-blue-600">Forget Password?</a>
                     <a href="<?= base_url('Accounts/register'); ?>" class="text-xs text-gray-500 hover:underline hover:text-blue-600">Register</a>
                 </div>
                 <div class="">

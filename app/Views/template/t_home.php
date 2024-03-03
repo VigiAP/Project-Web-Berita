@@ -1,18 +1,37 @@
 <!DOCTYPE html>
-<html data-theme="night" lang="en">
+<html data-theme="dracula" lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title; ?></title>
     <link rel="stylesheet" href="<?= base_url('css/styles.css'); ?>">
+    <!-- swiperjs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        .swiper-container {
+            width: 100%;
+        }
+
+        .swiper-slide {
+            background-size: cover;
+            background-position: 50%;
+            min-height: 20vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- navbar -->
 
-    <div class="navbar bg-base-100">
+    <div class="navbar bg-base-300">
         <div class="navbar-start">
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -34,11 +53,11 @@
                     <li><a>Item 3</a></li>
                 </ul>
             </div>
-            <a class="btn btn-ghost text-xl" href="/Home">Pojok Berita</a>
+            <a class="btn btn-ghost text-xl" href="<?= base_url('/'); ?>">Pojok Berita</a>
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
-                <li><a href="/home">Home</a></li>
+                <li><a href="<?= base_url('/'); ?>">Home</a></li>
                 <li>
                     <details>
                         <summary>Kategori</summary>
@@ -66,19 +85,41 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                         </svg>
                     </a>
-
-
                 </div>
             </div>
         </div>
+        <!-- navbar end -->
+    </div>
+
+        <main class="mt-3">
+            <div class="container">
+                <?= $this->renderSection('konten'); ?>
+            </div>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+
+        </script>
+        </body>
+
+        </html>
     </div>
     <!-- navbar end -->
+    <main class="mt-3">
+        <div class="container">
 
-    <div class="bg-gray-700">
 
-        <?= $this->renderSection('konten'); ?>
+            <?= $this->renderSection('konten'); ?>
 
-    </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+
+    </script>
 </body>
 
 </html>
