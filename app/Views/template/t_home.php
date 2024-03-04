@@ -6,31 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title; ?></title>
     <link rel="stylesheet" href="<?= base_url('css/styles.css'); ?>">
-    <!-- swiperjs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <style>
-        .swiper-container {
-            width: 100%;
-        }
-
-        .swiper-slide {
-            background-size: cover;
-            background-position: 50%;
-            min-height: 20vh;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-    </style>
+   
 </head>
 
 <body>
 
     <!-- navbar -->
-
     <div class="navbar bg-base-300 ">
         <div class="navbar-start">
             <div class="dropdown">
@@ -110,33 +92,17 @@
     </div>
 
 
-    <main class="mt-3">
+    <main class="my-3 mx-3">
         <div class="container">
             <?= $this->renderSection('konten'); ?>
         </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
 
-    </script>
 </body>
 
 </html>
-</div>
-<!-- navbar end -->
-<main class="mt-3">
-    <div class="container">
 
-
-        <?= $this->renderSection('konten'); ?>
-
-    </div>
-</main>
-
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
 
 </script>
 </body>
