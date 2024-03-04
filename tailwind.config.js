@@ -74,4 +74,7 @@ module.exports = {
       backgroundOpacity: ['dark'],
     },
   },
+  plugins: [
+    require("daisyui"),
+  ],
 }
