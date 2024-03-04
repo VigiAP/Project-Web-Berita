@@ -32,7 +32,7 @@
                 </div>
                 <div class="">
                     <button class="btn btn-block border border-gray-400">Login</button>
-                    <a href="<?= base_url('Home/'); ?>" class="btn btn-block border border-gray-400 mt-3">Back</a>
+                    <a href="<?= base_url('/'); ?>" class="btn btn-block border border-gray-400 mt-3">Back</a>
                 </div>
             </form>
         </div>
