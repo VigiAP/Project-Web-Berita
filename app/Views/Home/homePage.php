@@ -1,7 +1,5 @@
-<?= $this->extend('/template/t_home'); ?>
+<?= $this->extend('/template/t_home_page'); ?>
 <?= $this->section('konten'); ?>
-
-
   <!-- =========={ MAIN }==========  -->
   <main id="content">
     <!-- advertisement -->
