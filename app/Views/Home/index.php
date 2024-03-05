@@ -1,6 +1,6 @@
 <?= $this->extend('/template/t_home'); ?>
 <?= $this->section('konten'); ?>
-
+ 
 
   <!-- =========={ MAIN }==========  -->
   <main id="content">
@@ -63,7 +63,7 @@
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
                           <a href="">
-                            <img class="max-w-full w-full mx-auto" src="src/img/dummy/img16.jpg" alt="alt title">
+                            <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img16.jpg'); ?> " alt="alt title">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
@@ -78,7 +78,7 @@
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
                           <a href="">
-                            <img class="max-w-full w-full mx-auto" src="src/img/dummy/img17.jpg" alt="alt title">
+                            <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img17.jpg'); ?> " alt="alt title">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
@@ -93,7 +93,7 @@
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
                           <a href="">
-                            <img class="max-w-full w-full mx-auto" src="src/img/dummy/img18.jpg" alt="alt title">
+                            <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img18.jpg'); ?> " alt="alt title">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
@@ -104,21 +104,7 @@
                         </div>
                       </div>
                     </li>
-                    <li class="splide__slide">
-                      <div class="w-full pb-3">
-                        <div class="hover-img bg-white">
-                          <a href="">
-                            <img class="max-w-full w-full mx-auto" src="src/img/dummy/img1.jpg" alt="alt title">
-                          </a>
-                          <div class="py-3 px-6">
-                            <h3 class="text-lg font-bold leading-tight mb-2">
-                              <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
-                            </h3>
-                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
+                    
                   </ul>
                 </div>
               </div>
@@ -142,7 +128,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 lg:w-1/4 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img19.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img19.jpg'); ?> " alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -156,7 +142,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 lg:w-1/4 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img20.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img20.jpg'); ?> " alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -170,7 +156,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 lg:w-1/4 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img21.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img21.jpg'); ?> " alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -184,7 +170,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 lg:w-1/4 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img22.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img22.jpg'); ?> " alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -198,7 +184,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 lg:w-1/4 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img23.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img23.jpg'); ?> " alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -212,7 +198,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 lg:w-1/4 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img24.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img24.jpg'); ?> " alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -226,7 +212,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 lg:w-1/4 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img25.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img25.jpg'); ?> " alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -240,7 +226,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 lg:w-1/4 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img26.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img26.jpg'); ?> " alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -273,7 +259,7 @@
                 <div class="relative hover-img max-h-98 overflow-hidden">
                   <!--thumbnail-->
                   <a href="#">
-                    <img class="max-w-full w-full mx-auto h-auto" src="src/img/dummy/img2.jpg" alt="Image description">
+                    <img class="max-w-full w-full mx-auto h-auto" src="<?= base_url('src/img/dummy/img2.jpg'); ?>"  alt="Image description">
                   </a>
                   <div class="absolute px-5 pt-8 pb-5 bottom-0 w-full bg-gradient-cover">
                     <!--title-->
@@ -292,7 +278,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img27.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img27.jpg'); ?> " alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -306,7 +292,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img3.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img3.jpg'); ?>"  alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -320,7 +306,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img4.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img4.jpg'); ?>"  alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -334,7 +320,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img5.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img5.jpg'); ?>"  alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -348,7 +334,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img6.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img6.jpg'); ?>"  alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -362,7 +348,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img7.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="<?= base_url('src/img/dummy/img7.jpg'); ?>"  alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -402,14 +388,7 @@
               </div>
             </div>
           </div>
-            <div class="text-sm py-6 sticky">
-              <div class="w-full text-center">
-                <a class="uppercase" href="#">Advertisement</a>
-                <a href="#">
-                  <img class="mx-auto" src="src/img/ads/250.jpg" alt="advertisement area">
-                </a>
-              </div>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -418,7 +397,6 @@
 
 
   </main><!-- end main -->
-
 
 
 <?= $this->endSection(); ?>
