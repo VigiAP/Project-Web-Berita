@@ -2594,7 +2594,7 @@ input.tab:checked + .tab-content,
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-// Theme css
+/* // Theme css */
 /*! purgecss start ignore */
 /*utility*/
 .text-shadow-white {
@@ -2773,7 +2773,7 @@ input.tab:checked + .tab-content,
   height: auto;
 }
 
-// splidejs
+/* // splidejs */
 .splide__container {
   box-sizing: border-box;
   position: relative;
@@ -3143,7 +3143,7 @@ input.tab:checked + .tab-content,
   right: 0;
 }
 
-// splide videos
+/* // splide videos */
 .splide__slide--has-video {
   cursor: pointer;
 }
@@ -3209,7 +3209,7 @@ input.tab:checked + .tab-content,
   margin-left: 4px;
 }
 
-// glightbox
+/* // glightbox */
 .glightbox-container {
   width: 100%;
   height: 100%;

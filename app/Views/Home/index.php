@@ -401,7 +401,7 @@
                 </ul>
               </div>
             </div>
-
+          </div>
             <div class="text-sm py-6 sticky">
               <div class="w-full text-center">
                 <a class="uppercase" href="#">Advertisement</a>
