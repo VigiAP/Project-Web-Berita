@@ -39,7 +39,7 @@
                 <a class="block py-3 px-6 border-b-2 border-transparent" href="index.html">Home</a>
               </li>
               <li class="dropdown relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Pages</a>
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Olahraga</a>
 
                 <ul
                   class="dropdown-menu font-normal absolute left-0 right-auto top-full z-50 border-b-0 text-left bg-white text-gray-700 border border-gray-100"
@@ -120,22 +120,22 @@
                 </ul>
               </li>
               <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Sport</a>
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Olahraga</a>
               </li>
               <li class="relative border-l border-gray-800 hover:bg-gray-900">
                 <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Travel</a>
               </li>
               <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Techno</a>
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Teknologi</a>
               </li>
               <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Worklife</a>
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Kesehatan</a>
               </li>
               <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Future</a>
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Otomotif</a>
               </li>
               <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">More</a>
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Lainnya</a>
               </li>
             </ul>
 

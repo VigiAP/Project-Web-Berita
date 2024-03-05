@@ -16,14 +16,14 @@
       </div>
     </div>
     <!-- slider news -->
-    <div class="relative bg-gray-50" style="background-image: url('src/img/bg.jpg');background-size: cover;background-position: center center;background-attachment: fixed">
+    <div class="relative bg-gray-50" style="background-image: url("<? base_url('src/img/bg.jpg')?>");background-size: cover;background-position: center center;background-attachment: fixed">
       <div class="bg-black bg-opacity-70">
         <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
           <div class="flex flex-row flex-wrap">
             <div class="flex-shrink max-w-full w-full py-12 overflow-hidden">
               <div class="w-full py-3">
                 <h2 class="text-white text-2xl font-bold text-shadow-black">
-                  <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>American
+                  <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Kesehatan
                 </h2>
               </div>
               <div id="post-carousel" class="post-carousel splide">
@@ -33,13 +33,13 @@
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
                           <a href="">
-                            <img class="max-w-full w-full mx-auto" src="src/img/dummy/img14.jpg" alt="alt title">
+                            <img class="max-w-full w-full mx-auto" src="https://picsum.photos/800/530" alt="alt title">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
-                              <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                              <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                             </h3>
-                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                           </div>
                         </div>
                       </div>
@@ -48,13 +48,13 @@
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
                           <a href="">
-                            <img class="max-w-full w-full mx-auto" src="src/img/dummy/img15.jpg" alt="alt title">
+                            <img class="max-w-full w-full mx-auto" src="https://loremflickr.com/800/530" alt="alt title">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
-                              <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                              <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                             </h3>
-                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                           </div>
                         </div>
                       </div>
@@ -67,9 +67,9 @@
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
-                              <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                              <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                             </h3>
-                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                           </div>
                         </div>
                       </div>
@@ -82,9 +82,9 @@
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
-                              <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                              <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                             </h3>
-                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                           </div>
                         </div>
                       </div>
@@ -97,9 +97,9 @@
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
-                              <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                              <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                             </h3>
-                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                           </div>
                         </div>
                       </div>
@@ -112,9 +112,9 @@
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
-                              <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                              <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                             </h3>
-                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                           </div>
                         </div>
                       </div>
@@ -135,7 +135,7 @@
           <div class="flex-shrink max-w-full w-full overflow-hidden">
             <div class="w-full py-3">
               <h2 class="text-gray-800 text-2xl font-bold">
-                <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Africa
+                <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Indonesia
               </h2>
             </div>
             <div class="flex flex-row flex-wrap -mx-3">
@@ -146,10 +146,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -160,10 +160,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -174,10 +174,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -188,10 +188,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -202,10 +202,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -216,10 +216,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -230,10 +230,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -244,10 +244,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -265,7 +265,7 @@
           <div class="flex-shrink max-w-full w-full lg:w-2/3  overflow-hidden">
             <div class="w-full py-3">
               <h2 class="text-gray-800 text-2xl font-bold">
-                <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Asian
+                <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Olahraga
               </h2>
             </div>
             <div class="flex flex-row flex-wrap -mx-3">
@@ -278,12 +278,12 @@
                   <div class="absolute px-5 pt-8 pb-5 bottom-0 w-full bg-gradient-cover">
                     <!--title-->
                     <a href="#">
-                      <h2 class="text-3xl font-bold capitalize text-white mb-3">Amazon Shoppers Are Ditching Designer Belts for This Best-Selling</h2>
+                      <h2 class="text-3xl font-bold capitalize text-white mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, earum?</h2>
                     </a>
-                    <p class="text-gray-100 hidden sm:inline-block">This is a wider card with supporting text below as a natural lead-in to additional content. This very helpfull for generate default content..</p>                                                  
+                    <p class="text-gray-100 hidden sm:inline-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus! This very helpfull for generate default content..</p>                                                  
                     <!-- author and date -->
                     <div class="pt-2">
-                      <div class="text-gray-100"><div class="inline-block h-3 border-l-2 border-red-600 mr-2"></div>Europe</div>
+                      <div class="text-gray-100"><div class="inline-block h-3 border-l-2 border-red-600 mr-2"></div>Indonesia</div>
                     </div>
                   </div>
                 </div>
@@ -296,10 +296,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -310,10 +310,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -324,10 +324,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -338,10 +338,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -352,10 +352,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -366,10 +366,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -436,12 +436,12 @@
                   <div class="absolute px-5 pt-8 pb-5 bottom-0 w-full bg-gradient-cover">
                     <!--title-->
                     <a href="#">
-                      <h2 class="text-3xl font-bold capitalize text-white mb-3">Amazon Shoppers Are Ditching Designer Belts for This Best-Selling</h2>
+                      <h2 class="text-3xl font-bold capitalize text-white mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, earum?</h2>
                     </a>
-                    <p class="text-gray-100 hidden sm:inline-block">This is a wider card with supporting text below as a natural lead-in to additional content. This very helpfull for generate default content..</p>                                                  
+                    <p class="text-gray-100 hidden sm:inline-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus! This very helpfull for generate default content..</p>                                                  
                     <!-- author and date -->
                     <div class="pt-2">
-                      <div class="text-gray-100"><div class="inline-block h-3 border-l-2 border-red-600 mr-2"></div>Europe</div>
+                      <div class="text-gray-100"><div class="inline-block h-3 border-l-2 border-red-600 mr-2"></div>Indonesia</div>
                     </div>
                   </div>
                 </div>
@@ -454,10 +454,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -468,10 +468,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -482,10 +482,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -496,10 +496,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -510,10 +510,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
@@ -524,10 +524,10 @@
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">5 Tips untuk tetap sehat selama bulan ramadan</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas omnis cumque non fugit ducimus!</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
                   </div>
                 </div>
               </div>
