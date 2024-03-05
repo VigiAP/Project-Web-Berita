@@ -260,6 +260,7 @@
   <?= $this->renderSection('konten'); ?>
 
 
+ 
   <!-- =========={ FOOTER }==========  -->
   <footer class="bg-black text-gray-400">
     <!--Footer content-->
@@ -268,10 +269,10 @@
         <div class="flex flex-wrap flex-row lg:justify-between -mx-3">
           <div class="flex-shrink max-w-full w-full lg:w-2/5 px-3 lg:pr-16">
             <div class="flex items-center mb-2">
-              <span class="text-3xl leading-normal mb-2 font-bold text-gray-100 mt-2">TailNews</span>
+              <span class="text-3xl leading-normal mb-2 font-bold text-gray-100 mt-2">Pojok Berita</span>
               <!-- <img src="src/img-min/logo.png" alt="LOGO"> -->
             </div>
-            <p>Tailwind News Template for build great newspapper, magazine and news portal.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint itaque, ex magnam nam cumque aliquid?</p>
             <ul class="space-x-3 mt-6 mb-6 Lg:mb-0">
               <!--facebook-->
               <li class="inline-block">
@@ -331,43 +332,7 @@
           </div>
           <div class="flex-shrink max-w-full w-full lg:w-3/5 px-3">
             <div class="flex flex-wrap flex-row">
-              <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
-                <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Product</h4>
-                <ul>
-                  <li class="py-1 hover:text-white"><a href="#">Landing</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Pages</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Sections</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Sign Up</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Login</a></li>
-                </ul>
-              </div>
-              <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
-                <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Support</h4>
-                <ul>
-                  <li class="py-1 hover:text-white"><a href="#">Documentation</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Changelog</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Tools</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Icons</a></li>
-                </ul>
-              </div>
-              <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
-                <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Includes</h4>
-                <ul>
-                  <li class="py-1 hover:text-white"><a href="#">Utilities</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Components</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Example code</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Updates</a></li>
-                </ul>
-              </div>
-              <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
-                <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Legal</h4>
-                <ul>
-                  <li class="py-1 hover:text-white hover:text-white"><a href="#">Privacy Policy</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Terms of Use</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">License</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">GDPR</a></li>
-                </ul>
-              </div>
+             
             </div>
           </div>
         </div>
@@ -379,7 +344,7 @@
       <div class="container py-4 border-t border-gray-200 border-opacity-10">
         <div class="row">
           <div class="col-12 col-md text-center">
-            <p class="d-block my-3">Copyright © Your Company | All rights reserved.</p>
+            <p class="d-block my-3">Copyright © Pojok Berita | All rights reserved.</p>
           </div>
         </div>
       </div>
