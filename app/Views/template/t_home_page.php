@@ -38,32 +38,13 @@
               <li class="relative border-l border-gray-800 hover:bg-gray-900">
                 <a class="block py-3 px-6 border-b-2 border-transparent" href="index.html">Home</a>
               </li>
-              <li class="dropdown relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Pages</a>
+              <li class="relative border-l border-gray-800 hover:bg-gray-900">
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Olahraga</a>
 
                 <ul
                   class="dropdown-menu font-normal absolute left-0 right-auto top-full z-50 border-b-0 text-left bg-white text-gray-700 border border-gray-100"
                   style="min-width: 12rem;">
-                  <li class="subdropdown relative hover:bg-gray-50">
-                    <a class="block py-2 px-6 border-b border-gray-100" href="#">
-                      Homepage
-                    </a>
-
-                    <!--dropdown submenu-->
-                    <ul
-                      class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100"
-                      style="min-width: 12rem;">
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                          href="index.html">Homepage 1</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                          href="index-2.html">Homepage 2</a></li>
-                    </ul>
-                  </li>
-                  <li class="subdropdown relative hover:bg-gray-50">
-                    <a class="block py-2 px-6 border-b border-gray-100" href="#">
-                      Pages
-                    </a>
-
+                  
                     <!--dropdown submenu-->
                     <ul
                       class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100"
@@ -82,60 +63,26 @@
                           href="contact-us.html">Contact</a></li>
                     </ul>
                   </li>
-                  <li class="subdropdown relative hover:bg-gray-50">
-                    <a class="block py-2 px-6 border-b border-gray-100" href="#">
-                      Post
-                    </a>
-
-                    <!--dropdown submenu-->
-                    <ul
-                      class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100"
-                      style="min-width: 12rem;">
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                          href="single.html">Post default</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                          href="single-2.html">Post fullwidth</a></li>
-                    </ul>
-                  </li>
-
-                  <li class="subdropdown relative hover:bg-gray-50">
-                    <a class="block py-2 px-6 border-b border-gray-100" href="#">
-                      Documentation
-                    </a>
-
-                    <!--dropdown submenu-->
-                    <ul
-                      class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100"
-                      style="min-width: 12rem;">
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                          href="docs/index.html">Get started</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                          href="docs/components.html">Components</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                          href="docs/credits.html">Credits</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                          href="docs/changelogs.html">Changelogs</a></li>
-                    </ul>
-                  </li>
+                  
                 </ul>
               </li>
               <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Sport</a>
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Olahraga</a>
               </li>
               <li class="relative border-l border-gray-800 hover:bg-gray-900">
                 <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Travel</a>
               </li>
               <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Techno</a>
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Teknologi</a>
               </li>
               <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Worklife</a>
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Kesehatan</a>
               </li>
               <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Future</a>
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Otomotif</a>
               </li>
               <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">More</a>
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Lainnya</a>
               </li>
             </ul>
 
@@ -232,7 +179,7 @@
       <div class="mb-auto">
         <!--navigation-->
         <nav class="relative flex flex-wrap">
-          <div class="text-center py-4 w-full font-bold border-b border-gray-100">TAILNEWS</div>
+          <div class="text-center py-4 w-full font-bold border-b border-gray-100">Pojok Berita</div>
           <ul id="side-menu" class="w-full float-none flex flex-col">
             <li class="relative">
               <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Home</a>
@@ -241,7 +188,7 @@
             <!-- dropdown with submenu-->
             <li class="dropdown relative">
               <a class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="javascript:;">
-                News
+                Berita
               </a>
 
               <!-- dropdown menu -->
@@ -277,7 +224,7 @@
             </li>
 
             <li class="relative">
-              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Sport</a>
+              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Olahraga</a>
             </li>
 
             <li class="relative">
@@ -285,26 +232,26 @@
             </li>
 
             <li class="relative">
-              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Techno</a>
+              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Teknologi</a>
             </li>
 
             <li class="relative">
-              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Worklife</a>
+              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Kesehatan</a>
             </li>
 
             <li class="relative">
-              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Future</a>
+              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Otomotif</a>
             </li>
 
             <li class="relative">
-              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">More</a>
+              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Lainnya</a>
             </li>
           </ul>
         </nav>
       </div>
       <!-- copyright -->
       <div class="py-4 px-6 text-sm mt-6 text-center">
-        <p>Copyright <a href="#">Tailnews</a> - All right reserved</p>
+        <p>Copyright <a href="#">Pojok Berita</a> - All right reserved</p>
       </div>
     </nav>
   </div><!-- End Mobile menu -->

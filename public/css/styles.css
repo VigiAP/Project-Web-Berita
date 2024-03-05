@@ -22,7 +22,7 @@
 
 ::before,
 ::after {
-  --tw-content: "";
+  --tw-content: '';
 }
 
 /*
@@ -44,11 +44,9 @@ html,
   -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
-  tab-size: 4;
+     tab-size: 4;
   /* 3 */
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, system-ui,
-    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -91,7 +89,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /*
@@ -137,8 +135,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-feature-settings: normal;
   /* 2 */
@@ -237,9 +234,9 @@ select {
 */
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -286,7 +283,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-[type="search"] {
+[type='search'] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -379,8 +376,7 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
   /* 1 */
   color: #d9d9d9;
@@ -450,8 +446,8 @@ video {
 
 :root,
 [data-theme] {
-  background-color: var(--fallback-b1, oklch(var(--b1) / 1));
-  color: var(--fallback-bc, oklch(var(--bc) / 1));
+  background-color: var(--fallback-b1,oklch(var(--b1)/1));
+  color: var(--fallback-bc,oklch(var(--bc)/1));
 }
 
 @supports not (color: oklch(0 0 0)) {
@@ -513,7 +509,7 @@ html {
 :root {
   color-scheme: light;
   --in: 0.7206 0.191 231.6;
-  --su: 64.8% 0.15 160;
+  --su: 64.8% 0.150 160;
   --wa: 0.8471 0.199 83.87;
   --er: 0.7176 0.221 22.18;
   --pc: 0.89824 0.06192 275.75;
@@ -526,7 +522,7 @@ html {
   --rounded-btn: 0.5rem;
   --rounded-badge: 1.9rem;
   --animation-btn: 0.25s;
-  --animation-input: 0.2s;
+  --animation-input: .2s;
   --btn-focus-scale: 0.95;
   --border-btn: 1px;
   --tab-border: 1px;
@@ -547,7 +543,7 @@ html {
   :root {
     color-scheme: dark;
     --in: 0.7206 0.191 231.6;
-    --su: 64.8% 0.15 160;
+    --su: 64.8% 0.150 160;
     --wa: 0.8471 0.199 83.87;
     --er: 0.7176 0.221 22.18;
     --pc: 0.13138 0.0392 275.75;
@@ -561,7 +557,7 @@ html {
     --rounded-btn: 0.5rem;
     --rounded-badge: 1.9rem;
     --animation-btn: 0.25s;
-    --animation-input: 0.2s;
+    --animation-input: .2s;
     --btn-focus-scale: 0.95;
     --border-btn: 1px;
     --tab-border: 1px;
@@ -578,10 +574,10 @@ html {
   }
 }
 
-[data-theme="light"] {
+[data-theme=light] {
   color-scheme: light;
   --in: 0.7206 0.191 231.6;
-  --su: 64.8% 0.15 160;
+  --su: 64.8% 0.150 160;
   --wa: 0.8471 0.199 83.87;
   --er: 0.7176 0.221 22.18;
   --pc: 0.89824 0.06192 275.75;
@@ -594,7 +590,7 @@ html {
   --rounded-btn: 0.5rem;
   --rounded-badge: 1.9rem;
   --animation-btn: 0.25s;
-  --animation-input: 0.2s;
+  --animation-input: .2s;
   --btn-focus-scale: 0.95;
   --border-btn: 1px;
   --tab-border: 1px;
@@ -611,10 +607,10 @@ html {
   --bc: 0.278078 0.029596 256.847952;
 }
 
-[data-theme="dark"] {
+[data-theme=dark] {
   color-scheme: dark;
   --in: 0.7206 0.191 231.6;
-  --su: 64.8% 0.15 160;
+  --su: 64.8% 0.150 160;
   --wa: 0.8471 0.199 83.87;
   --er: 0.7176 0.221 22.18;
   --pc: 0.13138 0.0392 275.75;
@@ -628,7 +624,7 @@ html {
   --rounded-btn: 0.5rem;
   --rounded-badge: 1.9rem;
   --animation-btn: 0.25s;
-  --animation-input: 0.2s;
+  --animation-input: .2s;
   --btn-focus-scale: 0.95;
   --border-btn: 1px;
   --tab-border: 1px;
@@ -644,9 +640,7 @@ html {
   --bc: 0.746477 0.0216 264.435964;
 }
 
-*,
-::before,
-::after {
+*, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -656,19 +650,19 @@ html {
   --tw-skew-y: 0;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  --tw-pan-x: ;
-  --tw-pan-y: ;
-  --tw-pinch-zoom: ;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
-  --tw-gradient-from-position: ;
-  --tw-gradient-via-position: ;
-  --tw-gradient-to-position: ;
-  --tw-ordinal: ;
-  --tw-slashed-zero: ;
-  --tw-numeric-figure: ;
-  --tw-numeric-spacing: ;
-  --tw-numeric-fraction: ;
-  --tw-ring-inset: ;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: rgb(59 130 246 / 0.5);
@@ -676,24 +670,24 @@ html {
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
-  --tw-blur: ;
-  --tw-brightness: ;
-  --tw-contrast: ;
-  --tw-grayscale: ;
-  --tw-hue-rotate: ;
-  --tw-invert: ;
-  --tw-saturate: ;
-  --tw-sepia: ;
-  --tw-drop-shadow: ;
-  --tw-backdrop-blur: ;
-  --tw-backdrop-brightness: ;
-  --tw-backdrop-contrast: ;
-  --tw-backdrop-grayscale: ;
-  --tw-backdrop-hue-rotate: ;
-  --tw-backdrop-invert: ;
-  --tw-backdrop-opacity: ;
-  --tw-backdrop-saturate: ;
-  --tw-backdrop-sepia: ;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
 }
 
 ::backdrop {
@@ -706,19 +700,19 @@ html {
   --tw-skew-y: 0;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  --tw-pan-x: ;
-  --tw-pan-y: ;
-  --tw-pinch-zoom: ;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
-  --tw-gradient-from-position: ;
-  --tw-gradient-via-position: ;
-  --tw-gradient-to-position: ;
-  --tw-ordinal: ;
-  --tw-slashed-zero: ;
-  --tw-numeric-figure: ;
-  --tw-numeric-spacing: ;
-  --tw-numeric-fraction: ;
-  --tw-ring-inset: ;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: rgb(59 130 246 / 0.5);
@@ -726,24 +720,24 @@ html {
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
-  --tw-blur: ;
-  --tw-brightness: ;
-  --tw-contrast: ;
-  --tw-grayscale: ;
-  --tw-hue-rotate: ;
-  --tw-invert: ;
-  --tw-saturate: ;
-  --tw-sepia: ;
-  --tw-drop-shadow: ;
-  --tw-backdrop-blur: ;
-  --tw-backdrop-brightness: ;
-  --tw-backdrop-contrast: ;
-  --tw-backdrop-grayscale: ;
-  --tw-backdrop-hue-rotate: ;
-  --tw-backdrop-invert: ;
-  --tw-backdrop-opacity: ;
-  --tw-backdrop-saturate: ;
-  --tw-backdrop-sepia: ;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
 }
 
 .container {
@@ -792,19 +786,19 @@ html {
   border-radius: var(--rounded-box, 1rem);
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: var(--fallback-b2, oklch(var(--b2) / var(--tw-border-opacity)));
+  border-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
   padding: 1rem;
   --tw-text-opacity: 1;
-  color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
-  --alert-bg: var(--fallback-b2, oklch(var(--b2) / 1));
-  --alert-bg-mix: var(--fallback-b1, oklch(var(--b1) / 1));
+  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
+  --alert-bg: var(--fallback-b2,oklch(var(--b2)/1));
+  --alert-bg-mix: var(--fallback-b1,oklch(var(--b1)/1));
   background-color: var(--alert-bg);
 }
 
 @media (min-width: 640px) {
   .alert {
     grid-auto-flow: column;
-    grid-template-columns: auto minmax(auto, 1fr);
+    grid-template-columns: auto minmax(auto,1fr);
     justify-items: start;
     text-align: start;
   }
@@ -816,28 +810,25 @@ html {
   justify-content: center;
 }
 
-@media (hover: hover) {
+@media (hover:hover) {
   .label a:hover {
     --tw-text-opacity: 1;
-    color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
+    color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
   }
 
   .menu li > *:not(ul, .menu-title, details, .btn):active,
-  .menu li > *:not(ul, .menu-title, details, .btn).active,
-  .menu li > details > summary:active {
+.menu li > *:not(ul, .menu-title, details, .btn).active,
+.menu li > details > summary:active {
     --tw-bg-opacity: 1;
-    background-color: var(--fallback-n, oklch(var(--n) / var(--tw-bg-opacity)));
+    background-color: var(--fallback-n,oklch(var(--n)/var(--tw-bg-opacity)));
     --tw-text-opacity: 1;
-    color: var(--fallback-nc, oklch(var(--nc) / var(--tw-text-opacity)));
+    color: var(--fallback-nc,oklch(var(--nc)/var(--tw-text-opacity)));
   }
 
   .table tr.hover:hover,
   .table tr.hover:nth-child(even):hover {
     --tw-bg-opacity: 1;
-    background-color: var(
-      --fallback-b2,
-      oklch(var(--b2) / var(--tw-bg-opacity))
-    );
+    background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
   }
 }
 
@@ -848,8 +839,8 @@ html {
   flex-shrink: 0;
   cursor: pointer;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -868,23 +859,21 @@ html {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   border-width: var(--border-btn, 1px);
   animation: button-pop var(--animation-btn, 0.25s) ease-out;
-  transition-property: color, background-color, border-color, opacity,
-    box-shadow, transform;
+  transition-property: color, background-color, border-color, opacity, box-shadow, transform;
   --tw-text-opacity: 1;
-  color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
+  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  outline-color: var(--fallback-bc, oklch(var(--bc) / 1));
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  outline-color: var(--fallback-bc,oklch(var(--bc)/1));
   background-color: oklch(var(--btn-color, var(--b2)) / var(--tw-bg-opacity));
   --tw-bg-opacity: 1;
   --tw-border-opacity: 1;
 }
 
 .btn-disabled,
-.btn[disabled],
-.btn:disabled {
+  .btn[disabled],
+  .btn:disabled {
   pointer-events: none;
 }
 
@@ -892,8 +881,8 @@ html {
 :where(.btn:is(input[type="radio"])) {
   width: auto;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .btn:is(input[type="checkbox"]):after,
@@ -902,7 +891,6 @@ html {
   content: var(--tw-content);
 }
 
-<<<<<<< HEAD
 .card {
   position: relative;
   display: flex;
@@ -931,12 +919,12 @@ html {
   z-index: 10;
   border-radius: var(--rounded-box, 1rem);
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-n, oklch(var(--n) / var(--tw-bg-opacity)));
+  background-color: var(--fallback-n,oklch(var(--n)/var(--tw-bg-opacity)));
   opacity: 0.75;
 }
 
 .card.image-full:before,
-.card.image-full > * {
+    .card.image-full > * {
   grid-column-start: 1;
   grid-row-start: 1;
 }
@@ -944,18 +932,16 @@ html {
 .card.image-full > figure img {
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .card.image-full > .card-body {
   position: relative;
   z-index: 20;
   --tw-text-opacity: 1;
-  color: var(--fallback-nc, oklch(var(--nc) / var(--tw-text-opacity)));
+  color: var(--fallback-nc,oklch(var(--nc)/var(--tw-text-opacity)));
 }
 
-=======
->>>>>>> 92ffd60dccdf920ceeaae010b42bb6d44760197d
 .dropdown {
   position: relative;
   display: inline-block;
@@ -974,20 +960,12 @@ html {
   visibility: hidden;
   opacity: 0;
   transform-origin: top;
-  --tw-scale-x: 0.95;
-  --tw-scale-y: 0.95;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  transition-property: color, background-color, border-color,
-    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
-    -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color,
-    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
-    backdrop-filter;
-  transition-property: color, background-color, border-color,
-    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
-    backdrop-filter, -webkit-backdrop-filter;
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 200ms;
@@ -1008,29 +986,23 @@ html {
 
   .btn:hover {
     --tw-border-opacity: 1;
-    border-color: var(
-      --fallback-b3,
-      oklch(var(--b3) / var(--tw-border-opacity))
-    );
+    border-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-border-opacity)));
     --tw-bg-opacity: 1;
-    background-color: var(
-      --fallback-b3,
-      oklch(var(--b3) / var(--tw-bg-opacity))
-    );
+    background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
   }
 
   @supports (color: color-mix(in oklab, black, black)) {
     .btn:hover {
       background-color: color-mix(
-        in oklab,
-        oklch(var(--btn-color, var(--b2)) / var(--tw-bg-opacity, 1)) 90%,
-        black
-      );
+            in oklab,
+            oklch(var(--btn-color, var(--b2)) / var(--tw-bg-opacity, 1)) 90%,
+            black
+          );
       border-color: color-mix(
-        in oklab,
-        oklch(var(--btn-color, var(--b2)) / var(--tw-border-opacity, 1)) 90%,
-        black
-      );
+            in oklab,
+            oklch(var(--btn-color, var(--b2)) / var(--tw-border-opacity, 1)) 90%,
+            black
+          );
     }
   }
 
@@ -1047,61 +1019,37 @@ html {
   }
 
   .btn-disabled:hover,
-  .btn[disabled]:hover,
-  .btn:disabled:hover {
+    .btn[disabled]:hover,
+    .btn:disabled:hover {
     --tw-border-opacity: 0;
-    background-color: var(--fallback-n, oklch(var(--n) / var(--tw-bg-opacity)));
+    background-color: var(--fallback-n,oklch(var(--n)/var(--tw-bg-opacity)));
     --tw-bg-opacity: 0.2;
-    color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
+    color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
     --tw-text-opacity: 0.2;
   }
 
   @supports (color: color-mix(in oklab, black, black)) {
-    .btn:is(input[type="checkbox"]:checked):hover,
-    .btn:is(input[type="radio"]:checked):hover {
-      background-color: color-mix(
-        in oklab,
-        var(--fallback-p, oklch(var(--p) / 1)) 90%,
-        black
-      );
-      border-color: color-mix(
-        in oklab,
-        var(--fallback-p, oklch(var(--p) / 1)) 90%,
-        black
-      );
+    .btn:is(input[type="checkbox"]:checked):hover, .btn:is(input[type="radio"]:checked):hover {
+      background-color: color-mix(in oklab, var(--fallback-p,oklch(var(--p)/1)) 90%, black);
+      border-color: color-mix(in oklab, var(--fallback-p,oklch(var(--p)/1)) 90%, black);
     }
   }
 
   .dropdown.dropdown-hover:hover .dropdown-content {
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
-  :where(
-      .menu li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title)
-    ):not(.active, .btn):hover,
-  :where(
-      .menu li:not(.menu-title, .disabled) > details > summary:not(.menu-title)
-    ):not(.active, .btn):hover {
+  :where(.menu li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title)):not(.active, .btn):hover, :where(.menu li:not(.menu-title, .disabled) > details > summary:not(.menu-title)):not(.active, .btn):hover {
     cursor: pointer;
     outline: 2px solid transparent;
     outline-offset: 2px;
   }
 
   @supports (color: oklch(0 0 0)) {
-    :where(
-        .menu li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title)
-      ):not(.active, .btn):hover,
-    :where(
-        .menu
-          li:not(.menu-title, .disabled)
-          > details
-          > summary:not(.menu-title)
-      ):not(.active, .btn):hover {
-      background-color: var(--fallback-bc, oklch(var(--bc) / 0.1));
+    :where(.menu li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title)):not(.active, .btn):hover, :where(.menu li:not(.menu-title, .disabled) > details > summary:not(.menu-title)):not(.active, .btn):hover {
+      background-color: var(--fallback-bc,oklch(var(--bc)/0.1));
     }
   }
 }
@@ -1116,7 +1064,7 @@ html {
   grid-auto-flow: row;
   place-items: start;
   -moz-column-gap: 1rem;
-  column-gap: 1rem;
+       column-gap: 1rem;
   row-gap: 2.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1141,8 +1089,8 @@ html {
 .label {
   display: flex;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   align-items: center;
   justify-content: space-between;
   padding-left: 0.25rem;
@@ -1154,8 +1102,8 @@ html {
 .input {
   flex-shrink: 1;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   height: 3rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1166,7 +1114,7 @@ html {
   border-width: 1px;
   border-color: transparent;
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b1, oklch(var(--b1) / var(--tw-bg-opacity)));
+  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
 }
 
 .input[type="number"]::-webkit-inner-spin-button,
@@ -1177,7 +1125,7 @@ html {
 }
 
 .join .dropdown .join-item:first-child:not(:last-child),
-.join *:first-child:not(:last-child) .dropdown .join-item {
+  .join *:first-child:not(:last-child) .dropdown .join-item {
   border-start-end-radius: inherit;
   border-end-end-radius: inherit;
 }
@@ -1203,8 +1151,7 @@ html {
   padding-inline-start: 0.5rem;
 }
 
-.menu :where(li:not(.menu-title) > *:not(ul, details, .menu-title, .btn)),
-.menu :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+.menu :where(li:not(.menu-title) > *:not(ul, details, .menu-title, .btn)), .menu :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
   display: grid;
   grid-auto-flow: column;
   align-content: flex-start;
@@ -1212,16 +1159,16 @@ html {
   gap: 0.5rem;
   grid-auto-columns: minmax(auto, max-content) auto max-content;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .menu li.disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  color: var(--fallback-bc, oklch(var(--bc) / 0.3));
+     -moz-user-select: none;
+          user-select: none;
+  color: var(--fallback-bc,oklch(var(--bc)/0.3));
 }
 
 .menu :where(li > .menu-dropdown:not(.menu-dropdown-show)) {
@@ -1258,8 +1205,8 @@ html {
   position: relative;
   display: inline-grid;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   place-content: center;
   cursor: pointer;
 }
@@ -1274,8 +1221,8 @@ html {
 
 .swap input {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .swap .swap-on,
@@ -1301,10 +1248,8 @@ html {
   align-items: flex-end;
 }
 
-.tabs-lifted:has(.tab-content[class^="rounded-"])
-  .tab:first-child:not(.tab-active),
-.tabs-lifted:has(.tab-content[class*=" rounded-"])
-  .tab:first-child:not(.tab-active) {
+.tabs-lifted:has(.tab-content[class^="rounded-"]) .tab:first-child:not(.tab-active),
+  .tabs-lifted:has(.tab-content[class*=" rounded-"]) .tab:first-child:not(.tab-active) {
   border-bottom-color: transparent;
 }
 
@@ -1319,7 +1264,7 @@ html {
 }
 
 :checked + .tab-content:nth-child(2),
-.tab-active + .tab-content:nth-child(2) {
+  .tab-active + .tab-content:nth-child(2) {
   border-start-start-radius: 0px;
 }
 
@@ -1342,7 +1287,7 @@ input.tab:checked + .tab-content,
   top: 0px;
   z-index: 1;
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b1, oklch(var(--b1) / var(--tw-bg-opacity)));
+  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
 }
 
 .table :where(.table-pin-rows tfoot tr) {
@@ -1350,7 +1295,7 @@ input.tab:checked + .tab-content,
   bottom: 0px;
   z-index: 1;
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b1, oklch(var(--b1) / var(--tw-bg-opacity)));
+  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
 }
 
 .table :where(.table-pin-cols tr th) {
@@ -1358,12 +1303,12 @@ input.tab:checked + .tab-content,
   left: 0px;
   right: 0px;
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b1, oklch(var(--b1) / var(--tw-bg-opacity)));
+  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
 }
 
 .toggle {
   flex-shrink: 0;
-  --tglbg: var(--fallback-b1, oklch(var(--b1) / 1));
+  --tglbg: var(--fallback-b1,oklch(var(--b1)/1));
   --handleoffset: 1.5rem;
   --handleoffsetcalculator: calc(var(--handleoffset) * -1);
   --togglehandleborder: 0 0;
@@ -1371,16 +1316,18 @@ input.tab:checked + .tab-content,
   width: 3rem;
   cursor: pointer;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border-radius: var(--rounded-badge, 1.9rem);
   border-width: 1px;
   border-color: currentColor;
   background-color: currentColor;
-  color: var(--fallback-bc, oklch(var(--bc) / 0.5));
-  transition: background, box-shadow var(--animation-input, 0.2s) ease-out;
+  color: var(--fallback-bc,oklch(var(--bc)/0.5));
+  transition: background,
+    box-shadow var(--animation-input, 0.2s) ease-out;
   box-shadow: var(--handleoffsetcalculator) 0 0 2px var(--tglbg) inset,
-    0 0 0 2px var(--tglbg) inset, var(--togglehandleborder);
+    0 0 0 2px var(--tglbg) inset,
+    var(--togglehandleborder);
 }
 
 .btm-nav > * .label {
@@ -1389,7 +1336,7 @@ input.tab:checked + .tab-content,
 }
 
 .btn:active:hover,
-.btn:active:focus {
+  .btn:active:focus {
   animation: button-pop 0s ease-out;
   transform: scale(var(--btn-focus-scale, 0.97));
 }
@@ -1410,8 +1357,7 @@ input.tab:checked + .tab-content,
 .btn.glass {
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   outline-color: currentColor;
 }
 
@@ -1421,28 +1367,27 @@ input.tab:checked + .tab-content,
 }
 
 .btn.btn-disabled,
-.btn[disabled],
-.btn:disabled {
+  .btn[disabled],
+  .btn:disabled {
   --tw-border-opacity: 0;
-  background-color: var(--fallback-n, oklch(var(--n) / var(--tw-bg-opacity)));
+  background-color: var(--fallback-n,oklch(var(--n)/var(--tw-bg-opacity)));
   --tw-bg-opacity: 0.2;
-  color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
+  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
   --tw-text-opacity: 0.2;
 }
 
 .btn:is(input[type="checkbox"]:checked),
 .btn:is(input[type="radio"]:checked) {
   --tw-border-opacity: 1;
-  border-color: var(--fallback-p, oklch(var(--p) / var(--tw-border-opacity)));
+  border-color: var(--fallback-p,oklch(var(--p)/var(--tw-border-opacity)));
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-p, oklch(var(--p) / var(--tw-bg-opacity)));
+  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
   --tw-text-opacity: 1;
-  color: var(--fallback-pc, oklch(var(--pc) / var(--tw-text-opacity)));
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
 }
 
-.btn:is(input[type="checkbox"]:checked):focus-visible,
-.btn:is(input[type="radio"]:checked):focus-visible {
-  outline-color: var(--fallback-p, oklch(var(--p) / 1));
+.btn:is(input[type="checkbox"]:checked):focus-visible, .btn:is(input[type="radio"]:checked):focus-visible {
+  outline-color: var(--fallback-p,oklch(var(--p)/1));
 }
 
 @keyframes button-pop {
@@ -1459,7 +1404,6 @@ input.tab:checked + .tab-content,
   }
 }
 
-<<<<<<< HEAD
 .card :where(figure:first-child) {
   overflow: hidden;
   border-start-start-radius: inherit;
@@ -1484,7 +1428,7 @@ input.tab:checked + .tab-content,
 .card.bordered {
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: var(--fallback-b2, oklch(var(--b2) / var(--tw-border-opacity)));
+  border-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
 }
 
 .card.compact .card-body {
@@ -1498,8 +1442,6 @@ input.tab:checked + .tab-content,
   border-radius: inherit;
 }
 
-=======
->>>>>>> 92ffd60dccdf920ceeaae010b42bb6d44760197d
 @keyframes checkmark {
   0% {
     background-position-y: 5px;
@@ -1519,21 +1461,19 @@ input.tab:checked + .tab-content,
 .dropdown:focus-within .dropdown-content {
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .label-text {
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
-  color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
+  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
 }
 
 .input input {
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-p, oklch(var(--p) / var(--tw-bg-opacity)));
+  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
   background-color: transparent;
 }
 
@@ -1547,41 +1487,39 @@ input.tab:checked + .tab-content,
 }
 
 .input-bordered {
-  border-color: var(--fallback-bc, oklch(var(--bc) / 0.2));
+  border-color: var(--fallback-bc,oklch(var(--bc)/0.2));
 }
 
 .input:focus,
-.input:focus-within {
+  .input:focus-within {
   box-shadow: none;
-  border-color: var(--fallback-bc, oklch(var(--bc) / 0.2));
+  border-color: var(--fallback-bc,oklch(var(--bc)/0.2));
   outline-style: solid;
   outline-width: 2px;
   outline-offset: 2px;
-  outline-color: var(--fallback-bc, oklch(var(--bc) / 0.2));
+  outline-color: var(--fallback-bc,oklch(var(--bc)/0.2));
 }
 
 .input-disabled,
-.input:disabled,
-.input[disabled] {
+  .input:disabled,
+  .input[disabled] {
   cursor: not-allowed;
   --tw-border-opacity: 1;
-  border-color: var(--fallback-b2, oklch(var(--b2) / var(--tw-border-opacity)));
+  border-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b2, oklch(var(--b2) / var(--tw-bg-opacity)));
-  color: var(--fallback-bc, oklch(var(--bc) / 0.4));
+  background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+  color: var(--fallback-bc,oklch(var(--bc)/0.4));
 }
 
-.input-disabled::-moz-placeholder,
-.input:disabled::-moz-placeholder,
-.input[disabled]::-moz-placeholder {
-  color: var(--fallback-bc, oklch(var(--bc) / var(--tw-placeholder-opacity)));
+.input-disabled::-moz-placeholder, .input:disabled::-moz-placeholder, .input[disabled]::-moz-placeholder {
+  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-placeholder-opacity)));
   --tw-placeholder-opacity: 0.2;
 }
 
 .input-disabled::placeholder,
-.input:disabled::placeholder,
-.input[disabled]::placeholder {
-  color: var(--fallback-bc, oklch(var(--bc) / var(--tw-placeholder-opacity)));
+  .input:disabled::placeholder,
+  .input[disabled]::placeholder {
+  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-placeholder-opacity)));
   --tw-placeholder-opacity: 0.2;
 }
 
@@ -1601,7 +1539,7 @@ input.tab:checked + .tab-content,
 
 :where(.menu li:empty) {
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-bc, oklch(var(--bc) / var(--tw-bg-opacity)));
+  background-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-bg-opacity)));
   opacity: 0.1;
   margin: 0.5rem 1rem;
   height: 1px;
@@ -1614,7 +1552,7 @@ input.tab:checked + .tab-content,
   top: 0.75rem;
   width: 1px;
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-bc, oklch(var(--bc) / var(--tw-bg-opacity)));
+  background-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-bg-opacity)));
   opacity: 0.1;
   content: "";
 }
@@ -1627,43 +1565,20 @@ input.tab:checked + .tab-content,
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   text-align: start;
-  transition-property: color, background-color, border-color,
-    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
-    -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color,
-    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
-    backdrop-filter;
-  transition-property: color, background-color, border-color,
-    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
-    backdrop-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 200ms;
   text-wrap: balance;
 }
 
-:where(
-    .menu li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title)
-  ):not(summary, .active, .btn).focus,
-:where(
-    .menu li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title)
-  ):not(summary, .active, .btn):focus,
-:where(
-    .menu li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title)
-  ):is(summary):not(.active, .btn):focus-visible,
-:where(
-    .menu li:not(.menu-title, .disabled) > details > summary:not(.menu-title)
-  ):not(summary, .active, .btn).focus,
-:where(
-    .menu li:not(.menu-title, .disabled) > details > summary:not(.menu-title)
-  ):not(summary, .active, .btn):focus,
-:where(
-    .menu li:not(.menu-title, .disabled) > details > summary:not(.menu-title)
-  ):is(summary):not(.active, .btn):focus-visible {
+:where(.menu li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title)):not(summary, .active, .btn).focus, :where(.menu li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title)):not(summary, .active, .btn):focus, :where(.menu li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title)):is(summary):not(.active, .btn):focus-visible, :where(.menu li:not(.menu-title, .disabled) > details > summary:not(.menu-title)):not(summary, .active, .btn).focus, :where(.menu li:not(.menu-title, .disabled) > details > summary:not(.menu-title)):not(summary, .active, .btn):focus, :where(.menu li:not(.menu-title, .disabled) > details > summary:not(.menu-title)):is(summary):not(.active, .btn):focus-visible {
   cursor: pointer;
-  background-color: var(--fallback-bc, oklch(var(--bc) / 0.1));
+  background-color: var(--fallback-bc,oklch(var(--bc)/0.1));
   --tw-text-opacity: 1;
-  color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
+  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
@@ -1672,9 +1587,9 @@ input.tab:checked + .tab-content,
 .menu li > *:not(ul, .menu-title, details, .btn).active,
 .menu li > details > summary:active {
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-n, oklch(var(--n) / var(--tw-bg-opacity)));
+  background-color: var(--fallback-n,oklch(var(--n)/var(--tw-bg-opacity)));
   --tw-text-opacity: 1;
-  color: var(--fallback-nc, oklch(var(--nc) / var(--tw-text-opacity)));
+  color: var(--fallback-nc,oklch(var(--nc)/var(--tw-text-opacity)));
 }
 
 .menu :where(li > details > summary)::-webkit-details-marker {
@@ -1721,7 +1636,7 @@ input.tab:checked + .tab-content,
   text-overflow: ellipsis;
   white-space: nowrap;
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b2, oklch(var(--b2) / var(--tw-bg-opacity)));
+  background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
   padding-left: 2rem;
   direction: ltr;
 }
@@ -1734,9 +1649,7 @@ input.tab:checked + .tab-content,
   aspect-ratio: 1 / 1;
   height: 0.75rem;
   --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   border-radius: 9999px;
   border-width: 2px;
   border-color: currentColor;
@@ -1751,9 +1664,7 @@ input.tab:checked + .tab-content,
   height: 0.5rem;
   --tw-translate-y: 25%;
   --tw-rotate: -45deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   border-radius: 9999px;
   border-width: 1px;
   border-color: currentColor;
@@ -1774,18 +1685,18 @@ input.tab:checked + .tab-content,
 
 @keyframes radiomark {
   0% {
-    box-shadow: 0 0 0 12px var(--fallback-b1, oklch(var(--b1) / 1)) inset,
-      0 0 0 12px var(--fallback-b1, oklch(var(--b1) / 1)) inset;
+    box-shadow: 0 0 0 12px var(--fallback-b1,oklch(var(--b1)/1)) inset,
+      0 0 0 12px var(--fallback-b1,oklch(var(--b1)/1)) inset;
   }
 
   50% {
-    box-shadow: 0 0 0 3px var(--fallback-b1, oklch(var(--b1) / 1)) inset,
-      0 0 0 3px var(--fallback-b1, oklch(var(--b1) / 1)) inset;
+    box-shadow: 0 0 0 3px var(--fallback-b1,oklch(var(--b1)/1)) inset,
+      0 0 0 3px var(--fallback-b1,oklch(var(--b1)/1)) inset;
   }
 
   100% {
-    box-shadow: 0 0 0 4px var(--fallback-b1, oklch(var(--b1) / 1)) inset,
-      0 0 0 4px var(--fallback-b1, oklch(var(--b1) / 1)) inset;
+    box-shadow: 0 0 0 4px var(--fallback-b1,oklch(var(--b1)/1)) inset,
+      0 0 0 4px var(--fallback-b1,oklch(var(--b1)/1)) inset;
   }
 }
 
@@ -1826,20 +1737,17 @@ input.tab:checked + .tab-content,
 }
 
 .table tr.active,
-.table tr.active:nth-child(even),
-.table-zebra tbody tr:nth-child(even) {
+  .table tr.active:nth-child(even),
+  .table-zebra tbody tr:nth-child(even) {
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b2, oklch(var(--b2) / var(--tw-bg-opacity)));
+  background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
 }
 
 .table :where(thead, tbody) :where(tr:not(:last-child)),
-.table :where(thead, tbody) :where(tr:first-child:last-child) {
+    .table :where(thead, tbody) :where(tr:first-child:last-child) {
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
-  border-bottom-color: var(
-    --fallback-b2,
-    oklch(var(--b2) / var(--tw-border-opacity))
-  );
+  border-bottom-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
 }
 
 .table :where(thead, tfoot) {
@@ -1847,7 +1755,7 @@ input.tab:checked + .tab-content,
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 700;
-  color: var(--fallback-bc, oklch(var(--bc) / 0.6));
+  color: var(--fallback-bc,oklch(var(--bc)/0.6));
 }
 
 @keyframes toast-pop {
@@ -1870,7 +1778,7 @@ input.tab:checked + .tab-content,
   outline-style: solid;
   outline-width: 2px;
   outline-offset: 2px;
-  outline-color: var(--fallback-bc, oklch(var(--bc) / 0.2));
+  outline-color: var(--fallback-bc,oklch(var(--bc)/0.2));
 }
 
 .toggle:hover {
@@ -1878,43 +1786,40 @@ input.tab:checked + .tab-content,
 }
 
 .toggle:checked,
-.toggle[checked="true"],
-.toggle[aria-checked="true"] {
+  .toggle[checked="true"],
+  .toggle[aria-checked="true"] {
   background-image: none;
   --handleoffsetcalculator: var(--handleoffset);
   --tw-text-opacity: 1;
-  color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
+  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
 }
 
-[dir="rtl"] .toggle:checked,
-[dir="rtl"] .toggle[checked="true"],
-[dir="rtl"] .toggle[aria-checked="true"] {
+[dir="rtl"] .toggle:checked, [dir="rtl"] .toggle[checked="true"], [dir="rtl"] .toggle[aria-checked="true"] {
   --handleoffsetcalculator: calc(var(--handleoffset) * -1);
 }
 
 .toggle:indeterminate {
   --tw-text-opacity: 1;
-  color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
+  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
   box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset,
-    calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset,
-    0 0 0 2px var(--tglbg) inset;
+      calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset,
+      0 0 0 2px var(--tglbg) inset;
 }
 
 [dir="rtl"] .toggle:indeterminate {
   box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset,
-    calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset,
-    0 0 0 2px var(--tglbg) inset;
+        calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset,
+        0 0 0 2px var(--tglbg) inset;
 }
 
 .toggle:disabled {
   cursor: not-allowed;
   --tw-border-opacity: 1;
-  border-color: var(--fallback-bc, oklch(var(--bc) / var(--tw-border-opacity)));
+  border-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-border-opacity)));
   background-color: transparent;
   opacity: 0.3;
-  --togglehandleborder: 0 0 0 3px var(--fallback-bc, oklch(var(--bc) / 1)) inset,
-    var(--handleoffsetcalculator) 0 0 3px
-      var(--fallback-bc, oklch(var(--bc) / 1)) inset;
+  --togglehandleborder: 0 0 0 3px var(--fallback-bc,oklch(var(--bc)/1)) inset,
+      var(--handleoffsetcalculator) 0 0 3px var(--fallback-bc,oklch(var(--bc)/1)) inset;
 }
 
 .btn-block {
@@ -2157,6 +2062,10 @@ input.tab:checked + .tab-content,
   height: 100vh;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 .w-6 {
   width: 1.5rem;
 }
@@ -2190,9 +2099,7 @@ input.tab:checked + .tab-content,
 }
 
 .transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer {
@@ -2294,6 +2201,10 @@ input.tab:checked + .tab-content,
   border-left-width: 2px;
 }
 
+.border-l-4 {
+  border-left-width: 4px;
+}
+
 .border-r {
   border-right-width: 1px;
 }
@@ -2331,6 +2242,11 @@ input.tab:checked + .tab-content,
   border-color: rgb(50 50 50 / var(--tw-border-opacity));
 }
 
+.border-orange-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(249 115 22 / var(--tw-border-opacity));
+}
+
 .border-red-600 {
   --tw-border-opacity: 1;
   border-color: rgb(220 38 38 / var(--tw-border-opacity));
@@ -2346,7 +2262,7 @@ input.tab:checked + .tab-content,
 
 .bg-base-300 {
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b3, oklch(var(--b3) / var(--tw-bg-opacity)));
+  background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
 }
 
 .bg-black {
@@ -2367,6 +2283,11 @@ input.tab:checked + .tab-content,
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(28 28 28 / var(--tw-bg-opacity));
+}
+
+.bg-orange-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 237 213 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -2417,6 +2338,11 @@ input.tab:checked + .tab-content,
 .py-0\.5 {
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-12 {
@@ -2581,6 +2507,11 @@ input.tab:checked + .tab-content,
   color: rgb(50 50 50 / var(--tw-text-opacity));
 }
 
+.text-orange-700 {
+  --tw-text-opacity: 1;
+  color: rgb(194 65 12 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2588,13 +2519,11 @@ input.tab:checked + .tab-content,
 
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
-    0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-/* // Theme css */
+// Theme css
 /*! purgecss start ignore */
 /*utility*/
 .text-shadow-white {
@@ -2626,8 +2555,7 @@ input.tab:checked + .tab-content,
 
 /*navbar*/
 
-.navbar > li.active > a,
-.navbar > li:hover > a {
+.navbar > li.active > a, .navbar > li:hover > a {
   border-color: #ce2626;
 }
 
@@ -2645,8 +2573,7 @@ input.tab:checked + .tab-content,
   display: block;
 }
 
-.search-dropdown.show .open,
-.search-dropdown .close {
+.search-dropdown.show .open, .search-dropdown .close {
   display: none;
 }
 
@@ -2659,30 +2586,27 @@ input.tab:checked + .tab-content,
     display: none;
   }
 
-  .navbar .dropdown:hover > .dropdown-menu,
-  .navbar .dropdown:hover > .dropdown-menu.show {
+  .navbar .dropdown:hover > .dropdown-menu, .navbar .dropdown:hover > .dropdown-menu.show {
     display: block;
   }
 
-  .navbar .dropdown-menu > li:hover > .dropdown-menu,
-  .navbar .dropdown-menu > li:hover > .dropdown-menu.show {
+  .navbar .dropdown-menu > li:hover > .dropdown-menu, .navbar .dropdown-menu > li:hover > .dropdown-menu.show {
     display: block;
   }
 }
 
 /*Caret*/
 
-.dropdown > a:after,
-.subdropdown > a:after {
+.dropdown > a:after, .subdropdown > a:after {
   content: "";
   display: inline-block;
-  width: 0.8rem;
-  height: 0.8rem;
+  width: .8rem;
+  height: .8rem;
   background-repeat: no-repeat;
-  background-size: 0.8rem 0.8rem;
+  background-size: .8rem .8rem;
   vertical-align: middle;
-  margin-left: 0.4rem;
-  margin-top: 0.2rem;
+  margin-left: .4rem;
+  margin-top: .2rem;
   float: right;
 }
 
@@ -2704,18 +2628,16 @@ input.tab:checked + .tab-content,
 
 /*side area*/
 
-.side-area,
-.side-area .back-menu {
+.side-area ,.side-area .back-menu {
   visibility: hidden;
 }
 
-.side-area.show,
-.side-area.show .back-menu {
+.side-area.show, .side-area.show .back-menu {
   visibility: visible;
 }
 
 .side-menu {
-  right: -16rem;
+  right:-16rem;
   transition: all 0.5s ease;
 }
 
@@ -2727,7 +2649,7 @@ input.tab:checked + .tab-content,
 
 .bg-gradient-cover {
   background-color: transparent;
-  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.92));
+  background-image: linear-gradient(transparent,rgba(0,0,0,0.92));
   background-position-y: -1px;
 }
 
@@ -2763,7 +2685,7 @@ input.tab:checked + .tab-content,
 
 .hover-img:hover img {
   filter: brightness(103%) contrast(103%);
-  opacity: 0.99;
+  opacity:.99;
 }
 
 /*splide*/
@@ -2773,10 +2695,10 @@ input.tab:checked + .tab-content,
   height: auto;
 }
 
-/* // splidejs */
+// splidejs
 .splide__container {
   box-sizing: border-box;
-  position: relative;
+  position: relative
 }
 
 .splide__list {
@@ -2784,11 +2706,11 @@ input.tab:checked + .tab-content,
   display: flex;
   height: 100%;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0 !important
 }
 
 .splide.is-initialized:not(.is-active) .splide__list {
-  display: block;
+  display: block
 }
 
 .splide__pagination {
@@ -2797,7 +2719,7 @@ input.tab:checked + .tab-content,
   flex-wrap: wrap;
   justify-content: center;
   margin: 0;
-  pointer-events: none;
+  pointer-events: none
 }
 
 .splide__pagination li {
@@ -2805,21 +2727,21 @@ input.tab:checked + .tab-content,
   line-height: 1;
   list-style-type: none;
   margin: 0;
-  pointer-events: auto;
+  pointer-events: auto
 }
 
 .splide__progress__bar {
-  width: 0;
+  width: 0
 }
 
 .splide {
   position: relative;
-  visibility: hidden;
+  visibility: hidden
 }
 
 .splide.is-initialized,
 .splide.is-rendered {
-  visibility: visible;
+  visibility: visible
 }
 
 .splide__slide {
@@ -2828,11 +2750,11 @@ input.tab:checked + .tab-content,
   flex-shrink: 0;
   list-style-type: none !important;
   margin: 0;
-  position: relative;
+  position: relative
 }
 
 .splide__slide img {
-  vertical-align: bottom;
+  vertical-align: bottom
 }
 
 .splide__spinner {
@@ -2849,7 +2771,7 @@ input.tab:checked + .tab-content,
   position: absolute;
   right: 0;
   top: 0;
-  width: 20px;
+  width: 20px
 }
 
 .splide__sr {
@@ -2860,31 +2782,31 @@ input.tab:checked + .tab-content,
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px;
+  width: 1px
 }
 
 .splide__toggle.is-active .splide__toggle__play,
 .splide__toggle__pause {
-  display: none;
+  display: none
 }
 
 .splide__toggle.is-active .splide__toggle__pause {
-  display: inline;
+  display: inline
 }
 
 .splide__track {
   overflow: hidden;
   position: relative;
-  z-index: 0;
+  z-index: 0
 }
 
 @keyframes splide-loading {
   0% {
-    transform: rotate(0);
+    transform: rotate(0)
   }
 
   to {
-    transform: rotate(1turn);
+    transform: rotate(1turn)
   }
 }
 
@@ -2892,33 +2814,33 @@ input.tab:checked + .tab-content,
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  user-select: none;
+       user-select: none
 }
 
-.splide__track--fade > .splide__list {
-  display: block;
+.splide__track--fade>.splide__list {
+  display: block
 }
 
-.splide__track--fade > .splide__list > .splide__slide {
+.splide__track--fade>.splide__list>.splide__slide {
   left: 0;
   opacity: 0;
   position: absolute;
   top: 0;
-  z-index: 0;
+  z-index: 0
 }
 
-.splide__track--fade > .splide__list > .splide__slide.is-active {
+.splide__track--fade>.splide__list>.splide__slide.is-active {
   opacity: 1;
   position: relative;
-  z-index: 1;
+  z-index: 1
 }
 
 .splide--rtl {
-  direction: rtl;
+  direction: rtl
 }
 
-.splide__track--ttb > .splide__list {
-  display: block;
+.splide__track--ttb>.splide__list {
+  display: block
 }
 
 .splide__arrow {
@@ -2930,58 +2852,58 @@ input.tab:checked + .tab-content,
   display: flex;
   height: 2em;
   justify-content: center;
-  opacity: 0.7;
+  opacity: .7;
   padding: 0;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 2em;
-  z-index: 1;
+  z-index: 1
 }
 
 .splide__arrow svg {
   fill: #000;
   height: 1.2em;
-  width: 1.2em;
+  width: 1.2em
 }
 
 .splide__arrow:hover:not(:disabled) {
-  opacity: 0.9;
+  opacity: .9
 }
 
 .splide__arrow:disabled {
-  opacity: 0.3;
+  opacity: .3
 }
 
 .splide__arrow:focus-visible {
   outline: 3px solid #0bf;
-  outline-offset: 3px;
+  outline-offset: 3px
 }
 
 .splide__arrow--prev {
-  left: 1em;
+  left: 1em
 }
 
 .splide__arrow--prev svg {
-  transform: scaleX(-1);
+  transform: scaleX(-1)
 }
 
 .splide__arrow--next {
-  right: 1em;
+  right: 1em
 }
 
 .splide.is-focus-in .splide__arrow:focus {
   outline: 3px solid #0bf;
-  outline-offset: 3px;
+  outline-offset: 3px
 }
 
 .splide__pagination {
-  bottom: 0.5em;
+  bottom: .5em;
   left: 0;
   padding: 0 1em;
   position: absolute;
   right: 0;
-  z-index: 1;
+  z-index: 1
 }
 
 .splide__pagination__page {
@@ -2991,138 +2913,138 @@ input.tab:checked + .tab-content,
   display: inline-block;
   height: 8px;
   margin: 3px;
-  opacity: 0.7;
+  opacity: .7;
   padding: 0;
   position: relative;
-  transition: transform 0.2s linear;
-  width: 8px;
+  transition: transform .2s linear;
+  width: 8px
 }
 
 .splide__pagination__page.is-active {
   background: #fff;
   transform: scale(1.4);
-  z-index: 1;
+  z-index: 1
 }
 
 .splide__pagination__page:hover {
   cursor: pointer;
-  opacity: 0.9;
+  opacity: .9
 }
 
 .splide__pagination__page:focus-visible {
   outline: 3px solid #0bf;
-  outline-offset: 3px;
+  outline-offset: 3px
 }
 
 .splide.is-focus-in .splide__pagination__page:focus {
   outline: 3px solid #0bf;
-  outline-offset: 3px;
+  outline-offset: 3px
 }
 
 .splide__progress__bar {
   background: #ccc;
-  height: 3px;
+  height: 3px
 }
 
 .splide__slide {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent
 }
 
 .splide__slide:focus {
-  outline: 0;
+  outline: 0
 }
 
-@supports (outline-offset: -3px) {
+@supports(outline-offset:-3px) {
   .splide__slide:focus-visible {
     outline: 3px solid #0bf;
-    outline-offset: -3px;
+    outline-offset: -3px
   }
 }
 
-@media screen and (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast:none) {
   .splide__slide:focus-visible {
-    border: 3px solid #0bf;
+    border: 3px solid #0bf
   }
 }
 
-@supports (outline-offset: -3px) {
+@supports(outline-offset:-3px) {
   .splide.is-focus-in .splide__slide:focus {
     outline: 3px solid #0bf;
-    outline-offset: -3px;
+    outline-offset: -3px
   }
 }
 
-@media screen and (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast:none) {
   .splide.is-focus-in .splide__slide:focus {
-    border: 3px solid #0bf;
+    border: 3px solid #0bf
   }
 
-  .splide.is-focus-in .splide__track > .splide__list > .splide__slide:focus {
-    border-color: #0bf;
+  .splide.is-focus-in .splide__track>.splide__list>.splide__slide:focus {
+    border-color: #0bf
   }
 }
 
 .splide__toggle {
-  cursor: pointer;
+  cursor: pointer
 }
 
 .splide__toggle:focus-visible {
   outline: 3px solid #0bf;
-  outline-offset: 3px;
+  outline-offset: 3px
 }
 
 .splide.is-focus-in .splide__toggle:focus {
   outline: 3px solid #0bf;
-  outline-offset: 3px;
+  outline-offset: 3px
 }
 
-.splide__track--nav > .splide__list > .splide__slide {
+.splide__track--nav>.splide__list>.splide__slide {
   border: 3px solid transparent;
-  cursor: pointer;
+  cursor: pointer
 }
 
-.splide__track--nav > .splide__list > .splide__slide.is-active img {
-  border: 3px solid #ffffff;
+.splide__track--nav>.splide__list>.splide__slide.is-active img{
+  border: 3px solid #ffffff
 }
 
 .splide__arrows--rtl .splide__arrow--prev {
   left: auto;
-  right: 1em;
+  right: 1em
 }
 
 .splide__arrows--rtl .splide__arrow--prev svg {
-  transform: scaleX(1);
+  transform: scaleX(1)
 }
 
 .splide__arrows--rtl .splide__arrow--next {
   left: 1em;
-  right: auto;
+  right: auto
 }
 
 .splide__arrows--rtl .splide__arrow--next svg {
-  transform: scaleX(-1);
+  transform: scaleX(-1)
 }
 
 .splide__arrows--ttb .splide__arrow {
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%)
 }
 
 .splide__arrows--ttb .splide__arrow--prev {
-  top: 1em;
+  top: 1em
 }
 
 .splide__arrows--ttb .splide__arrow--prev svg {
-  transform: rotate(-90deg);
+  transform: rotate(-90deg)
 }
 
 .splide__arrows--ttb .splide__arrow--next {
   bottom: 1em;
-  top: auto;
+  top: auto
 }
 
 .splide__arrows--ttb .splide__arrow--next svg {
-  transform: rotate(90deg);
+  transform: rotate(90deg)
 }
 
 .splide__pagination--ttb {
@@ -3131,8 +3053,8 @@ input.tab:checked + .tab-content,
   flex-direction: column;
   left: auto;
   padding: 1em 0;
-  right: 0.5em;
-  top: 0;
+  right: .5em;
+  top: 0
 }
 
 .gal-cover {
@@ -3143,22 +3065,22 @@ input.tab:checked + .tab-content,
   right: 0;
 }
 
-/* // splide videos */
+// splide videos
 .splide__slide--has-video {
-  cursor: pointer;
+  cursor: pointer
 }
 
 .splide__slide--has-video:hover .splide__video__play {
-  opacity: 1;
+  opacity: 1
 }
 
 .splide__slide__container--has-video {
   cursor: pointer;
-  position: relative;
+  position: relative
 }
 
 .splide__slide__container--has-video:hover .splide__video__play {
-  opacity: 1;
+  opacity: 1
 }
 
 .splide__video {
@@ -3166,20 +3088,20 @@ input.tab:checked + .tab-content,
   left: 0;
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 100%
 }
 
 .splide__video__wrapper {
   background: #000;
   height: inherit;
-  width: inherit;
+  width: inherit
 }
 
 .splide__video__wrapper div,
 .splide__video__wrapper iframe,
 .splide__video__wrapper video {
   height: 100%;
-  width: 100%;
+  width: 100%
 }
 
 .splide__video__play {
@@ -3192,12 +3114,12 @@ input.tab:checked + .tab-content,
   height: 80px;
   justify-content: center;
   left: 50%;
-  opacity: 0.7;
+  opacity: .7;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: opacity 0.1s linear;
-  width: 80px;
+  transition: opacity .1s linear;
+  width: 80px
 }
 
 .splide__video__play:after {
@@ -3206,10 +3128,10 @@ input.tab:checked + .tab-content,
   border-width: 9px 0 9px 17px;
   content: "";
   display: inline-block;
-  margin-left: 4px;
+  margin-left: 4px
 }
 
-/* // glightbox */
+// glightbox
 .glightbox-container {
   width: 100%;
   height: 100%;
@@ -3491,10 +3413,10 @@ input.tab:checked + .tab-content,
   max-height: 78vh;
   overflow: auto !important;
   background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0,
-    rgba(0, 0, 0, 0.75) 100%
-  );
+        to bottom,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0.75) 100%
+    );
   transition: opacity 0.3s linear;
   padding-bottom: 50px;
 }
@@ -3867,7 +3789,7 @@ iframe.wait-autoplay {
   }
 
   .glightbox-container .ginner-container.desc-top .gslide-image,
-  .glightbox-container .ginner-container.desc-top .gslide-image img {
+    .glightbox-container .ginner-container.desc-top .gslide-image img {
     order: 1;
   }
 
@@ -3901,7 +3823,7 @@ iframe.wait-autoplay {
   }
 
   .gslide-description.description-left,
-  .gslide-description.description-right {
+    .gslide-description.description-right {
     max-width: 275px;
   }
 
@@ -3918,21 +3840,21 @@ iframe.wait-autoplay {
   }
 
   .glightbox-clean .description-left .gdesc-inner,
-  .glightbox-clean .description-right .gdesc-inner {
+    .glightbox-clean .description-right .gdesc-inner {
     position: absolute;
     height: 100%;
     overflow-y: auto;
   }
 
   .glightbox-clean .gclose,
-  .glightbox-clean .gnext,
-  .glightbox-clean .gprev {
+    .glightbox-clean .gnext,
+    .glightbox-clean .gprev {
     background-color: rgba(0, 0, 0, 0.32);
   }
 
   .glightbox-clean .gclose:hover,
-  .glightbox-clean .gnext:hover,
-  .glightbox-clean .gprev:hover {
+    .glightbox-clean .gnext:hover,
+    .glightbox-clean .gprev:hover {
     background-color: rgba(0, 0, 0, 0.7);
   }
 
@@ -4031,12 +3953,9 @@ iframe.wait-autoplay {
 }
 
 .hover\:ring-0:hover {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
-    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
-    calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
-    var(--tw-shadow, 0 0 #0000);
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
 .focus\:border-gray-400:focus {
@@ -4050,12 +3969,9 @@ iframe.wait-autoplay {
 }
 
 .focus\:ring-0:focus {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
-    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
-    calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
-    var(--tw-shadow, 0 0 #0000);
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
 :is(.dark .dark\:border-gray-700) {
@@ -4137,11 +4053,19 @@ iframe.wait-autoplay {
   .md\:block {
     display: block;
   }
+
+  .md\:w-1\/4 {
+    width: 25%;
+  }
 }
 
 @media (min-width: 1024px) {
   .lg\:order-last {
     order: 9999;
+  }
+
+  .lg\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .lg\:flex {

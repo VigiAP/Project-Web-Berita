@@ -48,7 +48,7 @@ class Accounts extends BaseController
                         'logged_in' => true
                     ];
                     $this->session->set($data);
-                    return redirect()->to('/Home');
+                    return redirect()->to('/');
                 endforeach;
             } else {
                 session()->setFlashdata('message', 'Username atau Password salah');
