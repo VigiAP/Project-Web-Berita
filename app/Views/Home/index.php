@@ -5,16 +5,7 @@
   <!-- =========={ MAIN }==========  -->
   <main id="content">
     <!-- advertisement -->
-    <div class="bg-gray-50 py-4 hidden">
-      <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
-        <div class="mx-auto table text-center text-sm">
-          <a class="uppercase" href="#">Advertisement</a>
-          <a href="#">
-            <img src="<?= base_url(' src/img/ads/ads_728.jpg'); ?>" alt="advertisement area">
-          </a>
-        </div>
-      </div>
-    </div>
+  
     <!-- slider news -->
     <div class="relative bg-gray-50" style="background-image: url("<? base_url('src/img/bg.jpg')?>");background-size: cover;background-position: center center;background-attachment: fixed">
       <div class="bg-black bg-opacity-70">

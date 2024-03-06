@@ -133,6 +133,6 @@ class Accounts extends BaseController
 
     public function logout() {
         $this->session->destroy();
-        return redirect()->to('/Accounts');
+        return redirect()->to('/');
     }
 }
