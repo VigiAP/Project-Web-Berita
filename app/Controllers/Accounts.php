@@ -69,14 +69,14 @@ class Accounts extends BaseController
 
     public function registerPost() {
         $username = $this->request->getVar('username');
-        $password = $this->request->getVar('pw');
+        $password = $this->request->getVar('password');
         $phone_number = $this->request->getVar('phone_no');
 
         $rules = [
             [
                 'username' => 'required|is_unique[tbl_users.username]',
                 'phone_no' => 'required',
-                'pw' => 'required',
+                'password' => 'required',
             ],
             [
                 'username' => [
@@ -86,7 +86,7 @@ class Accounts extends BaseController
                 'phone_no' => [
                     'required' => 'nomor hp harus diisi',
                 ],
-                'pw' => [
+                'password' => [
                     'required' => 'password harus diisi',
                 ],
             ]
