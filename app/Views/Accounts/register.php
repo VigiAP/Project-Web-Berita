@@ -9,13 +9,15 @@
 </head>
 
 <body>
-    <?php if(session()->getFlashdata()) {?>
-        <?php $error = session()->getFlashdata()['_ci_validation_errors'];?>
-        <div class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4 text-center" role="alert">
-            <?php foreach($error as $key => $value): ?>
-                    <p class="font-bold"><?= $value;?></p>
-            <?php endforeach;?>
-         </div>
+    <?php if(session('validation')) {?>
+         <?php if(session('validation')->getErrors()) {?>
+            <?php $error = session('validation')->getErrors();?>
+            <div class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4 text-center" role="alert">
+                <?php foreach($error as $key => $value): ?>
+                        <p class="font-bold"><?= $value;?></p>
+                <?php endforeach;?>
+            </div>
+        <?php }?>
     <?php }?>
 
                    
