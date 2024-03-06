@@ -87,7 +87,7 @@ class Accounts extends BaseController
                     'required' => '{field} harus diisi',
                 ],
                 'phone_no' => [
-                    'required' => '{field} harus diisi',
+                    'required' => 'Nomor HP harus diisi',
                 ]
             ]
         ];
