@@ -41,7 +41,7 @@
                     <label class="label -mt-2">
                         <span class="text-base label-text">Password</span>
                     </label>
-                    <input type="password" placeholder="Password" class="w-full input input-bordered" name="password" />
+                    <input type="password" placeholder="Password" class="w-full input input-bordered" name="pw" />
                 </div>
                 <div class="mt-5">
                     <button class="btn btn-block border border-gray-400">Register</button>

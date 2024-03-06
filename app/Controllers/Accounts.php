@@ -69,26 +69,26 @@ class Accounts extends BaseController
 
     public function registerPost() {
         $username = $this->request->getVar('username');
-        $password = $this->request->getVar('password');
+        $password = $this->request->getVar('pw');
         $phone_number = $this->request->getVar('phone_no');
 
         $rules = [
             [
                 'username' => 'required|is_unique[tbl_users.username]',
-                'password' => 'required',
                 'phone_no' => 'required',
+                'pw' => 'required',
             ],
             [
                 'username' => [
                     'required' => '{field} harus diisi',
                     'is_unique' => '{field} sudah terdaftar',
                 ],
-                'password' => [
-                    'required' => '{field} harus diisi',
-                ],
                 'phone_no' => [
-                    'required' => 'Nomor HP harus diisi',
-                ]
+                    'required' => 'nomor hp harus diisi',
+                ],
+                'pw' => [
+                    'required' => 'password harus diisi',
+                ],
             ]
         ];
 
