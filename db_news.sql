@@ -27,19 +27,20 @@ CREATE TABLE `tbl_users` (
   `name` varchar(150) NOT NULL,
   `phone_no` varchar(13) NOT NULL,
   `image` varchar(50) NOT NULL,
-  `role` enum('admin','author','pengunjung') NOT NULL DEFAULT 'pengunjung',
+  `role` enum('admin','author','pengunjung','visitor','editor') NOT NULL DEFAULT 'visitor',
   `status` enum('1','0') NOT NULL DEFAULT '1',
-  `gender` enum('L','P') NOT NULL DEFAULT 'L',
   `otp` varchar(5) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `tbl_users` */
 
-insert  into `tbl_users`(`user_id`,`username`,`password`,`name`,`phone_no`,`image`,`role`,`status`,`gender`,`otp`,`created_at`,`updated_at`) values 
-(11,'admin','$2y$10$TC6h.E/FaCXq5zflI9/Mnefbvu61diYV5jND3sBFiF4m7KsW7UqF.','Yon','08966801778','','admin','1','L',NULL,'2024-03-05 13:54:19','2024-03-05 13:57:41');
+insert  into `tbl_users`(`user_id`,`username`,`password`,`name`,`phone_no`,`image`,`role`,`status`,`otp`,`created_at`,`updated_at`) values 
+(11,'admin','$2y$10$TC6h.E/FaCXq5zflI9/Mnefbvu61diYV5jND3sBFiF4m7KsW7UqF.','Yon','08966801778','','admin','1',NULL,'2024-03-05 13:54:19','2024-03-05 13:57:41'),
+(32,'author','$2y$10$4TXhpVxCToBFA.OX7WwYOunofxxiEC2p0tDJ4InyimOS5T8As0O3e','author','089668017776','','author','1',NULL,'2024-03-17 23:40:13','2024-03-17 23:40:13'),
+(33,'visitor','$2y$10$3jmoe5ErGvqabUrIUG1RJeSqquY5bWroIk4CjHmKT3KyRn8.lTwzS','','089667961116','','visitor','1',NULL,'2024-03-17 23:40:59','2024-03-17 23:40:59');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
