@@ -9,10 +9,18 @@ class Home extends BaseController
         if(!session()->get('logged_in')) {
             return redirect()->to('/Home/homePage');
         }
-        $data = [
+
+        if(session()->get('jenisLog') == 'visitor') {
+            $data = [
             'title' => 'Home | Pojok Berita',
-        ];
-        echo view('/Home/index', $data);
+            ];
+            echo view('/Home/index', $data);
+        } else {
+            $data = [
+            'title' => 'Home | Pojok Berita',
+            ];
+            echo view('/Dashboard/Home/index', $data);
+        }
     }
 
     public function homePage()
