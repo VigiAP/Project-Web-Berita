@@ -142,4 +142,22 @@ class Admin extends BaseController
             return redirect()->back()->with('error', 'Failed to delete user.');
         }
     }
+
+    public function profile()
+    {
+        $data = [
+            'title' => 'Profile | Pojok Berita',
+        ];
+
+        echo view('/Dashboard/Admin/profile', $data);
+    }
+
+    public function edit_profile()
+    {
+        $data = [
+            'title' => 'Edit Profile | Pojok Berita',
+        ];
+
+        echo view('/Dashboard/Admin/edit_profile', $data);
+    }
 }
