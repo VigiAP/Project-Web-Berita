@@ -135,4 +135,57 @@ class Accounts extends BaseController
         $this->session->destroy();
         return redirect()->to('/Accounts');
     }
+
+      public function profile()
+    {
+        $data = [
+            'title' => 'Profile | Pojok Berita',
+            'user' => $this->userModel->getDataUsers(session()->get('username'))
+        ];
+
+        echo view('/Accounts/profile', $data);
+    }
+
+    public function edit_profile()
+    {
+        $data = [
+            'title' => 'Edit Profile | Pojok Berita',
+            'user' => $this->userModel->getDataUsers(session()->get('username'))
+        ];
+
+        echo view('/Accounts/edit_profile', $data);
+    }
+
+    public function update_profile()
+    {
+            $id = $this->request->getVar('id');
+            $username = $this->request->getVar('username');
+            $name = $this->request->getVar('name');
+            $phone_no = $this->request->getVar('phone_no');
+
+            $rules = [
+                'name' => 'required',
+                'phone_no' => 'required',
+                'username' => 'required',
+            ];
+
+            $data = [
+                'name' => $name,
+                'username' => $username,
+                'phone_no' => $phone_no,
+            ];
+
+            $this->validation->setRules($rules);
+            if ($this->validation->run($data)) {
+                $validatedData = $this->validation->getValidated();
+                if ($this->userModel->editData($validatedData, $id)) {
+                    return redirect()->back()->with('success', 'User data saved successfully.');
+                } else {
+                    return redirect()->back()->with('error', 'User data failed to save.');
+                }
+            } else {
+                return redirect()->to('Accounts/edit_profile')->withInput()->with('validation', $this->validation);
+            }
+        
+    }
 }

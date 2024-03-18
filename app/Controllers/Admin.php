@@ -80,7 +80,6 @@ class Admin extends BaseController
                 return redirect()->back()->with('success', 'User data saved successfully.');
             } else {
                 return redirect()->back()->with('error', 'User data failed to save.');
-            
             }
         }
     }
@@ -142,4 +141,5 @@ class Admin extends BaseController
             return redirect()->back()->with('error', 'Failed to delete user.');
         }
     }
+
 }

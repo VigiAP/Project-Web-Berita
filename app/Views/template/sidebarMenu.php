@@ -8,6 +8,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('Accounts/profile'); ?>" id="sidebar-nav" class="nav-link" style="border: 1px solid gray;">
+                    <i class="fa-solid fa-address-card ml-1"></i>
+                        <p>
+                            Profile
+                        </p>
+                    </a>
+                </li>
                 <?php
                     switch (session()->get('jenisLog')) {
                         case 'admin':

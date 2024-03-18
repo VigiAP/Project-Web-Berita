@@ -48,4 +48,9 @@ class UserModel extends Model
     {
         return ($this->builder->delete(['user_id' => $id])) ? 1 : 0;
     }
+
+    public function editData($data, $id)
+    {
+        return $this->builder->where('user_id', $id)->update($data);
+    }
 }

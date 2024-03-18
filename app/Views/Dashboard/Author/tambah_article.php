@@ -1,4 +1,4 @@
-<?= $this->extend('/template/t_author'); ?>
+<?= $this->extend('/template/t_main'); ?>
 <?= $this->section('konten'); ?>
 
 <section class="content">

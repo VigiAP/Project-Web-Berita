@@ -18,9 +18,7 @@
                 <?php endforeach;?>
             </div>
         <?php }?>
-    <?php }?>
-
-                   
+    <?php }?>   
     <div class="relative flex flex-col items-center justify-center h-screen overflow-hidden ">
         <div class="w-full  p-6 bg-base-300 border border-gray-400 rounded-xl shadow-md border-top lg:max-w-lg">
             <h1 class="text-3xl font-semibold text-center text-gray-400">Register</h1>
