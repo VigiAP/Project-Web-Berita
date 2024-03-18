@@ -13,6 +13,33 @@ class Author extends BaseController
         echo view('/Dashboard/Author/index', $data);
     }
 
+    public function profile()
+    {
+        $data = [
+            'title' => 'Profile | Pojok Berita',
+        ];
+
+        echo view('/Dashboard/Author/profile', $data);
+    }
+    
+    public function edit_profile()
+    {
+        $data = [
+            'title' => 'Edit Profile | Pojok Berita',
+        ];
+
+        echo view('/Dashboard/Author/edit_profile', $data);
+    }
+
+    public function comments()
+    {
+        $data = [
+            'title' => 'Comments | Pojok Berita',
+        ];
+
+        echo view('/Dashboard/Author/comments', $data);
+    }
+
     public function article()
     {
         $data = [
@@ -30,4 +57,5 @@ class Author extends BaseController
 
         echo view('/Dashboard/Author/tambah_article', $data);
     }
+
 }
