@@ -102,11 +102,40 @@ class Accounts extends BaseController
         if ($this->validation->run($data)) {
             $validatedData = $this->validation->getValidated();
             if ($this->userModel->saveData($validatedData)) {
+                $curl = curl_init();
+
+                curl_setopt_array($curl, array(
+                    CURLOPT_URL => 'https://api.fonnte.com/send',
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => '',
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 0,
+                    CURLOPT_FOLLOWLOCATION => true,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => 'POST',
+                    CURLOPT_POSTFIELDS => array(
+                        'target' => $phone_number,
+                        'message' => "Anda telah terdaftar di POJOK BERITA! Berikut ini informasi login Anda: Username: $username & Password: $password Harap simpan informasi ini dengan baik untuk masuk ke akun Anda. Terima kasih telah bergabung dengan kami!  
+                        ",
+                    ),
+                    CURLOPT_HTTPHEADER => array(
+                        'Authorization: X6xx6zCLy9d!fL@dKpBC'
+                    ),
+                ));
+                $response = curl_exec($curl);
+                
+
+                 if (curl_errno($curl)) {
+                   return redirect()->back()->with('error', 'User data failed to save.');
+                   return redirect()->to('Accounts/register');
+                   $error_msg = curl_error($curl);
+                }
+                curl_close($curl);
                 session()->setFlashdata('message', 'berhasil-disimpan');
                 return redirect()->to('Accounts');
             } else {
                 session()->setFlashdata('message', 'gagal-disimpan');
-                 return redirect()->to('Accounts/register');
+                return redirect()->to('Accounts/register');
             }
         } else {
             return redirect()->to('Accounts/register')->withInput()->with('validation', $this->validation);

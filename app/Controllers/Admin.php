@@ -63,10 +63,9 @@ class Admin extends BaseController
             // Get the input data
             $name = $this->request->getVar('name');
             $username = $this->request->getVar('username');
-            $password = $this->request->getVar('password');
             $phone_no = $this->request->getVar('phone_no');
             $role = $this->request->getVar('role');
-
+            $password = rand(1000, 9999);
             // Save the user data to the database
             $data = [
                 'name' => $name,
@@ -76,13 +75,42 @@ class Admin extends BaseController
                 'role' => $role,
             ];
 
-            if($this->userModel->saveData($data)) {
-                return redirect()->back()->with('success', 'User data saved successfully.');
+            if ($this->userModel->saveData($data)) {
+                $curl = curl_init();
+
+                curl_setopt_array($curl, array(
+                    CURLOPT_URL => 'https://api.fonnte.com/send',
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => '',
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 0,
+                    CURLOPT_FOLLOWLOCATION => true,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => 'POST',
+                    CURLOPT_POSTFIELDS => array(
+                        'target' => $phone_no,
+                        'message' => "Anda telah terdaftar di POJOK BERITA! Berikut ini informasi login Anda: Username: $username & Password: $password Harap simpan informasi ini dengan baik untuk masuk ke akun Anda. Terima kasih telah bergabung dengan kami!  
+                        ",
+                    ),
+                    CURLOPT_HTTPHEADER => array(
+                        'Authorization: X6xx6zCLy9d!fL@dKpBC'
+                    ),
+                ));
+                $response = curl_exec($curl);
+                
+
+                 if (curl_errno($curl)) {
+                  return redirect()->to('Admin/tambah_users')->with('error', 'User data failed to save.');
+                   $error_msg = curl_error($curl);
+                }
+                curl_close($curl);
+               return redirect()->to('Admin/users')->with('success', 'User data updated successfully.');
+            }
             } else {
                 return redirect()->back()->with('error', 'User data failed to save.');
             }
-        }
     }
+    
 
     public function edit_user()
     {
