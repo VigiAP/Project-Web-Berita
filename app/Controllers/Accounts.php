@@ -179,7 +179,7 @@ class Accounts extends BaseController
             if ($this->validation->run($data)) {
                 $validatedData = $this->validation->getValidated();
                 if ($this->userModel->editData($validatedData, $id)) {
-                    return redirect()->back()->with('success', 'User data saved successfully.');
+                    return redirect()->to('Accounts/profile')->with('success', 'User data saved successfully.');
                 } else {
                     return redirect()->back()->with('error', 'User data failed to save.');
                 }
