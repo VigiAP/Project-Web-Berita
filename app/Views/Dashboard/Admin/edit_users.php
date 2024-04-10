@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="card-body">
             <form action="<?= base_url('admin/update_user'); ?>" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="id" class="form-control" placeholder="Username ..." value="<?= $user[0]['user_id']; ?>">
+            <input type="hidden" name="id" class="form-control" placeholder="Username ..." value="<?= $user[0]['id_user']; ?>">
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" name="username" class="form-control" placeholder="Username ..." value="<?= $user[0]['username']; ?>">

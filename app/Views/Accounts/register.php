@@ -1,24 +1,5 @@
-<!DOCTYPE html>
-<html  lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $title; ?></title>
-    <link rel="stylesheet" href="<?= base_url('css/styles.css'); ?>">
-</head>
-
-<body>
-    <?php if(session('validation')) {?>
-         <?php if(session('validation')->getErrors()) {?>
-            <?php $error = session('validation')->getErrors();?>
-            <div class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4 text-center" role="alert">
-                <?php foreach($error as $key => $value): ?>
-                        <p class="font-bold"><?= $value;?></p>
-                <?php endforeach;?>
-            </div>
-        <?php }?>
-    <?php }?>   
+<?= $this->extend('template/t_login_reg_forgot'); ?>
+<?= $this->section('content'); ?>
     <div class="relative flex flex-col items-center justify-center h-screen overflow-hidden ">
         <div class="w-full  p-6 bg-base-300 border border-gray-400 rounded-xl shadow-md border-top lg:max-w-lg">
             <h1 class="text-3xl font-semibold text-center text-gray-400">Register</h1>
@@ -48,7 +29,4 @@
             </form>
         </div>
     </div>
-
-</body>
-
-</html>
+<?= $this->endSection(); ?>

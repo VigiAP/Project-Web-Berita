@@ -71,7 +71,8 @@
                         <hr>
                         <div class="row">
                             <div class="col-sm-12">
-                                <a class="btn btn-info " href="<?= base_url('Accounts/edit_profile'); ?>">Edit</a>
+                                <a class="btn btn-info " href="<?= base_url('Accounts/edit_profile'); ?>">Edit Profile</a>
+                                <a class="btn btn-success " href="<?= base_url('Accounts/change_password'); ?>">Ubah Password</a>
                             </div>
                         </div>
                     </div>

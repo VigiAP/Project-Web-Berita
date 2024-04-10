@@ -8,11 +8,11 @@ class UserModel extends Model
 {
 
     protected $table = 'tbl_users';
-    protected $primaryKey = 'user_id';
+    protected $primaryKey = 'id_user';
     protected $useAutoIncrement = true;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
-    protected $allowedFields = ['user_id', 'username', 'nama', 'password', 'role', 'image', 'status', 'phone_no'];
+    protected $allowedFields = ['id_user', 'username', 'nama', 'password', 'role', 'image', 'status', 'phone_no'];
     protected $builder;
     
     public function __construct()
@@ -24,14 +24,14 @@ class UserModel extends Model
     public function getDataUsers($username = false)
     {
         if ($username === false) {
-            return $this->builder->orderBy('user_id', 'DESC')->get()->getResultArray();
+            return $this->builder->orderBy('id_user', 'DESC')->get()->getResultArray();
         }
         return $this->builder->where('username', $username)->get()->getResultArray();
     }
 
     public function getDataUserById($id)
     {
-        return $this->builder->where('user_id', $id)->get()->getResultArray();
+        return $this->builder->where('id_user', $id)->get()->getResultArray();
     }
 
     public function saveData($data)
@@ -41,16 +41,26 @@ class UserModel extends Model
 
     public function updateData($data, $id)
     {
-        return $this->builder->where('user_id', $id)->update($data);
+        return $this->builder->where('id_user', $id)->update($data);
     }
 
     public function deleteData($id)
     {
-        return ($this->builder->delete(['user_id' => $id])) ? 1 : 0;
+        return ($this->builder->delete(['id_user' => $id])) ? 1 : 0;
     }
 
     public function editData($data, $id)
     {
-        return $this->builder->where('user_id', $id)->update($data);
+        return $this->builder->where('id_user', $id)->update($data);
+    }
+
+    public function updateOTP($otp, $username)
+    {
+        $this->builder->set('otp', $otp)->where('username', $username)->update();
+    }
+
+    public function updatePassUser($password, $username)
+    {
+        return $this->builder->set('password', $password)->where('username', $username)->update();
     }
 }

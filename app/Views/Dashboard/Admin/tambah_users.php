@@ -16,10 +16,10 @@
                     <label for="name">Nomor Hp</label>
                     <input type="text" name="phone_no" class="form-control" placeholder="Nomor Hp ..." value="<?= old('phone_no'); ?>">
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" name="password" class="form-control" placeholder="Password ..." value="<?= old('password'); ?>">
-                </div>
+                    <input type="password" name="password" class="form-control" placeholder="Password ..." value="">
+                </div> -->
                 <div class="form-group">
                     <label for="role">Role</label>
                     <select name="role" class="form-control">

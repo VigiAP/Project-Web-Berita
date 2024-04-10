@@ -25,7 +25,7 @@
     <!-- Summernote -->
     <link rel="stylesheet" href="<?= base_url('/plugins/summernote/summernote-bs4.min.css'); ?>">
 
-</head>
+   
 
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed dark-mode">
     <div class="wrapper">
@@ -73,6 +73,7 @@
                 <?php }?>
             <?php }?>
             <?= $this->renderSection('konten'); ?>
+            <div class="swal" data-swal="<?= session()->getFlashdata('message'); ?>"></div>
         </div>
         <footer class="main-footer">
             <strong>Copyright &copy; 2024.</strong>
@@ -117,6 +118,7 @@
     <script src="<?= base_url('plugins/bs-custom-file-input/bs-custom-file-input.min.js'); ?>"></script>
     <script src="<?= base_url('/plugins/summernote/summernote-bs4.min.js'); ?>"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
     <script>
         $(function() {
             $("#example1").DataTable({
@@ -141,49 +143,126 @@
             bsCustomFileInput.init();
         });
     </script>
+     <script>
+        // sweeta alert
+        // tambah, edit, hapus
+        const alert = $('.swal').data('swal');
+        if (alert == 'passwordChanged') {
+            confirmAlert("Berhasil", "Password berhasil diubah", "success");
+        } else if (alert == 'passwordNotSame') {
+            confirmAlert("Maaf", "Password tidak sama", "info");
+        } else {
+            let strArray = alert.split("-");
+            if (strArray[0] == 'berhasil') {
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Data berhasil ' + strArray[1],
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            } else if (strArray[0] == 'gagal') {
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Data gagal ' + strArray[1],
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
+        }
 
-    <script>
-        <?php if (session('success')) { ?>
+
+        function confirmAlert($title, $text, $icon) {
             Swal.fire({
-                icon: 'success',
-                title: 'sukses',
-                text: '<?php echo (session('success')) ?>',
-                showConfirmButton: false,
-                timer: 1500
-            })
-
-        <?php } ?>
-
-        <?php if (session('errors')) { ?>
-             dd(session('errors'));
-            Swal.fire({
-                icon: 'error',
-                title: "Gagal...",
-                text: '<?php  echo (session('success'))?>',
-                showConfirmButton: false,
-                timer: 1600
-            })
-        <?php } ?>
-
-
-        $(document).on('click', '#delete', function(e) {
-            var url = $(this).attr('url') 
+                title: $title,
+                text: $text,
+                icon: $icon
+            });
+        }
+        // hapus
+        $(document).on('click', '.btn-hapus', function(e) {
             e.preventDefault();
+            const href = $(this).attr('href');
             Swal.fire({
-                title: 'Anda yakin?',
-                text: 'Menghapus data ini',
-                icon: 'question',
+                title: 'Apakah anda yakin?',
+                icon: 'warning',
                 showCancelButton: true,
-                colorConfirmButton: '#d33',
-                confirmButtonText: 'Ya, Hapus',
-                cancelButtonText: 'Tidak'
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ya, hapus!',
+                cancelButtonText: 'Batal'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location = url;
+                    document.location.href = href;
                 }
             })
-        })
+        });
+        // end sweet alert 
     </script>
+    <script>
+    // sweeta alert
+    // tambah, edit, hapus
+    const swal = $('.swal').data('swal');
+    let strArray = swal.split("-");
+    if (strArray[0] == 'berhasil') {
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Data berhasil ' + strArray[1],
+        showConfirmButton: false,
+        timer: 1500
+      })
+    } else if (strArray[0] == 'gagal') {
+      Swal.fire({
+        position: 'top-end',
+        icon: 'error',
+        title: 'Data gagal ' + strArray[1],
+        showConfirmButton: false,
+        timer: 1500
+      })
+    }
+    // hapus
+    $(document).on('click', '.btn-hapus', function(e) {
+      e.preventDefault();
+      const href = $(this).attr('href');
+      Swal.fire({
+        title: 'Apakah anda yakin?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya, hapus!',
+        cancelButtonText: 'Batal'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          document.location.href = href;
+        }
+      })
+    });
+    // end sweet alert 
+    var select_box_element = document.querySelector('#select_box');
+
+    dselect(select_box_element, {
+      search: true
+    });
+    // script menampilkan foto hal add users
+    function displaySelectedImage(event, elementId) {
+      const selectedImage = document.getElementById(elementId);
+      const fileInput = event.target;
+
+      if (fileInput.files && fileInput.files[0]) {
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+          selectedImage.src = e.target.result;
+        };
+
+        reader.readAsDataURL(fileInput.files[0]);
+      }
+    }
+    // end script menampilkan foto hal add users
+  </script>
 
     <script>
         $(function() {

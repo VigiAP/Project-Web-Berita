@@ -31,8 +31,8 @@
                             <td><?= $user['phone_no']; ?></td>
                             <td><?= status($user['status']); ?></td>
                             <td>
-                                    <a href="<?= base_url('/admin/edit_user/' . $user['user_id']); ?>" class="btn btn-primary btn-sm"><i class="nav-icon fa fa-edit"></i> Edit</a>
-                                    <a href="<?= base_url('/admin/delete_user/' . $user['user_id']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this item?')"><i class="nav-icon fa fa-trash"></i> Delete</a>
+                                    <a href="<?= base_url('/admin/edit_user/' . $user['id_user']); ?>" class="btn btn-primary btn-sm"><i class="nav-icon fa fa-edit"></i> Edit</a>
+                                    <a href="<?= base_url('/admin/delete_user/' . $user['id_user']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this item?')"><i class="nav-icon fa fa-trash"></i> Delete</a>
                             </td>
                     <?php endforeach; ?>
                     </tbody>

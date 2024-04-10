@@ -33,7 +33,7 @@ class Accounts extends BaseController
 
         $user = $this->userModel->getDataUsers($username);
         if (!$user) {
-            session()->setFlashdata('message', 'Username atau Password salah');
+            session()->setFlashdata('message', 'infoMessage');
             return redirect()->to('Accounts');
         }
         foreach ($user as $result) :
@@ -41,7 +41,7 @@ class Accounts extends BaseController
             if (password_verify($password, $passdb) &&  $result["status"] == 1) {
                 foreach ($user as $result) :
                     $data = [
-                        'id'  => $result["user_id"],
+                        'id'  => $result["id_user"],
                         'jenisLog' => $result["role"],
                         'username' => $result["username"],
                         'name' => $result["name"],
@@ -51,7 +51,7 @@ class Accounts extends BaseController
                     return redirect()->to('/');
                 endforeach;
             } else {
-                session()->setFlashdata('message', 'Username atau Password salah');
+                session()->setFlashdata('message', 'infoMessage');
                 return redirect()->to('Accounts');
             }
         endforeach;
@@ -126,15 +126,15 @@ class Accounts extends BaseController
                 
 
                  if (curl_errno($curl)) {
-                   return redirect()->back()->with('error', 'User data failed to save.');
+                  session()->setFlashdata('message', 'registerFailde');
                    return redirect()->to('Accounts/register');
                    $error_msg = curl_error($curl);
                 }
                 curl_close($curl);
-                session()->setFlashdata('message', 'berhasil-disimpan');
+                session()->setFlashdata('message', 'registerSuccess');
                 return redirect()->to('Accounts');
             } else {
-                session()->setFlashdata('message', 'gagal-disimpan');
+                session()->setFlashdata('message', 'registerFailde');
                 return redirect()->to('Accounts/register');
             }
         } else {
@@ -149,6 +149,114 @@ class Accounts extends BaseController
         ];
 
         echo view('/accounts/forget', $data);
+    }
+
+    public function forgetPassPost()
+    {
+        $username = $this->request->getVar('username');
+        $noHp = $this->request->getVar('phone_no');
+
+        $data = $this->userModel->getDataUsers($username);
+        if (!$data) {
+            session()->setFlashdata('message', 'infoMessageForgetPass');
+            return redirect()->to('Accounts/forget');
+        }
+        $random = rand(10000, 99999);
+        foreach ($data as $user) {
+            if ($user["username"] == $username && $user["phone_no"] == $noHp) {
+
+                $this->userModel->updateOTP($random, $username);
+                $curl = curl_init();
+
+                curl_setopt_array($curl, array(
+                    CURLOPT_URL => 'https://api.fonnte.com/send',
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => '',
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 0,
+                    CURLOPT_FOLLOWLOCATION => true,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => 'POST',
+                    CURLOPT_POSTFIELDS => array(
+                        'target' => $noHp,
+                        'message' => "Kode OTP: ".$random." ",
+                    ),
+                    CURLOPT_HTTPHEADER => array(
+                        'Authorization: X6xx6zCLy9d!fL@dKpBC'
+                    ),
+                ));
+
+                $response = curl_exec($curl);
+                if (curl_errno($curl)) {
+                    $error_msg = curl_error($curl);
+                }
+                curl_close($curl);
+                
+                    $data = [
+                            'title' => 'Forget Password | Pojok Berita',
+                        ];
+
+                    echo view('/accounts/forgetToken', $data);
+            } else {
+                session()->setFlashdata('message', 'infoMessageForgetPass');
+                return redirect()->to('Accounts/forget');
+            }
+        }
+    }
+
+    public function updatePassword()
+    {
+        $username = $this->request->getVar('username');
+        $otp = $this->request->getVar('token');
+
+        $newPassword = password_hash($this->request->getVar('password'), PASSWORD_DEFAULT);
+
+        $data = $this->userModel->getDataUsers($username);
+        if ($data) {
+            foreach ($data as $user) {
+                if ($otp == $user['otp']) {
+                    if ($this->userModel->updatePassUser($newPassword, $username)) {
+                          session()->setFlashdata('message', 'infoMessageForgetPass3');
+                        return redirect()->to('Accounts');
+                    }
+                } else {
+                        session()->setFlashdata('message', 'infoMessageForgetPass2');
+                        return redirect()->to('Accounts/forgetToken');
+                }
+            }
+        } else {
+            session()->setFlashdata('message', 'infoMessageForgetPass2');
+            return redirect()->to('Pages/forgetPass');
+        }
+    }
+
+    public function changePassword()
+    {
+        $old_password = $this->request->getVar('old_password');
+        $new_password = $this->request->getVar('new_password');
+        $repeat_password = $this->request->getVar('repeat_password');
+        $id = $this->request->getVar('id');
+
+        $password = password_hash($new_password, PASSWORD_DEFAULT);
+
+        $data = $this->userModel->getDataUserById($id);
+        
+            foreach ($data as $user) {
+                if (password_verify($old_password,$user['password'])) {
+                    if ($new_password == $repeat_password) {
+                        $this->userModel->updatePassUser($password, $user['username']);
+                        session()->setFlashdata('message', 'passwordChanged');
+                        return redirect()->to('/Accounts/profile');
+                    } else {
+                        session()->setFlashdata('message', 'passwordNotSame');
+                        return redirect()->to('Accounts/change_password');
+                    }
+                } else {
+                    session()->setFlashdata('message', 'passwordNotSame');
+                    return redirect()->to('Accounts/change_password');
+                }
+            }
+        
     }
 
     public function forgetToken()
@@ -183,6 +291,16 @@ class Accounts extends BaseController
         ];
 
         echo view('/Accounts/edit_profile', $data);
+    }
+
+     public function change_password()
+    {
+        $data = [
+            'title' => 'Ubah Password | Pojok Berita',
+            'user' => $this->userModel->getDataUsers(session()->get('username'))
+        ];
+
+        echo view('/Accounts/change_password', $data);
     }
 
     public function update_profile()

@@ -32,7 +32,7 @@
                 <form action="<?= base_url('Accounts/update_profile'); ?>" method="post" enctype="multipart/form-data">
                     <div class="card">
                         <div class="card-body">
-                            <input type="hidden" name="id" class="form-control" value="<?=$user[0]['user_id']?>">
+                            <input type="hidden" name="id" class="form-control" value="<?=$user[0]['id_user']?>">
                             <div class="row mb-3">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Full Name</h6>

@@ -51,7 +51,6 @@ class Admin extends BaseController
             $rules = [
                 'name' => 'required',
                 'username' => 'required|is_unique[tbl_users.username]',
-                'password' => 'required',
                 'phone_no' => 'required',
                 'role' => 'required',
             ];
