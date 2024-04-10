@@ -13,6 +13,22 @@
                             value="<?= old('judul_berita'); ?>">
                     </div>
                     <div class="form-group">
+                            <label>Genre</label>
+                            <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+                            <select name="genre[]" class="form-control select2" multiple="multiple" placeholder="Genre ...">
+                                <option value="">testing</option>
+                                <option value="">testing</option>
+                                <option value="">testing</option>
+                            </select>
+                            <script>
+                                $(document).ready(function() {
+                                    $('.select2').select2({
+                                        placeholder: "Genre....",
+                                    });
+                                });
+                            </script>
+                        </div>
+                    <div class="form-group">
                         <label for="exampleInputFile">Gambar</label>
                         <div class="input-group">
                             <div class="custom-file">
