@@ -44,28 +44,8 @@ class CategoryModel extends Model
         return $this->builder->where('id_category', $id)->update($data);
     }
 
-    // public function updateData($data, $id)
-    // {
-    //     return $this->builder->where('id_user', $id)->update($data);
-    // }
-
     public function deleteData($id)
     {
         return ($this->builder->delete(['id_category' => $id])) ? 1 : 0;
     }
-
-    // public function editData($data, $id)
-    // {
-    //     return $this->builder->where('id_user', $id)->update($data);
-    // }
-
-    // public function updateOTP($otp, $username)
-    // {
-    //     $this->builder->set('otp', $otp)->where('username', $username)->update();
-    // }
-
-    // public function updatePassUser($password, $username)
-    // {
-    //     return $this->builder->set('password', $password)->where('username', $username)->update();
-    // }
 }

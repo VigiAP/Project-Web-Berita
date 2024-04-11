@@ -5,30 +5,14 @@
     <div class="container-fluid">
         <div class="card-body">
 
-            <form action="<?= base_url('author/save_article'); ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= base_url('author/simpan'); ?>" method="post" enctype="multipart/form-data">
                 <div class="card-body">
-                    <input type="hidden" name="id_user" class="form-control" placeholder="Judul ..." value="<?=session()->get('id')?>">
                     <div class="form-group">
                         <label for="judul">Judul</label>
-                        <input type="text" name="tiltle" class="form-control" placeholder="Judul ...">
+                        <input type="text" name="judul_berita" class="form-control" placeholder="Judul ..."
+                            value="<?= old('judul_berita'); ?>">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputFile">Gambar</label>
-                        <div class="input-group">
-                            <div class="custom-file">
-                                <input type="file" name="image" class="custom-file-input" id="exampleInputFile">
-                                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                            </div>
-                        </div>
-                    </div>
-                     
-                     
-                    <div class="form-group">
-                        <textarea id="summernote" name="content">
-
-                        </textarea>
-                    </div>
-                     <div class="form-group">
                         <label>Genre</label>
                         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
                         <select name="genre[]" class="form-control select2" multiple="multiple" placeholder="Genre ...">
@@ -44,6 +28,22 @@
                             });
                         </script>
                     </div>
+                    <div class="form-group">
+                        <label for="exampleInputFile">Gambar</label>
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" name="foto_berita" class="custom-file-input" id="exampleInputFile"
+                                    value="<?= old('foto_berita'); ?>">
+                                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="summernote" name="isi_berita">
+
+                        </textarea>
+                    </div>
+
                 </div>
                 <!-- /.card-body -->
 

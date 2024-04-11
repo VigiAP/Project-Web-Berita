@@ -27,25 +27,6 @@ class Author extends BaseController
 
         echo view('/Dashboard/Author/index', $data);
     }
-    // profile method
-    // public function profile()
-    // {
-    //     $data = [
-    //         'title' => 'Profile | Pojok Berita',
-    //     ];
-
-    //     echo view('/Dashboard/Author/profile', $data);
-    // }
-    
-    // public function edit_profile()
-    // {
-    //     $data = [
-    //         'title' => 'Edit Profile | Pojok Berita',
-    //     ];
-
-    //     echo view('/Dashboard/Author/edit_profile', $data);
-    // }
-    // end of profile method
     
     // article method
     public function article()
@@ -96,6 +77,16 @@ class Author extends BaseController
             $this->articleModel->saveData($data);
 
             return redirect()->to('Author/article')->with('success', 'User data saved successfully.');
+        }
+    }
+    
+    public function delete_article()
+    {
+        $id = $this->request->getUri()->getSegment(3);
+        if ($this->articleModel->deleteData($id)) {
+            return redirect()->back()->with('success', 'Article deleted successfully.');
+        } else {
+            return redirect()->back()->with('error', 'Failed to delete Article.');
         }
     }
     // end ofarticle method

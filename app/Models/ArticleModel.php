@@ -46,7 +46,7 @@ class ArticleModel extends Model
 
     public function deleteData($id)
     {
-        return ($this->builder->delete(['id_category' => $id])) ? 1 : 0;
+        return ($this->builder->delete(['id_article' => $id])) ? 1 : 0;
     }
 
     // public function editData($data, $id)

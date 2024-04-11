@@ -118,7 +118,12 @@
     <script src="<?= base_url('plugins/bs-custom-file-input/bs-custom-file-input.min.js'); ?>"></script>
     <script src="<?= base_url('/plugins/summernote/summernote-bs4.min.js'); ?>"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<<<<<<< HEAD
     
+=======
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+>>>>>>> 7cd6b097090b1fcb2c6d1398cb68a0f18b432e7e
     <script>
         $(function() {
             $("#example1").DataTable({
