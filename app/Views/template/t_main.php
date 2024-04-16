@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $title; ?></title>
 
+   
+
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
@@ -25,8 +27,20 @@
     <!-- Summernote -->
     <link rel="stylesheet" href="<?= base_url('/plugins/summernote/summernote-bs4.min.css'); ?>">
 
-   
-
+    <!-- multiple select -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> -->
+     <!-- my css -->
+    <link rel="stylesheet" href="<?=base_url()?>/css/myCss.css">
+    <style>
+        #choices-multiple-remove-button:hover {
+            color: black;
+        }
+    </style>
+</head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed dark-mode">
     <div class="wrapper">
         <!-- Navbar -->
@@ -49,8 +63,7 @@
                     <a href="<?= base_url('Accounts/logout'); ?>" class="nav-link" role="button" data-widget=""><i class="fa fa-sign-out"></i></a>
                 </li>
             </ul>
-        </nav>
-
+        </nav>;
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
@@ -149,6 +162,17 @@
         });
     </script>
      <script>
+        $(document).ready(function(){
+    
+            var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+                removeItemButton: true,
+                // maxItemCount:5,
+                // searchResultLimit:5,
+                // renderChoiceLimit:5
+            }); 
+            
+            
+        });
         // sweeta alert
         // tambah, edit, hapus
         const alert = $('.swal').data('swal');
@@ -156,7 +180,11 @@
             confirmAlert("Berhasil", "Password berhasil diubah", "success");
         } else if (alert == 'passwordNotSame') {
             confirmAlert("Maaf", "Password tidak sama", "info");
-        } else {
+        } else if (alert == 'success') {
+            confirmAlert("Berhasil", "Data berhasil disimpan", "success");
+        } else if (alert == 'gagal') {
+            confirmAlert("Gagal", "Data berhasil disimpan", "info");
+        }else {
             let strArray = alert.split("-");
             if (strArray[0] == 'berhasil') {
                 Swal.fire({

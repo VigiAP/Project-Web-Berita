@@ -11,6 +11,7 @@
   <title><?= $title; ?></title>
   <meta name="description" content="Tailwind CSS News Template">
 
+
   <!-- Development css -->
   <link rel="stylesheet" href="<?= base_url('css/styles.css'); ?>">
 
@@ -22,6 +23,8 @@
 
   <!-- Favicon  -->
   <link rel="icon" href="<?= base_url('src/img/favicon.jpg'); ?> ">
+
+ 
 </head>
 
 <body class="text-gray-700 pt-9 sm:pt-10">

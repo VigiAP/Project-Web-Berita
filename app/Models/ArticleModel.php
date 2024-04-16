@@ -12,11 +12,12 @@ class ArticleModel extends Model
     protected $useAutoIncrement = true;
     protected $allowedFields = ['id_article', 'id_user', 'title', 'content', 'image','publication_date', 'view','aproved'];
     protected $builder;
+    protected $db;
     
     public function __construct()
     {
-        $db = \Config\Database::connect();
-        $this->builder = $db->table($this->table);
+        $this->db = \Config\Database::connect();
+        $this->builder = $this->db->table($this->table);
     }
 
     public function getDataArticles()
@@ -31,6 +32,7 @@ class ArticleModel extends Model
 
     public function saveData($data)
     {
+    
         return $this->builder->insert($data);
     }
 

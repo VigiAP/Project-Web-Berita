@@ -4,18 +4,21 @@ namespace App\Controllers;
 
 use App\Models\CategoryModel;
 use App\Models\ArticleModel;
+use App\Models\DetailCategoryeModel;
 
 class Author extends BaseController
 {
+    protected $detailCategoryModel;
     protected $categoryModel;
-     protected $articleModel;
+    protected $articleModel;
     protected $session;
     protected $validation;
 
     public function __construct()
     {
+        $this->detailCategoryModel = new DetailCategoryeModel();
         $this->categoryModel = new CategoryModel();
-         $this->articleModel = new ArticleModel();
+        $this->articleModel = new ArticleModel();
         $this->session = \Config\Services::session();
         $this->validation = \Config\Services::validation();
     }
@@ -63,30 +66,123 @@ class Author extends BaseController
                 return redirect()->back()->withInput()->with('validation', $this->validation);
             }
 
+            $file = $this->request->getFile('image');
+            $tempfile = $file->getTempName();
+            $newName = $file->getRandomName();
+
             // Get the input data
             $title = $this->request->getVar('title');
             $content = $this->request->getVar('content');
-            $category = $this->request->getVar('category');
+           
+
+            $data = [
+                'title' => $title,
+                'id_user' => session()->get('id'),
+                'content' => $content,
+                'image' => $newName,
+                'publication_date' => date("Y-m-d")
+            ];
+
+            if($lastInsertID = $this->articleModel->insert($data)) {
+                move_uploaded_file($tempfile, '../public/'. 'img/' . $newName);
+
+                $category = $this->request->getVar('category');
+
+                foreach ($category as $dataCategory) {
+                    $additionalData = [
+                        'id_article' => $lastInsertID,
+                        'id_category' => $dataCategory
+                    ];
+                    $this->detailCategoryModel->saveData($additionalData);
+                }
+                session()->setFlashdata('message', 'success');
+                return redirect()->to('Author/article');
+            }
+        }
+    }
+
+    public function edit_article()
+    {
+        $data = [
+            'title' => 'Edit Article | Pojok Berita',
+            'article' => $this->articleModel->getDataArticleById($this->request->getUri()->getSegment(3)),
+            'category' => $this->detailCategoryModel->getDataDetailCategoryByIdArticle($this->request->getUri()->getSegment(3)),  
+            'categories' => $this->categoryModel->getDataCategories(),
+        ];
+
+        echo view('/Dashboard/Author/articles/edit_article', $data);
+    }
+    
+    public function update_article()
+    {
+        if ($this->request->getMethod() === 'post') {
+            // Validate the input data
+            $rules = [
+                'title' => 'required',
+                'content' => 'required',
+                'category' => 'required',
+            ];
+
+            if (!$this->validate($rules)) {
+                return redirect()->back()->withInput()->with('validation', $this->validation);
+            }
+
+            $file = $this->request->getFile('new_image');
+            $tempfile = $file->getTempName();
+            $newName = $file->getRandomName();
+
+            // Get the input data
+            $id = $this->request->getVar('id');
+            $id_user = $this->request->getVar('id_user');
+            $title = $this->request->getVar('title');
+            $content = $this->request->getVar('content');
+            $old_image = $this->request->getVar('old_image');
 
             $data = [
                 'title' => $title,
                 'content' => $content,
-                'category' => $category,
+                'image' => $newName,
+                'id_user' => $id_user
             ];
 
-            $this->articleModel->saveData($data);
+            if($file->isValid()) {
+                $data['image'] = $newName;
+                move_uploaded_file($tempfile, '../public/'. 'img/' . $newName);
+                unlink('../public/img/' . $old_image);
+            } else {
+                $data['image'] = $old_image;
+            }
 
-            return redirect()->to('Author/article')->with('success', 'User data saved successfully.');
+            if ($this->articleModel->updateData($data, $id)) {
+                $this->detailCategoryModel->deleteData($id);
+                $category = $this->request->getVar('category');
+
+                foreach ($category as $dataCategory) {
+                    $additionalData = [
+                        'id_article' => $id,
+                        'id_category' => $dataCategory
+                    ];
+                    $this->detailCategoryModel->saveData($additionalData);
+                }
+                session()->setFlashdata('message', 'success');
+                return redirect()->to('Author/article');
+            } else {
+                session()->setFlashdata('message', 'gagal');
+                return redirect()->to('Author/edit_article/<?=$id?>');
+            }
         }
     }
-    
+
     public function delete_article()
     {
         $id = $this->request->getUri()->getSegment(3);
+        $this->detailCategoryModel->deleteData($id);
         if ($this->articleModel->deleteData($id)) {
-            return redirect()->back()->with('success', 'Article deleted successfully.');
+            session()->setFlashdata('message', 'success');
+            return redirect()->to('Author/article');
         } else {
-            return redirect()->back()->with('error', 'Failed to delete Article.');
+            session()->setFlashdata('message', 'gagal');
+                return redirect()->to('Author/article');
         }
     }
     // end ofarticle method
