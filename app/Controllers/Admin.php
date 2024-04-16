@@ -97,16 +97,18 @@ class Admin extends BaseController
                 ));
                 $response = curl_exec($curl);
                 
-
                  if (curl_errno($curl)) {
-                  return redirect()->to('Admin/tambah_users')->with('error', 'User data failed to save.');
+                    session()->setFlashdata('message', 'gagal');
+                    return redirect()->to('Admin/tambah_users');
                    $error_msg = curl_error($curl);
                 }
                 curl_close($curl);
-               return redirect()->to('Admin/users')->with('success', 'User data updated successfully.');
+                session()->setFlashdata('message', 'success');
+                return redirect()->to('Admin/users');
             }
             } else {
-                return redirect()->back()->with('error', 'User data failed to save.');
+                session()->setFlashdata('message', 'gagal');
+                return redirect()->to('Admin/tambah_users');
             }
     }
     
@@ -152,9 +154,11 @@ class Admin extends BaseController
             ];
 
             if ($this->userModel->updateData($data, $id)) {
-                return redirect()->to('Admin/users')->with('success', 'User data updated successfully.');
+                session()->setFlashdata('message', 'success');
+                return redirect()->to('Admin/users');
             } else {
-                return redirect()->to('Admin/edit_user/<?=$id?>')->with('error', 'Failed to update user data.');
+                session()->setFlashdata('message', 'gagal');
+                return redirect()->to('Admin/edit_user/<?=$id?>');
             }
         }
     }
@@ -163,9 +167,11 @@ class Admin extends BaseController
     {
         $idUser = $this->request->getUri()->getSegment(3);
         if ($this->userModel->deleteData($idUser)) {
-            return redirect()->back()->with('success', 'User deleted successfully.');
+            session()->setFlashdata('message', 'successHapus');
+            return redirect()->to('Admin/users');
         } else {
-            return redirect()->back()->with('error', 'Failed to delete user.');
+            session()->setFlashdata('message', 'gagalHapus');
+            return redirect()->to('Admin/users');
         }
     }
 

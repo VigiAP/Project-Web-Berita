@@ -34,7 +34,7 @@
                         <div class="col-md-6"> 
                             <select id="choices-multiple-remove-button" placeholder="Select category" multiple name="category[]">
                                 <?php foreach ($categories as $category):?>
-                                <option selected value="<?= $category['id_category'] ?>"><?= $category['name'] ?></option>
+                                <option value="<?= $category['id_category'] ?>"><?= $category['name'] ?></option>
                                 <?php endforeach;?>
                             </select> 
                         </div>

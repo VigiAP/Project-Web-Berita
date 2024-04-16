@@ -178,11 +178,11 @@ class Author extends BaseController
         $id = $this->request->getUri()->getSegment(3);
         $this->detailCategoryModel->deleteData($id);
         if ($this->articleModel->deleteData($id)) {
-            session()->setFlashdata('message', 'success');
+            session()->setFlashdata('message', 'successHapus');
             return redirect()->to('Author/article');
         } else {
-            session()->setFlashdata('message', 'gagal');
-                return redirect()->to('Author/article');
+            session()->setFlashdata('message', 'gagalHapus');
+            return redirect()->to('Author/article');
         }
     }
     // end ofarticle method
@@ -240,7 +240,11 @@ class Author extends BaseController
 
             $this->categoryModel->saveData($data);
 
-             return redirect()->to('Author/category')->with('success', 'User data saved successfully.');
+            session()->setFlashdata('message', 'success');
+            return redirect()->to('Author/category');
+        } else {
+            session()->setFlashdata('message', 'success');
+            return redirect()->to('Author/add_category');
         }
     }
 
@@ -259,7 +263,7 @@ class Author extends BaseController
        if ($this->request->getMethod() === 'post') {
             // Validate the input data
             $rules = [
-                'name' => 'required|is_unique[categories.name]',
+                'name' => 'required',
             ];
 
             if (!$this->validate($rules)) {
@@ -276,9 +280,11 @@ class Author extends BaseController
             ];
 
             if ($this->categoryModel->updateData($data, $id)) {
-                return redirect()->to('Author/category')->with('success', 'User data updated successfully.');
+               session()->setFlashdata('message', 'success');
+                return redirect()->to('Author/category');
             } else {
-                return redirect()->to('Author/edit_category/<?=$id?>')->with('error', 'Failed to update user data.');
+                session()->setFlashdata('message', 'gagal');
+                return redirect()->to('Author/edit_category/<?=$id?>');
             }
         }
     }
@@ -287,9 +293,11 @@ class Author extends BaseController
     {
         $id = $this->request->getUri()->getSegment(3);
         if ($this->categoryModel->deleteData($id)) {
-            return redirect()->back()->with('success', 'User deleted successfully.');
+            session()->setFlashdata('message', 'successHapus');
+            return redirect()->to('Author/category');
         } else {
-            return redirect()->back()->with('error', 'Failed to delete user.');
+            session()->setFlashdata('message', 'gagalHapus');
+            return redirect()->to('Author/category');
         }
     }
     // end of category method

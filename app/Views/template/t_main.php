@@ -184,6 +184,10 @@
             confirmAlert("Berhasil", "Data berhasil disimpan", "success");
         } else if (alert == 'gagal') {
             confirmAlert("Gagal", "Data berhasil disimpan", "info");
+        } else if (alert == 'successHapus') {
+            confirmAlert("Berhasil", "Data berhasil dihapus", "success");
+        } else if (alert == 'gagalHapus') {
+            confirmAlert("Berhasil", "Data gagal dihapus", "success");
         }else {
             let strArray = alert.split("-");
             if (strArray[0] == 'berhasil') {
