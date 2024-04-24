@@ -28,6 +28,11 @@ class DetailCategoryeModel extends Model
         return $this->builder->where('d_detail_category', $id_detail_category)->get()->getResultArray();
     }
 
+    public function saveData($data)
+    {
+        return $this->builder->insert($data);
+    }
+    
     public function getDataDetailCategoryByIdArticle($id)
     {
         return $this->db->query("SELECT article.id_article, categories.name, detail_categories.id_detail_category, detail_categories.id_category
@@ -36,11 +41,6 @@ class DetailCategoryeModel extends Model
         ON article.id_article = detail_categories.id_article
         JOIN categories
         ON categories.id_category = detail_categories.id_category WHERE detail_categories.id_article = $id")->getResultArray();
-    }
-
-    public function saveData($data)
-    {
-        return $this->builder->insert($data);
     }
 
      public function updateData($data, $id)
