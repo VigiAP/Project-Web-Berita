@@ -273,7 +273,7 @@ class Accounts extends BaseController
         return redirect()->to('/Accounts');
     }
 
-      public function profile()
+    public function profile()
     {
         $data = [
             'title' => 'Profile | Pojok Berita',
@@ -293,17 +293,7 @@ class Accounts extends BaseController
         echo view('/Accounts/edit_profile', $data);
     }
 
-     public function change_password()
-    {
-        $data = [
-            'title' => 'Ubah Password | Pojok Berita',
-            'user' => $this->userModel->getDataUsers(session()->get('username'))
-        ];
-
-        echo view('/Accounts/change_password', $data);
-    }
-
-    public function update_profile()
+     public function update_profile()
     {
             $id = $this->request->getVar('id');
             $username = $this->request->getVar('username');
@@ -335,4 +325,16 @@ class Accounts extends BaseController
             }
         
     }
+
+    public function change_password()
+    {
+        $data = [
+            'title' => 'Ubah Password | Pojok Berita',
+            'user' => $this->userModel->getDataUsers(session()->get('username'))
+        ];
+
+        echo view('/Accounts/change_password', $data);
+    }
+
+   
 }

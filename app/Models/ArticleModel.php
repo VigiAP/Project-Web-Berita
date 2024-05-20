@@ -41,21 +41,9 @@ class ArticleModel extends Model
         return $this->builder->where('id_article', $id)->update($data);
     }
 
-    // public function updateData($data, $id)
-    // {
-    //     return $this->builder->where('id_user', $id)->update($data);
-    // }
 
     public function deleteData($id)
     {
         return ($this->builder->delete(['id_article' => $id])) ? 1 : 0;
-    }
-
-    // public function editData($data, $id)
-    // {
-    //     return $this->builder->where('id_user', $id)->update($data);
-    // }
-
-
-   
+    }  
 }
