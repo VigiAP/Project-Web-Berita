@@ -41,10 +41,10 @@
         }
     </style>
 </head>
-<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed dark-mode">
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
     <div class="wrapper">
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-dark">
+        <nav class="main-header navbar navbar-expand">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -65,9 +65,9 @@
             </ul>
         </nav>;
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <aside class="main-sidebar sidebar-primary elevation-4">
 
-            <a href="/" class="brand-link">
+            <a href="#" class="brand-link">
                 <span class="ml-4 brand-text font-weight-light">Pojok Berita</span>
             </a>
             <!-- Sidebar -->
