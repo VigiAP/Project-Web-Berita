@@ -48,6 +48,10 @@ class DetailCategoryeModel extends Model
         return $this->builder->where('d_detail_category', $id)->update($data);
     }
 
+    public function findCategoryByIdArtikel($id_artikel) {
+        return $this->builder->where('id_article', $id_artikel)->get()->getResultArray();
+    }
+    
     public function deleteData($id)
     {
         return ($this->builder->delete(['id_article' => $id])) ? 1 : 0;
