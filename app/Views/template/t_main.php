@@ -65,7 +65,7 @@
             </ul>
         </nav>;
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-primary elevation-4">
+        <aside class="main-sidebar sidebar-light-primary elevation-4">
 
             <a href="#" class="brand-link">
                 <span class="ml-4 brand-text font-weight-light">Pojok Berita</span>

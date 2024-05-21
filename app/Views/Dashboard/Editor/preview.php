@@ -25,6 +25,7 @@
                                     <a href="" class="btn btn-danger btn-sm"
                                         onclick="return confirm('Are you sure you want to delete this item?')"><i
                                             class="nav-icon fa fa-trash"></i> Delete</a>
+                                    <a href="<?= base_url('editor/preview_article'); ?>" class="btn btn-primary btn-sm">Preview</a>
 
                                 </div>
                             </div>
@@ -51,6 +52,7 @@
                                     <a href="" class="btn btn-danger btn-sm"
                                         onclick="return confirm('Are you sure you want to delete this item?')"><i
                                             class="nav-icon fa fa-trash"></i> Delete</a>
+                                            <a href="" class="btn btn-primary btn-sm">Preview</a>
 
                                 </div>
                             </div>

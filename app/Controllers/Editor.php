@@ -34,4 +34,11 @@ class Editor extends BaseController
         ];
         return view('Dashboard/Editor/edit_profile', $data);
     }
+
+    public function preview_article(){
+        $data = [
+            'title' => 'Preview Article | Pojok Berita',
+        ];
+        return view('Dashboard/Editor/preview_article', $data);
+    }
 }
