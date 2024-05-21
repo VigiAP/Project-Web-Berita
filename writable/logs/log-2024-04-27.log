@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INFO - 2024-04-27 08:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-04-27 08:57:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-04-27 08:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -14,3 +15,186 @@ INFO - 2024-04-27 09:19:52 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-04-27 09:21:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-04-27 09:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-04-27 09:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+INFO - 2024-04-27 03:46:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-27 03:46:29 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_news', 3306, '', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\ArticleModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Author.php(39): App\Models\ArticleModel->getDataArticles()
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Author->article()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\ArticleModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Author.php(39): App\Models\ArticleModel->getDataArticles()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Author->article()
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#10 {main}
+CRITICAL - 2024-04-27 03:46:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `article`
+ORDER BY `id_article` DESC', [], false)
+ 3 APPPATH\Models\ArticleModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Author.php(39): App\Models\ArticleModel->getDataArticles()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Author->article()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-04-27 03:46:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-27 03:46:34 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_news', 3306, '', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\ArticleModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Author.php(39): App\Models\ArticleModel->getDataArticles()
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Author->article()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\ArticleModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Author.php(39): App\Models\ArticleModel->getDataArticles()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Author->article()
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#10 {main}
+CRITICAL - 2024-04-27 03:46:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `article`
+ORDER BY `id_article` DESC', [], false)
+ 3 APPPATH\Models\ArticleModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Author.php(39): App\Models\ArticleModel->getDataArticles()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Author->article()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-04-27 03:46:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-27 03:46:48 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_news', 3306, '', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\ArticleModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Author.php(39): App\Models\ArticleModel->getDataArticles()
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Author->article()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\ArticleModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Author.php(39): App\Models\ArticleModel->getDataArticles()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Author->article()
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#10 {main}
+CRITICAL - 2024-04-27 03:46:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `article`
+ORDER BY `id_article` DESC', [], false)
+ 3 APPPATH\Models\ArticleModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Author.php(39): App\Models\ArticleModel->getDataArticles()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Author->article()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-04-27 03:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-04-27 03:46:57 --> [DEPRECATED] ucwords(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\template\sidebar.php on line 8.
+ 1 APPPATH\Views\template\sidebar.php(8): ucwords(null)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\app\\Views\\template\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('template/sidebar', null, true)
+ 5 APPPATH\Views\template\t_main.php(74): CodeIgniter\View\View->include('template/sidebar')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\app\\Views\\template\\t_main.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('/template/t_main', [], true)
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Dashboard/Author/articles/article', [], true)
+10 APPPATH\Controllers\Author.php(42): view('/Dashboard/Author/articles/article', [...])
+11 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Author->article()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Author))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-04-27 03:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 03:47:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 03:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 03:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 03:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 03:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 03:50:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 04:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 04:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 04:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 04:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 04:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 04:47:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 06:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 06:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 06:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 06:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 07:00:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 07:00:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 07:00:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 07:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 07:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 07:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 07:00:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 07:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 07:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 08:02:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 08:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 08:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 08:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 08:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 08:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 08:49:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 08:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-27 10:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> c5323d03c7afbc5880c69ccfd54f283104027304

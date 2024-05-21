@@ -4,7 +4,6 @@
 <section class="content">
     <div class="container-fluid">
         <div class="card-body">
-
             <form action="<?= base_url('author/update_category'); ?>" method="post" enctype="multipart/form-data">
                 <div class="card-body">
                     <div class="form-group">
@@ -15,7 +14,6 @@
                     </div>
                 </div>
                 <!-- /.card-body -->
-
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Simpan</button>
                     <a href="<?= base_url('author/category'); ?>" class="btn btn-danger">Kembali</a>

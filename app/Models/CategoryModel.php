@@ -33,17 +33,16 @@ class CategoryModel extends Model
     {
         return $this->builder->where('id_category', $id)->get()->getResultArray();
     }
+    public function updateData($data, $id)
+    {
+        return $this->builder->where('id_category', $id)->update($data);
+    }
 
     public function saveData($data)
     {
         return $this->builder->insert($data);
     }
-
-     public function updateData($data, $id)
-    {
-        return $this->builder->where('id_category', $id)->update($data);
-    }
-
+    
     public function deleteData($id)
     {
         return ($this->builder->delete(['id_category' => $id])) ? 1 : 0;
