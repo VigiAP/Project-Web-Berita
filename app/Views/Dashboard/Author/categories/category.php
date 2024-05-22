@@ -23,8 +23,8 @@
                             <td><?= $no++; ?></td>
                             <td><?= $category['name']; ?></td>
                             <td>
-                                    <a href="<?= base_url('/author/edit_category/' . $category['id_category']); ?>" class="btn btn-primary btn-sm"><i class="nav-icon fa fa-edit"></i> Edit</a>
-                                    <a href="<?= base_url('/author/delete_category/' . $category['id_category']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this item?')"><i class="nav-icon fa fa-trash"></i> Delete</a>
+                                <a href="<?= base_url('/author/edit_category/' . $category['id_category']); ?>" class="btn btn-primary btn-sm"><i class="nav-icon fa fa-edit"></i> Edit</a>
+                                <a href="<?= base_url('/author/delete_category/' . $category['id_category']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this item?')"><i class="nav-icon fa fa-trash"></i> Delete</a>
                             </td>
                     <?php endforeach; ?>
                     </tbody>

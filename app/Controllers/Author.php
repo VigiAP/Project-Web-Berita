@@ -108,6 +108,7 @@ class Author extends BaseController
             'article' => $this->articleModel->getDataArticleById($this->request->getUri()->getSegment(3)),
             'category' => $this->detailCategoryModel->getDataDetailCategoryByIdArticle($this->request->getUri()->getSegment(3)),  
             'categories' => $this->categoryModel->getDataCategories(),
+            'selectedCategory' => $this->detailCategoryModel->findCategoryByIdArtikel($this->request->getUri()->getSegment(3))
         ];
 
         echo view('/Dashboard/Author/articles/edit_article', $data);
@@ -162,6 +163,7 @@ class Author extends BaseController
                         'id_article' => $id,
                         'id_category' => $dataCategory
                     ];
+                    // harusnya update data dan belum pull
                     $this->detailCategoryModel->saveData($additionalData);
                 }
                 session()->setFlashdata('message', 'success');
