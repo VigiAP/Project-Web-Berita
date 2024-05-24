@@ -1,13 +1,14 @@
 <?= $this->extend('/template/t_main'); ?>
 <?= $this->section('konten'); ?>
-
 <section class="content">
     <div class="container-fluid">
         <div class="card-body">
             <h2><?= $article[0]['title'];?></h2>
             <p class="text-muted"><?=formatTanggal($article[0]['publication_date'])?></p>
+            <?php if($article[0]['image']):?>
             <img src="<?= base_url('img/')?>/<?= $article[0]['image']; ?>" style="max-width: 100%; height: auto;">
-            <br><br>
+             <br><br>
+            <?php endif;?>
             <div><?= $article[0]['content'];?></div>
             <hr style="border: 1px solid white;">
         </div>

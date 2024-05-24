@@ -32,15 +32,14 @@
                      <div class="form-group">
                         <label>Genre</label>
                         <div class="col-md-6"> 
-                            <select id="choices-multiple-remove-button" placeholder="Select category" multiple name="category[]">
-                                <?php foreach ($categories as $category):?>
-                                    <?php foreach($selectedCategory as $data):?>
-                                        <?php if($category['id_category'] == $data['id_category']) {?>
-                                            <option selected value="<?= $category['id_category'] ?>"><?= $category['name'] ?></option>
-                                        <?php }?>   
-                                    <?php endforeach;?>
-                                    <option value="<?= $category['id_category'] ?>"><?= $category['name'] ?></option>
-                                <?php endforeach;?>
+                            <select id="choices-multiple-remove-button" placeholder="Select category" multiple name="category[]">                      
+                                <?php foreach ($categories as $category): ?>
+                                    <option value="<?= $category['id_category'] ?>" 
+                                        <?php foreach($selectedCategory as $data): ?>
+                                            <?= $category['id_category'] == $data['id_category'] ? 'selected' : '' ?>
+                                        <?php endforeach; ?>
+                                    ><?= $category['name'] ?></option>
+                                <?php endforeach; ?>
                             </select> 
                         </div>
                     </div>

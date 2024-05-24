@@ -73,15 +73,23 @@ class Author extends BaseController
             // Get the input data
             $title = $this->request->getVar('title');
             $content = $this->request->getVar('content');
-           
-
-            $data = [
-                'title' => $title,
-                'id_user' => session()->get('id'),
-                'content' => $content,
-                'image' => $newName,
-                'publication_date' => date("Y-m-d")
-            ];
+            if($file->getName()) {
+                $data = [
+                    'title' => $title,
+                    'id_user' => session()->get('id'),
+                    'content' => $content,
+                    'image' => $newName,
+                    'publication_date' => date("Y-m-d")
+                ];
+            } else {
+                $data = [
+                    'title' => $title,
+                    'id_user' => session()->get('id'),
+                    'content' => $content,
+                    'publication_date' => date("Y-m-d")
+                ];
+            }
+            
 
             if($lastInsertID = $this->articleModel->insert($data)) {
                 move_uploaded_file($tempfile, '../public/'. 'img/' . $newName);

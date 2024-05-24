@@ -29,9 +29,12 @@
 
                                 </div>
                             </div>
-                        </div><img src="<?= base_url('img/')?>/<?= $article['image']; ?>"
-                            alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
-                    </div>
+                        </div>
+                            <?php if($article['image']){?>
+                                <img src="<?= base_url('img/')?>/<?= $article['image']; ?>"
+                                    alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                            <?php }?>
+                        </div>
                     <!-- End -->
                 </li>
                 <?php endforeach;?>
