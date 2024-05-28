@@ -31,4 +31,13 @@ class Home extends BaseController
 
         echo view('/Home/homePage', $data);
     }
+
+    public function post()
+    {
+        $data = [
+            'title' => 'Post | Pojok Berita',
+        ];
+
+        echo view('/Home/post', $data);
+    }
 }
