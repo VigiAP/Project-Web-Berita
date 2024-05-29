@@ -30,6 +30,13 @@ class ArticleModel extends Model
         return $this->builder->where('id_article', $id)->get()->getResultArray();
     }
 
+    public function getDataSomeArticles() {
+        // $this->builder->select('*');
+        // $this->builder->join('cate', 'comments.id = blogs.id');
+        $this->builder->limit(8);
+        return $this->builder->orderBy('id_article', 'DESC')->get()->getResultArray();
+    }
+
     public function getDataArticleByApproval()
     {
         return $this->db->query("SELECT article.id_article, article.id_user, article.title, article.image, article.content, tbl_users.name

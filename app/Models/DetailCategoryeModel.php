@@ -43,7 +43,19 @@ class DetailCategoryeModel extends Model
         ON categories.id_category = detail_categories.id_category WHERE detail_categories.id_article = $id")->getResultArray();
     }
 
-     public function updateData($data, $id)
+    public function getDataSomeArticlesByCategory() {
+        $category = 'Politik';
+        return $this->db->query("SELECT article.id_article, article.`image`, article.`title`, article.`content`, categories.name, detail_categories.id_detail_category, detail_categories.id_category
+        FROM article
+        JOIN detail_categories
+        ON article.id_article = detail_categories.id_article
+        JOIN categories
+        ON categories.id_category = detail_categories.id_category WHERE categories.name = '$category'")
+        ->getResultArray();
+
+    }
+
+    public function updateData($data, $id)
     {
         return $this->builder->where('d_detail_category', $id)->update($data);
     }

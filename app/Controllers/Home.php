@@ -1,9 +1,20 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\ArticleModel;
+use App\Models\DetailCategoryeModel;
 
 class Home extends BaseController
-{
+{   
+    protected $articleModel;
+    protected $detailCategoryModel;
+
+    public function __construct() {
+        
+        $this->articleModel = new ArticleModel();
+        $this->detailCategoryModel = new DetailCategoryeModel();
+    }
+
     public function index()
     {
         if(!session()->get('logged_in')) {
@@ -27,6 +38,8 @@ class Home extends BaseController
     {
         $data = [
             'title' => 'Home | Pojok Berita',
+            'articles' => $this->articleModel->getDataSomeArticles(),
+            'artilcesSelectedByCategory' => $this->detailCategoryModel->getDataSomeArticlesByCategory()
         ];
 
         echo view('/Home/homePage', $data);

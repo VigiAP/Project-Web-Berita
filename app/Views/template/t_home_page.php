@@ -256,11 +256,8 @@
     </nav>
   </div><!-- End Mobile menu -->
 
-
   <?= $this->renderSection('konten'); ?>
 
-
- 
   <!-- =========={ FOOTER }==========  -->
   <footer class="bg-black text-gray-400">
     <!--Footer content-->
