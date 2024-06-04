@@ -39,7 +39,7 @@
                 <a class="block py-3 px-6 border-b-2 border-transparent" href="index.html">Home</a>
               </li>
               <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Olahraga</a>
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Alam</a>
 
                 <ul
                   class="dropdown-menu font-normal absolute left-0 right-auto top-full z-50 border-b-0 text-left bg-white text-gray-700 border border-gray-100"

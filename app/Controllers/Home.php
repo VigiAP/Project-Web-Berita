@@ -39,9 +39,22 @@ class Home extends BaseController
         $data = [
             'title' => 'Home | Pojok Berita',
             'articles' => $this->articleModel->getDataSomeArticles(),
-            'artilcesSelectedByCategory' => $this->detailCategoryModel->getDataSomeArticlesByCategory()
+            'artilcesSelectedByCategory' => $this->detailCategoryModel->getDataSomeArticlesByCategory('Politik'),
+            'artilcesSelectedByCategory2' => $this->detailCategoryModel->getDataSomeArticlesByCategory('Olahraga'),
+            'artilcesSelectedByCategory3' => $this->detailCategoryModel->getDataSomeArticlesByCategory('Teknologi'),
         ];
 
         echo view('/Home/homePage', $data);
+    }
+
+    public function singlePost()
+    {
+        $data = [
+            'title' => 'Post | Pojok Berita',
+            'article' => $this->articleModel->getDataArticleById2($this->request->getUri()->getSegment(3)),
+            'randomArticleTitle' => $this->articleModel->getRandomArticleTitle(),
+        ];
+
+        echo view('/Home/singlePost', $data);
     }
 }

@@ -65,8 +65,6 @@ class Editor extends BaseController
         }
     }
 
-  
-
     public function profile(){
         $data = [
             'title' => 'Profile | Pojok Berita',
