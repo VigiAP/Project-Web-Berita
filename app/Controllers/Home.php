@@ -40,4 +40,22 @@ class Home extends BaseController
 
         echo view('/Home/post', $data);
     }
+
+    public function category()
+    {
+        $data = [
+            'title' => 'Category | Pojok Berita',
+        ];
+
+        echo view('/Home/category', $data);
+    }
+
+    public function listCategory()
+    {
+        $data = [
+            'title' => 'List Category | Pojok Berita',
+        ];
+
+        echo view('/Home/listCategory', $data);
+    }
 }
