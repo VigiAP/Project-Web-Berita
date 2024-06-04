@@ -2,3 +2,15 @@ INFO - 2024-06-04 08:19:21 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-06-04 08:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-04 08:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-04 08:28:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-04 08:50:51 --> ErrorException: Undefined variable $articles
+in APPPATH\Views\Home\category.php on line 20.
+ 1 APPPATH\Views\Home\category.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $articles', 'C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\app\\Views\\Home\\category.php', 20)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\app\\Views\\Home\\category.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/category', [], true)
+ 5 APPPATH\Controllers\Home.php(50): view('/Home/category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->category()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
