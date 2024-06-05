@@ -97,8 +97,6 @@
                   Logout
                 </a>
               </div>
-
-
               <div class="search-dropdown relative border-r lg:border-l border-gray-800 hover:bg-gray-900">
                 <button class="block py-3 px-6 border-b-2 border-transparent">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -137,7 +135,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="relative hover:bg-gray-800 block lg:hidden">
                 <button type="button" class="menu-mobile block py-3 px-6 border-b-2 border-transparent">
                   <span class="sr-only">Mobile menu</span>
@@ -148,7 +145,6 @@
                   </svg> Menu
                 </button>
               </div>
-
             </div>
           </div>
         </div>

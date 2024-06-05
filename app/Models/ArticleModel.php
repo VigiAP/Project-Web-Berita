@@ -30,10 +30,30 @@ class ArticleModel extends Model
         return $this->builder->where('id_article', $id)->get()->getResultArray();
     }
 
+    public function getDataArticleById2($id)
+    {
+        $this->builder->select('article.id_article, article.title, article.image, article.content, article.publication_date, article.view, tbl_users.name');
+        $this->builder->join('tbl_users', 'tbl_users.id_user = article.id_user');
+        $this->builder->where('article.approved', '1');
+        return $this->builder->where('article.id_article', $id)->get()->getResultArray();
+    }
+
+    public function getDataSomeArticles() {
+        // $this->builder->select('*');
+        // $this->builder->join('cate', 'comments.id = blogs.id');
+        $this->builder->limit(8);
+        $this->builder->where('approved', '1');
+        return $this->builder->orderBy('id_article', 'DESC')->get()->getResultArray();
+    }
+
+    public function getRandomArticleTitle()
+    {
+        $this->builder->select('title');
+        return $this->builder->get()->getResultArray();
+    }
+    
     public function getDataArticleByApproval()
     {
-        // return $this->builder->orderBy('id_article', 'DESC')->where('approved', '0')->get()->getResultArray();
-        // return $this->builder->join('tbl_users', 'tbl_users.id_user = article.id_user')->orderBy('id_article', 'DESC')->where('approved', '0')->get()->getResultArray();
         return $this->db->query("SELECT article.id_article, article.id_user, article.title, article.image, article.content, tbl_users.name
         FROM article
         JOIN tbl_users
@@ -47,7 +67,7 @@ class ArticleModel extends Model
         return $this->builder->insert($data);
     }
 
-     public function updateData($data, $id)
+    public function updateData($data, $id)
     {
         return $this->builder->where('id_article', $id)->update($data);
     }

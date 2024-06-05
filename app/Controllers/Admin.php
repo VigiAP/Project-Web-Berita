@@ -99,14 +99,17 @@ class Admin extends BaseController
                 
                  if (curl_errno($curl)) {
                     session()->setFlashdata('message', 'gagal');
+                     
                     return redirect()->to('Admin/tambah_users');
                    $error_msg = curl_error($curl);
+ 
                 }
                 curl_close($curl);
                 session()->setFlashdata('message', 'success');
                 return redirect()->to('Admin/users');
             }
             } else {
+                 dd('error 2');
                 session()->setFlashdata('message', 'gagal');
                 return redirect()->to('Admin/tambah_users');
             }

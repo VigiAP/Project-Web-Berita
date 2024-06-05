@@ -30,7 +30,6 @@ class Editor extends BaseController
     public function preview(){
         $data = [
             'title' => 'Preview | Pojok Berita',
-            // join table untuk ngambil data nama author
             'articles' => $this->articleModel->getDataArticleByApproval()
         ];
         return view('Dashboard/Editor/preview', $data);
@@ -65,8 +64,6 @@ class Editor extends BaseController
             return redirect()->to('editor/preview');
         }
     }
-
-  
 
     public function profile(){
         $data = [

@@ -27,10 +27,14 @@
                             <td><?= $article['title']; ?></td>
                             <td><?= $article['content']; ?></td>
                             <td><?= $article['publication_date']; ?></td>
-                            <td><img src="<?= base_url('img/')?>/<?= $article['image']; ?>" width="100px"></td>
                             <td>
-                                    <a href="<?= base_url('/author/edit_article/' . $article['id_article']); ?>" class="btn btn-primary btn-sm"><i class="nav-icon fa fa-edit"></i> Edit</a>
-                                    <a href="<?= base_url('/author/delete_article/' . $article['id_article']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this item?')"><i class="nav-icon fa fa-trash"></i> Delete</a>
+                                <?php if($article['image']) {?>
+                                    <img src="<?= base_url('img/')?>/<?= $article['image']; ?>" width="100px">
+                                <?php }?>
+                            </td>
+                            <td>
+                                <a href="<?= base_url('/author/edit_article/' . $article['id_article']); ?>" class="btn btn-primary btn-sm"><i class="nav-icon fa fa-edit"></i> Edit</a>
+                                <a href="<?= base_url('/author/delete_article/' . $article['id_article']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this item?')"><i class="nav-icon fa fa-trash"></i> Delete</a>
                             </td>
                     <?php endforeach; ?>
                     </tbody>
