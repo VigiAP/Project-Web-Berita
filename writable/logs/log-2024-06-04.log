@@ -108,6 +108,10 @@ in APPPATH\Views\Home\category.php on line 20.
  8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+<<<<<<< HEAD
+INFO - 2024-06-04 14:41:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-04 14:48:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
 >>>>>>> ad1f72409222efffb9bf06e69226a0c70664b4e7
 INFO - 2024-06-04 23:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 ERROR - 2024-06-04 23:10:59 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
@@ -271,3 +275,4 @@ WARNING - 2024-06-04 23:54:41 --> [DEPRECATED] Function strftime() is deprecated
  8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+>>>>>>> 58f1d27518b175d8236ff525bfe867b21ef2b28a
