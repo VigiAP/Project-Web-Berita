@@ -43,7 +43,8 @@ class DetailCategoryeModel extends Model
         ON categories.id_category = detail_categories.id_category WHERE detail_categories.id_article = $id")->getResultArray();
     }
 
-    public function getDataSomeArticlesByCategory($category) {
+    public function getDataSomeArticlesByCategory($category, $limit) {
+        $this->builder->limit($limit);
         return $this->db->query("SELECT article.id_article, article.`image`, article.`title`, article.`content`, categories.name, detail_categories.id_detail_category, detail_categories.id_category
         FROM article
         JOIN detail_categories

@@ -3,16 +3,19 @@
 namespace App\Controllers;
 use App\Models\ArticleModel;
 use App\Models\DetailCategoryeModel;
+use App\Models\CategoryModel;
 
 class Home extends BaseController
 {   
     protected $articleModel;
     protected $detailCategoryModel;
+    protected $categoryModel;
 
     public function __construct() {
         
         $this->articleModel = new ArticleModel();
         $this->detailCategoryModel = new DetailCategoryeModel();
+        $this->categoryModel = new CategoryModel();
     }
 
     public function index()
@@ -39,9 +42,9 @@ class Home extends BaseController
         $data = [
             'title' => 'Home | Pojok Berita',
             'articles' => $this->articleModel->getDataSomeArticles(),
-            'artilcesSelectedByCategory' => $this->detailCategoryModel->getDataSomeArticlesByCategory('Politik'),
-            'artilcesSelectedByCategory2' => $this->detailCategoryModel->getDataSomeArticlesByCategory('Olahraga'),
-            'artilcesSelectedByCategory3' => $this->detailCategoryModel->getDataSomeArticlesByCategory('Teknologi'),
+            'artilcesSelectedByCategory' => $this->detailCategoryModel->getDataSomeArticlesByCategory('Politik', 8),
+            'artilcesSelectedByCategory2' => $this->detailCategoryModel->getDataSomeArticlesByCategory('Olahraga', 8),
+            'artilcesSelectedByCategory3' => $this->detailCategoryModel->getDataSomeArticlesByCategory('Teknologi', 8),
         ];
 
         echo view('/Home/homePage', $data);
@@ -56,5 +59,26 @@ class Home extends BaseController
         ];
 
         echo view('/Home/singlePost', $data);
+    }
+
+    public function category()
+    {
+        $data = [
+            'title' => 'Category | Pojok Berita',
+            'articles' => $this->detailCategoryModel->getDataSomeArticlesByCategory(ucfirst($this->request->getUri()->getSegment(3)), 100),
+            'category' => ucfirst($this->request->getUri()->getSegment(3)),
+        ];
+
+        echo view('/Home/category', $data);
+    }
+
+    public function listCategories()
+    {
+        $data = [
+            'title' => 'List Categories | Pojok Berita',
+            'categories' => $this->categoryModel->getDataCategories()
+        ];
+
+        echo view('/Home/listCategories', $data);
     }
 }

@@ -22,7 +22,7 @@
                       <li class="splide__slide">
                         <div class="w-full pb-3">
                           <div class="hover-img bg-white">
-                            <a href="">
+                            <a href="<?=base_url('Home/singlePost')?>/<?=$article['id_article']?>">
                               <img class="max-w-full w-full mx-auto" src="<?= base_url('img/')?>/<?= $article['image']; ?>" alt="alt title">
                             </a>
                             <div class="py-3 px-6">
@@ -57,12 +57,12 @@
                <?php foreach($articles as $article): ?>
               <div class="flex-shrink max-w-full w-full sm:w-1/3 lg:w-1/4 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                   <div class="flex flex-row sm:block hover-img">
-                    <a href="">
+                    <a href="<?=base_url('Home/singlePost')?>/<?=$article['id_article']?>">
                       <img class="max-w-full w-full mx-auto" src="<?= base_url('img/')?>/<?= $article['image']; ?>" alt="alt title">
                     </a>
                     <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                       <h3 class="text-lg font-bold leading-tight mb-2">
-                        <a href="#"><?=$article['title']?></a>
+                        <a href="<?=base_url('Home/singlePost')?>/<?=$article['id_article']?>"><?=$article['title']?></a>
                       </h3>
                       <p class="hidden md:block text-gray-600 leading-tight mb-1"><?=substr(strip_tags($article['content']), 0, 100). "...";?></p>
                       <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Kategori</a>
@@ -90,7 +90,7 @@
               <div class="flex-shrink max-w-full w-full px-3 pb-5">
                 <div class="relative hover-img max-h-98 overflow-hidden">
                   <!--thumbnail-->
-                  <a href="#">
+                  <a href="<?=base_url('Home/singlePost')?>/<?=$article['id_article']?>">
                     <img class="max-w-full w-full mx-auto h-auto" src="<?= base_url('src/img/dummy/img2.jpg'); ?>"  alt="Image description">
                   </a>
                   <div class="absolute px-5 pt-8 pb-5 bottom-0 w-full bg-gradient-cover">
@@ -109,12 +109,12 @@
             <?php foreach($artilcesSelectedByCategory2 as $article): ?>
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
-                  <a href="">
+                  <a href="<?=base_url('Home/singlePost')?>/<?=$article['id_article']?>">
                     <img class="max-w-full w-full mx-auto" src="<?= base_url('img/')?>/<?= $article['image']; ?>" alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#"><?=$article['title'];?></a>
+                      <a href="<?=base_url('Home/singlePost')?>/<?=$article['id_article']?>"><?=$article['title'];?></a>
                     </h3>
                     <p class="hidden md:block text-gray-600 leading-tight mb-1"><?=substr(strip_tags($article['content']), 100, 100). "...";?></p>
                     <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Indonesia</a>
