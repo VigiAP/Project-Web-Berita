@@ -39,8 +39,6 @@ class ArticleModel extends Model
     }
 
     public function getDataSomeArticles() {
-        // $this->builder->select('*');
-        // $this->builder->join('cate', 'comments.id = blogs.id');
         $this->builder->limit(8);
         $this->builder->where('approved', '1');
         return $this->builder->orderBy('id_article', 'DESC')->get()->getResultArray();
@@ -76,5 +74,10 @@ class ArticleModel extends Model
     public function deleteData($id)
     {
         return ($this->builder->delete(['id_article' => $id])) ? 1 : 0;
-    }  
+    } 
+    
+    public function getDataViewArticle($id) {
+        $this->builder->select('view');
+        return $this->builder->where('id_article', $id)->get()->getResultArray();
+    }
 }

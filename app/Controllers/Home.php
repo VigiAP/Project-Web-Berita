@@ -52,13 +52,34 @@ class Home extends BaseController
 
     public function singlePost()
     {
+        $id_article = $this->request->getUri()->getSegment(3);
         $data = [
             'title' => 'Post | Pojok Berita',
-            'article' => $this->articleModel->getDataArticleById2($this->request->getUri()->getSegment(3)),
+            'article' => $this->articleModel->getDataArticleById2($id_article),
             'randomArticleTitle' => $this->articleModel->getRandomArticleTitle(),
         ];
+        $viewArticle = $this->articleModel->getDataViewArticle( $id_article);
+        $NewviewArticle = $viewArticle[0]['view'] + 1;
+
+        $data2 = [
+            'view' => $NewviewArticle,
+        ];
+
+        $this->articleModel->updateData($data2, $id_article);
 
         echo view('/Home/singlePost', $data);
+    }
+
+    public function likeArticle() {
+        $id_user = $this->request->getVar('id_user');
+        $id_article = $this->request->getVar('id_article');
+
+        $data = [
+            'id_user' => $id_user,
+            'id_article' => $id_article,
+            'like' => '1',
+        ];
+        echo $id_article;
     }
 
     public function category()

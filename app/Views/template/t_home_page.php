@@ -10,18 +10,38 @@
   <!-- Title  -->
   <title><?= $title; ?></title>
   <meta name="description" content="Tailwind CSS News Template">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <!-- Development css -->
   <link rel="stylesheet" href="<?= base_url('css/styles.css'); ?>">
-
   <!-- Production css -->
   <!-- <link rel="stylesheet" href="dist/css/style.css"> -->
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js">
+  </script>
   <!-- google font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
 
   <!-- Favicon  -->
   <link rel="icon" href="<?= base_url('src/img/favicon.jpg'); ?> ">
+  <style>
+    .like {
+      background-color: transparent;
+      border: none;
+    }
+
+    .fa-heart {
+      font-size: 18px;
+
+    }
+
+    .blank {
+      color: #142034;
+    }
+
+    .red {
+      color: red;
+    }
+  </style>
 </head>
 
 <body class="text-gray-700 pt-9 sm:pt-10">
@@ -44,46 +64,52 @@
                 <ul
                   class="dropdown-menu font-normal absolute left-0 right-auto top-full z-50 border-b-0 text-left bg-white text-gray-700 border border-gray-100"
                   style="min-width: 12rem;">
-                  
-                    <!--dropdown submenu-->
-                    <ul
-                      class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100"
-                      style="min-width: 12rem;">
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                          href="404.html">404</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                          href="author.html">Author</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                          href="category.html">Category</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                          href="search.html">Search</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                          href="page.html">Page</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                          href="contact-us.html">Contact</a></li>
-                    </ul>
-                  </li>
-                  
-                </ul>
+
+                  <!--dropdown submenu-->
+                  <ul
+                    class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100"
+                    style="min-width: 12rem;">
+                    <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
+                        href="404.html">404</a></li>
+                    <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
+                        href="author.html">Author</a></li>
+                    <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
+                        href="category.html">Category</a></li>
+                    <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
+                        href="search.html">Search</a></li>
+                    <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
+                        href="page.html">Page</a></li>
+                    <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
+                        href="contact-us.html">Contact</a></li>
+                  </ul>
               </li>
-              <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="<?=base_url('Home/category/olahraga')?>">Olahraga</a>
-              </li>
-              <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="<?=base_url('Home/category/travel')?>">Travel</a>
-              </li>
-              <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="<?=base_url('Home/category/teknologi')?>">Teknologi</a>
-              </li>
-              <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="<?=base_url('Home/category/kesehatan')?>">Kesehatan</a>
-              </li>
-              <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="<?=base_url('Home/category/otomotif')?>">Otomotif</a>
-              </li>
-              <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a class="block py-3 px-6 border-b-2 border-transparent" href="<?=base_url('Home/listCategories')?>">Lainnya</a>
-              </li>
+
+            </ul>
+            </li>
+            <li class="relative border-l border-gray-800 hover:bg-gray-900">
+              <a class="block py-3 px-6 border-b-2 border-transparent"
+                href="<?=base_url('Home/category/olahraga')?>">Olahraga</a>
+            </li>
+            <li class="relative border-l border-gray-800 hover:bg-gray-900">
+              <a class="block py-3 px-6 border-b-2 border-transparent"
+                href="<?=base_url('Home/category/travel')?>">Travel</a>
+            </li>
+            <li class="relative border-l border-gray-800 hover:bg-gray-900">
+              <a class="block py-3 px-6 border-b-2 border-transparent"
+                href="<?=base_url('Home/category/teknologi')?>">Teknologi</a>
+            </li>
+            <li class="relative border-l border-gray-800 hover:bg-gray-900">
+              <a class="block py-3 px-6 border-b-2 border-transparent"
+                href="<?=base_url('Home/category/kesehatan')?>">Kesehatan</a>
+            </li>
+            <li class="relative border-l border-gray-800 hover:bg-gray-900">
+              <a class="block py-3 px-6 border-b-2 border-transparent"
+                href="<?=base_url('Home/category/otomotif')?>">Otomotif</a>
+            </li>
+            <li class="relative border-l border-gray-800 hover:bg-gray-900">
+              <a class="block py-3 px-6 border-b-2 border-transparent"
+                href="<?=base_url('Home/listCategories')?>">Lainnya</a>
+            </li>
             </ul>
 
             <!-- search form & mobile nav -->
@@ -329,7 +355,7 @@
           </div>
           <div class="flex-shrink max-w-full w-full lg:w-3/5 px-3">
             <div class="flex flex-wrap flex-row">
-             
+
             </div>
           </div>
         </div>
@@ -374,6 +400,35 @@
 
   <!-- Production js -->
   <!-- <script src="dist/js/scripts.js"></script> -->
+  <script>
+    const base_url = "http://localhost:8080/project-web-berita/public";
+    $(document).ready(function () {
+      $("#like").on("click", function () {
+        $("#icon").toggleClass("red");
+        $("#icon").toggleClass("fa-solid");
+
+        const userId = $(this).data('user-id');
+        const articleId = $(this).data('article-id');
+        $.ajax({
+            url: "/Home/likeArticle",
+            type: 'POST',
+            data: {
+                id_user: userId,
+                id_article: articleId
+            },
+            success: function(response) {
+                // Handle the successful response here
+                console.log(response);
+            },
+            error: function(xhr, status, error) {
+               
+                console.error(error);
+            }
+        });
+
+      });
+    });
+  </script>
 </body>
 
 </html>
