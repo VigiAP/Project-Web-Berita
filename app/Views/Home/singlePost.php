@@ -137,7 +137,7 @@
 
               <!-- author -->
               <div class="flex flex-wrap flex-row -mx-4 justify-center py-4 items-center">
-                <div class="flex-shrink max-w-full px-4 w-1/4 sm:w-1/5 md:w-1/6">
+                <div class="flex-shrink max-w-full px-4">
                   <a href="#"><img class="rounded-full border max-w-full h-auto dark:border-gray-700"
                       src="<?= base_url('assets/images/image.png'); ?>" alt="author"></a>
                 </div>
