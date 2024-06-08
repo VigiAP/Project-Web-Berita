@@ -78,15 +78,14 @@
                         <path fill-rule="evenodd"
                           d="M8 5.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM4.5 8a3.5 3.5 0 117 0 3.5 3.5 0 01-7 0z"
                           clip-rule="evenodd"></path>
-                      </svg> <?=$article[0]['view']?>x Dilihat
-
+                      </svg> <?=$getViewArticleById?>x Dilihat
                     </span>
                     <!-- like button -->
-                    <button id="like" data-user-id="<?=session()->get('id')?>" data-article-id="<?=$article[0]['id_article']?>">
+                    <button id="like" data-user-id="<?=session()->get('logged_in') ? session()->get('id') : false?>" data-article-id="<?=$article[0]['id_article']?>">
                       <i id="icon" class="fa-regular fa-heart blank">
                       </i>
                     </button>
-                    100x Disukai
+                    <?=$getArticleLikesById?>x Disukai
                     <!--end view-->
                   </div>
 

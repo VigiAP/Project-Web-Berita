@@ -114,17 +114,23 @@
 
             <!-- search form & mobile nav -->
             <div class="flex flex-row items-center text-gray-300 ">
-
-              <div class="relative border-l border-gray-800 hover:bg-gray-900">
-                <a href="<?= base_url('Accounts/'); ?>" class="block py-3 px-6 border-b-2 border-transparent">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                  </svg>
-                </a>
-              </div>
-
+              <?php if(session()->get('id')){?>
+                <div class="relative border-l border-gray-800 hover:bg-gray-900">
+                  <a href="<?= base_url('Accounts/logout'); ?>" class="block py-3 px-6 border-b-2 border-transparent">
+                    Logout
+                  </a>
+                </div>
+              <?php }else {?>
+                <div class="relative border-l border-gray-800 hover:bg-gray-900">
+                  <a href="<?= base_url('Accounts/'); ?>" class="block py-3 px-6 border-b-2 border-transparent">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                  </a>
+                </div>
+              <?php }?>
 
               <div class="search-dropdown relative border-r lg:border-l border-gray-800 hover:bg-gray-900">
                 <button class="block py-3 px-6 border-b-2 border-transparent">
@@ -403,30 +409,68 @@
   <script>
     const base_url = "http://localhost:8080/project-web-berita/public";
     $(document).ready(function () {
-      $("#like").on("click", function () {
-        $("#icon").toggleClass("red");
-        $("#icon").toggleClass("fa-solid");
 
+      $("#like").on("click", function () {
         const userId = $(this).data('user-id');
         const articleId = $(this).data('article-id');
+
+        if(userId && articleId) {
+          $("#icon").toggleClass("red");
+          $("#icon").toggleClass("fa-solid");
+          $.ajax({
+          url: "/Home/likeArticle",
+          type: 'POST',
+          data: {
+              id_user: userId,
+              id_article: articleId
+          },
+          success: function(response) {
+              // Handle the successful response here
+              console.log(response);
+          },
+          error: function(xhr, status, error) {
+              
+              console.error(error);
+          }
+        });
+        } else {
+          alert("Anda harus login terlebih dahulu");
+        } 
+      });
+
+      function getArticleIdFromUrl() {
+        const urlPath = window.location.pathname;
+        const pathParts = urlPath.split('/');
+        return pathParts[pathParts.length - 1]; // Assuming the article ID is the last part of the path
+      }
+
+      const articleId = getArticleIdFromUrl();
+      if (articleId) {
         $.ajax({
-            url: "/Home/likeArticle",
-            type: 'POST',
+            url: `/Home/singlePost`,
+            type: 'GET',
+            format: 'json',
             data: {
-                id_user: userId,
                 id_article: articleId
             },
             success: function(response) {
                 // Handle the successful response here
-                console.log(response);
+               if(response == 1) {
+                $("#icon").toggleClass("red");
+                $("#icon").toggleClass("fa-solid");
+               }
+
             },
             error: function(xhr, status, error) {
-               
-                console.error(error);
+                console.error("AJAX Error: ", error);
+                console.error("Status: ", status);
+                console.error("Response: ", xhr.responseText);
             }
         });
+      } else {
+        console.error("id_article not found in the URL");
+      }
 
-      });
     });
   </script>
 </body>

@@ -10,7 +10,7 @@ class ArticleModel extends Model
     protected $table = 'article';
     protected $primaryKey = 'id_article';
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['id_article', 'id_user', 'title', 'content', 'image','publication_date', 'view','aproved'];
+    protected $allowedFields = ['id_article', 'id_user', 'title', 'content', 'image','publication_date','aproved'];
     protected $builder;
     protected $db;
     
@@ -32,7 +32,7 @@ class ArticleModel extends Model
 
     public function getDataArticleById2($id)
     {
-        $this->builder->select('article.id_article, article.title, article.image, article.content, article.publication_date, article.view, tbl_users.name');
+        $this->builder->select('article.id_article, article.title, article.image, article.content, article.publication_date, tbl_users.name');
         $this->builder->join('tbl_users', 'tbl_users.id_user = article.id_user');
         $this->builder->where('article.approved', '1');
         return $this->builder->where('article.id_article', $id)->get()->getResultArray();
@@ -76,8 +76,4 @@ class ArticleModel extends Model
         return ($this->builder->delete(['id_article' => $id])) ? 1 : 0;
     } 
     
-    public function getDataViewArticle($id) {
-        $this->builder->select('view');
-        return $this->builder->where('id_article', $id)->get()->getResultArray();
-    }
 }

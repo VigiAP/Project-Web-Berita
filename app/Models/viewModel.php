@@ -1,0 +1,54 @@
+<?php
+
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class ViewModel extends Model
+{
+
+    protected $table = 'views';
+    protected $primaryKey = 'id_view';
+    protected $useAutoIncrement = true;
+    protected $allowedFields = ['id_view', 'id_user', 'id_article'];
+    protected $builder;
+    
+    public function __construct()
+    {
+        $db      = \Config\Database::connect();
+        $this->builder = $db->table($this->table);
+    }
+
+    // public function getDataCategories($id_category = false)
+    // {
+    //     if ($id_category === false) {
+    //         return $this->builder->orderBy('id_category', 'DESC')->get()->getResultArray();
+    //     }
+    //     return $this->builder->where('id_category', $id_category)->get()->getResultArray();
+    // }
+
+    // public function getDataCategoryById($id)
+    // {
+    //     return $this->builder->where('id_category', $id)->get()->getResultArray();
+    // }
+
+    // public function updateData($data, $id)
+    // {
+    //     return $this->builder->where('id_category', $id)->update($data);
+    // }
+
+    public function saveData($data)
+    {
+        return $this->builder->insert($data);
+    }
+
+    public function getDataViewArticleById($id) {
+        return $this->builder->where('id_article', $id)->countAllResults();
+    
+    }
+    
+    // public function deleteData($id)
+    // {
+    //     return ($this->builder->delete(['id_category' => $id])) ? 1 : 0;
+    // }
+}
