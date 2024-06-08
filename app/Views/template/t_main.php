@@ -6,11 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $title; ?></title>
 
-   
-
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
@@ -32,12 +29,15 @@
     <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> -->
-     <!-- my css -->
+    <!-- my css -->
     <link rel="stylesheet" href="<?=base_url()?>/css/myCss.css">
     <style>
         #choices-multiple-remove-button:hover {
             color: black;
+        }
+        .main-header.navbar {
+            background-color: #ffffff; /* Change to desired background color */
+            opacity: 1; /* Set opacity to 1 to remove transparency */
         }
     </style>
 </head>
@@ -63,7 +63,7 @@
                     <a href="<?= base_url('Accounts/logout'); ?>" class="nav-link" role="button" data-widget=""><i class="fa fa-sign-out"></i></a>
                 </li>
             </ul>
-        </nav>;
+        </nav>
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-light-primary elevation-4">
 
@@ -130,13 +130,8 @@
     <script src="<?= base_url('plugins/datatables-buttons/js/buttons.colVis.min.js'); ?>"></script>
     <script src="<?= base_url('plugins/bs-custom-file-input/bs-custom-file-input.min.js'); ?>"></script>
     <script src="<?= base_url('/plugins/summernote/summernote-bs4.min.js'); ?>"></script>
+    <script src="<?= base_url('plugins/chart.js/Chart.min.js'); ?>"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<<<<<<< HEAD
-    
-=======
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
->>>>>>> 7cd6b097090b1fcb2c6d1398cb68a0f18b432e7e
     <script>
         $(function() {
             $("#example1").DataTable({
@@ -313,6 +308,8 @@
             });
         })
     </script>
+
+
 </body>
 
 </html>
