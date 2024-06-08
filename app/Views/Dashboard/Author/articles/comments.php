@@ -74,93 +74,27 @@
 
     }
 </style>
-
 <div class="container pt-3">
-
     <div class="row d-flex justify-content-center">
-
         <div class="col-md-11">
-
-
-
             <div class="card p-3">
-
                 <div class="d-flex justify-content-between align-items-center">
-
                     <div class="user d-flex flex-row align-items-center">
-
-                        <img src="https://i.imgur.com/hczKIze.jpg" width="30" class="user-img rounded-circle mr-3">
-                        <span><small class="font-weight-bold text-primary">james_olesenn</small> 
-                        <br>
-                        <small class="font-weight-bold">Hmm, This poster looks cool</small></span>
-
+                        <img src="path_to_default_image.jpg" width="30" class="user-img rounded-circle mr-3">
+                        <span>
+                            <small class="font-weight-bold text-primary">username</small>
+                            <br>
+                            <small class="font-weight-bold">text</small>
+                        </span>
                     </div>
-
-
-                    <small>2 days ago</small>
-
+                    <div>
+                        <small>dibuat kapan</small>
+                        <a href="#" class="btn btn-danger">Hapus</a> 
+                    </div>
                 </div>
             </div>
-            <div class="card p-3">
-
-                <div class="d-flex justify-content-between align-items-center">
-
-                    <div class="user d-flex flex-row align-items-center">
-
-                        <img src="https://i.imgur.com/hczKIze.jpg" width="30" class="user-img rounded-circle mr-3">
-                        <span><small class="font-weight-bold text-primary">james_olesenn</small> 
-                        <br>
-                        <small class="font-weight-bold">Hmm, This poster looks cool</small></span>
-
-                    </div>
-
-
-                    <small>2 days ago</small>
-
-                </div>
-            </div>
-            <div class="card p-3">
-
-                <div class="d-flex justify-content-between align-items-center">
-
-                    <div class="user d-flex flex-row align-items-center">
-
-                        <img src="https://i.imgur.com/hczKIze.jpg" width="30" class="user-img rounded-circle mr-3">
-                        <span><small class="font-weight-bold text-primary">james_olesenn</small> 
-                        <br>
-                        <small class="font-weight-bold">Hmm, This poster looks cool</small></span>
-
-                    </div>
-
-
-                    <small>2 days ago</small>
-
-                </div>
-            </div>
-            <div class="card p-3">
-
-                <div class="d-flex justify-content-between align-items-center">
-
-                    <div class="user d-flex flex-row align-items-center">
-
-                        <img src="https://i.imgur.com/hczKIze.jpg" width="30" class="user-img rounded-circle mr-3">
-                        <span><small class="font-weight-bold text-primary">james_olesenn</small> 
-                        <br>
-                        <small class="font-weight-bold">Hmm, This poster looks cool</small></span>
-
-                    </div>
-
-
-                    <small>2 days ago</small>
-
-                </div>
-            </div>
-
-
         </div>
-
     </div>
-
 </div>
 
 <?= $this->endSection(); ?>
