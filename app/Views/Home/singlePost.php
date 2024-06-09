@@ -151,49 +151,24 @@
 
               <!-- Comments -->
               <div>
-                <form class="w-full bg-white rounded-lg border p-2 mx-auto mt-10">
+                <form class="w-full bg-white rounded-lg border p-2 mx-auto mt-10 my-10">
                   <div class="px-3 mb-2 mt-2">
                     <textarea placeholder="comment"
-                      class="w-full bg-gray-100 rounded border border-gray-00 leading-normal resize-none h-20 py-2 px-3 font-medium  focus:outline-none focus:bg-white"></textarea>
+                      class="w-full bg-gray-100 rounded border border-gray-00 leading-normal resize-none h-20 py-2 px-3 font-medium  focus:outline-none focus:bg-white" id="comment"></textarea>
                   </div>
                   <div class="flex justify-end px-4">
                     <input type="submit"
                       class="px-2.5 py-1.5 rounded-md text-white text-sm bg-indigo-500 transition duration-300 ease-in-out hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-300"
-                      value="Comment">
+                      value="Comment" id="tSubmit" data-user="<?=session()->get('logged_in') ? session()->get('id') : false ?>" data-article="<?=$article[0]['id_article']?>">
                   </div>
                 </form>
               </div>
 
-
-
-              <div class="w-full border px-6 py-4 rounded-lg my-10 ">
-                <div class="flex items-center mb-6">
-                  <img src="https://randomuser.me/api/portraits/men/97.jpg" alt="Avatar"
-                    class="w-12 h-12 rounded-full mr-4">
-                  <div>
-                    <div class="text-lg font-medium text-gray-800">John Doe</div>
-                    <div class="text-gray-500">2 hours ago</div>
-                  </div>
-                </div>
-                <p class="text-lg leading-relaxed mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  sit amet lorem
-                  nulla. Donec consequat urna a tortor sagittis lobortis.</p>
-                <div class="flex justify-end items-center">
-                  <a href="#" class="text-gray-500 hover:text-gray-700 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-5 w-5 mr-2">
-                      <path
-                        d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
-                    </svg>
-                    Delete
-                  </a> <!-- delete oleh akun yang komen -->
-                </div>
-                </div>
+              <div id="container">
+              </div>
               </div>
 
             </div>
-
-
-
           </div>
         </div>
       </div>

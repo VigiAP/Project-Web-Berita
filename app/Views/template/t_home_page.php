@@ -407,6 +407,58 @@
   <!-- Production js -->
   <!-- <script src="dist/js/scripts.js"></script> -->
   <script>
+    //idonesian format
+    function convertToIndonesianFormat(datetime) {
+      // Define an array of Indonesian month names
+      const months = [
+          'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
+          'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
+      ];
+
+      // Create a Date object from the input string
+      const date = new Date(datetime);
+
+      // Extract the day, month, and year
+      const day = String(date.getDate()).padStart(2, '0');
+      const month = months[date.getMonth()];
+      const year = date.getFullYear();
+
+      // Extract the hour and minute
+      const hours = String(date.getHours()).padStart(2, '0');
+      const minutes = String(date.getMinutes()).padStart(2, '0');
+
+      // Format the date to Indonesian format
+      const formattedDate = `${hours}:${minutes} ${day} ${month} ${year}`;
+
+      return formattedDate;
+    }
+    function timeAgo(datetime) {
+      const now = new Date();
+      const date = new Date(datetime);
+      const diffInSeconds = Math.floor((now - date) / 1000);
+      
+      const intervals = [
+          { label: 'tahun', seconds: 31536000 },
+          { label: 'bulan', seconds: 2592000 },
+          { label: 'hari', seconds: 86400 },
+          { label: 'jam', seconds: 3600 },
+          { label: 'menit', seconds: 60 },
+          { label: 'detik', seconds: 1 }
+      ];
+
+      for (let interval of intervals) {
+          const count = Math.floor(diffInSeconds / interval.seconds);
+          if (count >= 1) {
+              if (count === 1) {
+                  return `satu ${interval.label} yang lalu`;
+              } else {
+                  return `${count} ${interval.label} yang lalu`;
+              }
+          }
+      }
+    
+     return 'baru saja';
+    }
     const base_url = "http://localhost:8080/project-web-berita/public";
     $(document).ready(function () {
 
@@ -438,6 +490,37 @@
         } 
       });
 
+      $('#tSubmit').on('click', function () {
+        event.preventDefault();
+        const userId = $(this).data('user');
+        const articleId = $(this).data('article');
+        const comment = $('#comment').val();
+        console.log(userId, articleId, comment);
+        if(userId && articleId) {
+          $.ajax({
+            url: "/Home/comment",
+            type: 'POST',
+            data: {
+                id_user: userId,
+                id_article: articleId,
+                comment: comment
+            },
+            success: function(response) {
+                // Handle the successful response here
+                console.log(response);
+                 const comment = $('#comment').val("");
+            },
+            error: function(xhr, status, error) {
+                
+                console.error(error);
+            }
+          });
+        } else {
+          alert("Anda harus login terlebih dahulu");
+        }
+      });
+
+      
       function getArticleIdFromUrl() {
         const urlPath = window.location.pathname;
         const pathParts = urlPath.split('/');
@@ -470,6 +553,54 @@
       } else {
         console.error("id_article not found in the URL");
       }
+      
+      setInterval(function () {
+        if(articleId) {
+          $.ajax({
+            url: `/Home/getComments`,
+            type: 'GET',
+            dataType: 'json',
+            data: {
+                id_article: articleId
+            },
+            success: function(data) {
+               
+                  let html = '';
+                  data.forEach(item => {
+                    html += `<div class="w-full border px-6 py-4 rounded-lg my-2 ">
+                      <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/97.jpg" alt="Avatar"
+                          class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                          <div class="text-lg font-medium text-gray-800">${item.name}</div>
+                          <div class="text-gray-500">${timeAgo(item.comment_date)}</div>
+                        </div>
+                      </div>
+                      <p class="text-lg leading-relaxed mb-6">${item.comment}</p>
+                      <div class="flex justify-end items-center">
+                        <a href="#" class="text-gray-500 hover:text-gray-700 flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-5 w-5 mr-2">
+                            <path
+                              d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
+                          </svg>
+                          Delete
+                        </a> <!-- delete oleh akun yang komen -->
+                      </div>
+                    </div>`;
+                  });
+                
+                $('#container').html(html);
+            },
+            error: function(xhr, status, error) {
+                console.error("AJAX Error: ", error);
+                console.error("Status: ", status);
+                console.error("Response: ", xhr.responseText);
+            }
+          }); 
+        }else{
+          console.error("id_article not found in the URL");
+        }
+      }, 1000);
 
     });
   </script>

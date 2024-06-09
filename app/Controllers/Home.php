@@ -6,6 +6,7 @@ use App\Models\DetailCategoryeModel;
 use App\Models\CategoryModel;
 use App\Models\LikeModel;
 use App\Models\ViewModel;
+use App\Models\CommentModel;
 
 class Home extends BaseController
 {   
@@ -14,6 +15,7 @@ class Home extends BaseController
     protected $categoryModel;
     protected $likeModel;
     protected $viewModel;
+    protected $commentModel;
 
     public function __construct() {
         
@@ -22,6 +24,7 @@ class Home extends BaseController
         $this->categoryModel = new CategoryModel();
         $this->likeModel = new LikeModel();
         $this->viewModel = new ViewModel();
+        $this->commentModel = new CommentModel();
     }
 
     public function index()
@@ -144,5 +147,23 @@ class Home extends BaseController
         ];
 
         echo view('/Home/listCategories', $data);
+    }
+
+    public function comment()
+    {
+        date_default_timezone_set("Asia/Bangkok");
+        $data = [
+            'id_user' => $this->request->getVar('id_user'),
+            'id_article' => $this->request->getVar('id_article'),
+            'comment' => $this->request->getVar('comment'),
+            'comment_date' => date('Y-m-d H:i:s'),
+        ];
+
+        echo json_encode($this->commentModel->saveData($data));
+    }
+
+    public function getComments() {
+        $id_article = $this->request->getVar('id_article');
+        echo json_encode($this->commentModel->getDataCommentsByArticleId($id_article));
     }
 }

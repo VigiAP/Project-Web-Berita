@@ -3956,3 +3956,1533 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
 11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
 INFO - 2024-06-08 14:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-06-08 14:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 16:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-08 16:38:34 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect()
+#1 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 D:\2023\web-project-berita\Project-Web-Berita\app\Models\ArticleModel.php(44): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\2023\web-project-berita\Project-Web-Berita\app\Controllers\Home.php(47): App\Models\ArticleModel->getDataSomeArticles()
+#6 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->homePage()
+#7 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\2023\web-project-berita\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 D:\2023\web-project-berita\Project-Web-Berita\app\Models\ArticleModel.php(44): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\2023\web-project-berita\Project-Web-Berita\app\Controllers\Home.php(47): App\Models\ArticleModel->getDataSomeArticles()
+#5 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->homePage()
+#6 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 D:\2023\web-project-berita\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('...')
+#10 {main}
+CRITICAL - 2024-06-08 16:38:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH\Models\ArticleModel.php(44): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(47): App\Models\ArticleModel->getDataSomeArticles()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->homePage()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 16:38:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 16:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-08 16:38:47 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`)) in D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 D:\2023\web-project-berita\Project-Web-Berita\app\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\2023\web-project-berita\Project-Web-Berita\app\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+#6 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+#7 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\2023\web-project-berita\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-06-08 16:38:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 3 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 16:38:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 5 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 16:38:47 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 6 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 16:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 16:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 16:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 16:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 16:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-08 16:39:13 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`)) in D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 D:\2023\web-project-berita\Project-Web-Berita\app\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\2023\web-project-berita\Project-Web-Berita\app\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+#6 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+#7 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\2023\web-project-berita\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-06-08 16:39:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 3 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 16:39:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 5 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 16:39:13 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 6 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 16:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 16:39:55 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-06-03 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('48')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 16:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 16:40:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 16:40:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-08 16:40:11 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`)) in D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 D:\2023\web-project-berita\Project-Web-Berita\app\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\2023\web-project-berita\Project-Web-Berita\app\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+#6 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+#7 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\2023\web-project-berita\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-06-08 16:40:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 3 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 16:40:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 5 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 16:40:11 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 6 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 16:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 16:40:12 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-06-03 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('48')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 16:40:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 16:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 16:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-08 16:40:23 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`)) in D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 D:\2023\web-project-berita\Project-Web-Berita\app\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\2023\web-project-berita\Project-Web-Berita\app\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+#6 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+#7 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\2023\web-project-berita\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-06-08 16:40:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 3 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 16:40:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 5 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 16:40:24 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 6 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 16:40:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 16:40:25 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-06-03 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('48')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 16:40:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 16:40:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 16:40:30 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-06-03 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('48')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 16:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 16:40:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 16:40:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-08 16:40:35 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`)) in D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 D:\2023\web-project-berita\Project-Web-Berita\app\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\2023\web-project-berita\Project-Web-Berita\app\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+#6 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+#7 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\2023\web-project-berita\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-06-08 16:40:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 3 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 16:40:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 5 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 16:40:35 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 6 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 16:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 16:40:36 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-06-03 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('48')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 16:40:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 17:02:01 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-06-03 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('48')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 17:02:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:02:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 17:02:17 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-06-03 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('48')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 17:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:02:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 17:02:24 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-06-03 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('48')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 17:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:03:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 17:03:31 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-06-03 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('48')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 17:03:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 17:03:37 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-06-03 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('48')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 17:03:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 17:03:50 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-06-03 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('48')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 17:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:04:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:04:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-08 17:04:26 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`)) in D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 D:\2023\web-project-berita\Project-Web-Berita\app\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\2023\web-project-berita\Project-Web-Berita\app\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+#6 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+#7 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\2023\web-project-berita\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-06-08 17:04:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 3 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 17:04:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 5 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 17:04:26 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 6 APPPATH\Controllers\Home.php(80): App\Models\ViewModel->saveData()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 17:04:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 17:04:31 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 17:04:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:05:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 17:05:34 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 17:05:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 17:07:19 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 17:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 17:08:42 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 17:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 17:09:13 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 17:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 17:10:41 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 17:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:13:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 17:13:47 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(108): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 17:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 17:58:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 17:58:36 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 17:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 18:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:00:12 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:00:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 18:01:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:01:19 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 18:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:04:57 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 18:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:05:58 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 18:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:06:09 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:06:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 18:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:07:22 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 18:07:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:07:38 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:07:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 18:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:08:08 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 18:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:08:19 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:08:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 18:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:09:23 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 18:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:11:21 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 18:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:30:46 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-08 18:30:50 --> TypeError: method_exists(): Argument #1 ($object_or_class) must be of type object|string, null given
+in SYSTEMPATH\Model.php on line 867.
+ 1 SYSTEMPATH\Model.php(867): method_exists()
+ 2 APPPATH\Controllers\Home.php(165): CodeIgniter\Model->__call()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:38:06 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:38:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-08 18:38:08 --> TypeError: method_exists(): Argument #1 ($object_or_class) must be of type object|string, null given
+in SYSTEMPATH\Model.php on line 867.
+ 1 SYSTEMPATH\Model.php(867): method_exists()
+ 2 APPPATH\Controllers\Home.php(166): CodeIgniter\Model->__call()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:38:59 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-08 18:39:01 --> TypeError: method_exists(): Argument #1 ($object_or_class) must be of type object|string, null given
+in SYSTEMPATH\Model.php on line 867.
+ 1 SYSTEMPATH\Model.php(867): method_exists()
+ 2 APPPATH\Controllers\Home.php(166): CodeIgniter\Model->__call()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:39:49 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-08 18:39:50 --> TypeError: method_exists(): Argument #1 ($object_or_class) must be of type object|string, null given
+in SYSTEMPATH\Model.php on line 867.
+ 1 SYSTEMPATH\Model.php(867): method_exists()
+ 2 APPPATH\Controllers\Home.php(166): CodeIgniter\Model->__call()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:43:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:43:27 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:43:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-08 18:43:29 --> TypeError: method_exists(): Argument #1 ($object_or_class) must be of type object|string, null given
+in SYSTEMPATH\Model.php on line 867.
+ 1 SYSTEMPATH\Model.php(867): method_exists()
+ 2 APPPATH\Controllers\Home.php(166): CodeIgniter\Model->__call()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 18:47:39 --> ErrorException: date_default_timezone_set(): Timezone ID 'UP7' is invalid
+in SYSTEMPATH\CodeIgniter.php on line 221.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(221): date_default_timezone_set()
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 18:48:23 --> ErrorException: date_default_timezone_set(): Timezone ID 'UP1' is invalid
+in SYSTEMPATH\CodeIgniter.php on line 221.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(221): date_default_timezone_set()
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:48:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:48:41 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 18:48:41 --> ErrorException: Undefined property: Config\App::$appTimezone
+in SYSTEMPATH\Common.php on line 53.
+ 1 SYSTEMPATH\Common.php(53): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\Config.php(36): app_timezone()
+ 3 SYSTEMPATH\Debug\Toolbar.php(164): CodeIgniter\Debug\Toolbar\Collectors\Config::display()
+ 4 SYSTEMPATH\Debug\Toolbar.php(369): CodeIgniter\Debug\Toolbar->run()
+ 5 SYSTEMPATH\Filters\DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare()
+ 6 SYSTEMPATH\Filters\Filters.php(208): CodeIgniter\Filters\DebugToolbar->after()
+ 7 SYSTEMPATH\CodeIgniter.php(522): CodeIgniter\Filters\Filters->run()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:51:52 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:51:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-08 18:51:56 --> TypeError: method_exists(): Argument #1 ($object_or_class) must be of type object|string, null given
+in SYSTEMPATH\Model.php on line 867.
+ 1 SYSTEMPATH\Model.php(867): method_exists()
+ 2 APPPATH\Controllers\Home.php(166): CodeIgniter\Model->__call()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:52:36 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 18:52:38 --> TypeError: method_exists(): Argument #1 ($object_or_class) must be of type object|string, null given
+in SYSTEMPATH\Model.php on line 867.
+ 1 SYSTEMPATH\Model.php(867): method_exists()
+ 2 APPPATH\Controllers\Home.php(166): CodeIgniter\Model->__call()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 18:53:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:53:18 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 18:53:20 --> TypeError: method_exists(): Argument #1 ($object_or_class) must be of type object|string, null given
+in SYSTEMPATH\Model.php on line 867.
+ 1 SYSTEMPATH\Model.php(867): method_exists()
+ 2 APPPATH\Controllers\Home.php(167): CodeIgniter\Model->__call()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:53:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 18:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:56:25 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 18:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 18:59:44 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 18:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:02:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:02:47 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:03:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:03:39 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:04:41 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:06:40 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:07:41 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:07:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:07:56 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:07:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:08:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:08:22 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:08:46 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:08:49 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:09:20 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:09:45 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:09:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:11:07 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:12:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:12:39 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:13:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:13:42 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:13:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:14:45 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:14:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:15:19 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:15:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:15:42 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:17:24 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:17:44 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:17:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:18:12 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:18:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:18:52 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:19:07 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:21:18 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:21:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-08 19:21:37 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`)) in D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 D:\2023\web-project-berita\Project-Web-Berita\app\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\2023\web-project-berita\Project-Web-Berita\app\Controllers\Home.php(83): App\Models\ViewModel->saveData()
+#6 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+#7 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\2023\web-project-berita\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-06-08 19:21:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 3 APPPATH\Controllers\Home.php(83): App\Models\ViewModel->saveData()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 19:21:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 5 APPPATH\Controllers\Home.php(83): App\Models\ViewModel->saveData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 19:21:37 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 6 APPPATH\Controllers\Home.php(83): App\Models\ViewModel->saveData()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:21:39 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-06-03 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('48')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:22:21 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-06-03 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('48')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:23:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:23:44 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-06-03 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('48')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:24:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:24:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-08 19:24:16 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`)) in D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 D:\2023\web-project-berita\Project-Web-Berita\app\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\2023\web-project-berita\Project-Web-Berita\app\Controllers\Home.php(83): App\Models\ViewModel->saveData()
+#6 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+#7 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\2023\web-project-berita\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-06-08 19:24:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 3 APPPATH\Controllers\Home.php(83): App\Models\ViewModel->saveData()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 19:24:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 5 APPPATH\Controllers\Home.php(83): App\Models\ViewModel->saveData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-08 19:24:16 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Models\viewModel.php(42): CodeIgniter\Database\BaseBuilder->insert()
+ 6 APPPATH\Controllers\Home.php(83): App\Models\ViewModel->saveData()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:24:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:24:17 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:25:25 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:25:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:25:56 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:25:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:26:52 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:27:29 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:27:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:33:24 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:36:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:36:06 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-08 19:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-06-08 19:40:00 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Helpers\my_function_helper.php on line 12.
+ 1 APPPATH\Views\Home\singlePost.php(68): formatTanggal('2024-05-15 00:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Home\\singlePost.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/Home/singlePost', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('/Home/singlePost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost('37')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-08 19:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
