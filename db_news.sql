@@ -71,15 +71,24 @@ CREATE TABLE `comments` (
   `id_comment` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) DEFAULT NULL,
   `id_article` int(11) DEFAULT NULL,
+  `comment_date` datetime DEFAULT NULL,
   `comment` text DEFAULT NULL,
   PRIMARY KEY (`id_comment`),
   KEY `id_user` (`id_user`),
   KEY `id_article` (`id_article`),
   CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `tbl_users` (`id_user`),
   CONSTRAINT `comments_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `comments` */
+
+insert  into `comments`(`id_comment`,`id_user`,`id_article`,`comment_date`,`comment`) values 
+(8,45,37,'2024-06-09 02:15:48','wkw'),
+(9,45,37,'2024-06-09 02:15:53','kipak'),
+(10,45,48,'2024-06-09 02:22:29','hello'),
+(11,51,37,'2024-06-09 02:24:31','ape luu\n'),
+(12,51,37,'2024-06-09 02:27:01','a'),
+(13,51,37,'2024-06-09 02:41:30','kipakkk');
 
 /*Table structure for table `detail_categories` */
 
@@ -126,13 +135,13 @@ CREATE TABLE `likes` (
   KEY `id_user_2` (`id_user`),
   CONSTRAINT `likes_ibfk_1` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`),
   CONSTRAINT `likes_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `tbl_users` (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `likes` */
 
 insert  into `likes`(`id_like`,`id_article`,`id_user`) values 
 (27,37,45),
-(29,37,51);
+(30,37,51);
 
 /*Table structure for table `tbl_users` */
 
@@ -157,10 +166,10 @@ CREATE TABLE `tbl_users` (
 
 insert  into `tbl_users`(`id_user`,`username`,`password`,`name`,`phone_no`,`image`,`role`,`status`,`otp`,`created_at`,`updated_at`) values 
 (11,'admin','$2y$10$qnEMvcYVOZBSZjURgKQv/.VwydR6urBIT0O5z2dBcx43BYk5lfj96','Yon Arifin','089668017778','','admin','1','97570','2024-03-05 13:54:19','2024-04-16 18:34:33'),
-(32,'author','$2y$10$tv0ohz1AU0IQ.apD0opn3e5vr/s2BvxJeYSt58cPeukuborZUMCGq','Yon Arifin','089668017776','','author','1',NULL,'2024-03-17 23:40:13','2024-04-26 21:35:47'),
-(34,'editor','$2y$10$lf2zxkewN.p4i4DzwY4/fOWT.z5dqK14MQtdmnqeCBdecMrB/DVZC','editor','0897979979797','','editor','1',NULL,'2024-03-18 16:18:33','2024-03-18 16:18:33'),
-(45,'visitor','$2y$10$NHujCp83sSdNTpKhQ59t6OQ4mTtACA1ciVzbbM03EJXmkJHCXayHi','','089668017778','','visitor','1',NULL,'2024-05-24 10:42:00','2024-05-24 10:42:00'),
-(51,'visitor2','$2y$10$NHujCp83sSdNTpKhQ59t6OQ4mTtACA1ciVzbbM03EJXmkJHCXayHi','Rmha','089668017778','','visitor','1',NULL,'2024-05-24 11:04:10','2024-06-08 19:21:57');
+(32,'author','$2y$10$tv0ohz1AU0IQ.apD0opn3e5vr/s2BvxJeYSt58cPeukuborZUMCGq','Vigi','089668017776','','author','1',NULL,'2024-03-17 23:40:13','2024-06-09 02:20:50'),
+(34,'editor','$2y$10$lf2zxkewN.p4i4DzwY4/fOWT.z5dqK14MQtdmnqeCBdecMrB/DVZC','Haris','0897979979797','','editor','1',NULL,'2024-03-18 16:18:33','2024-06-09 02:20:59'),
+(45,'visitor','$2y$10$NHujCp83sSdNTpKhQ59t6OQ4mTtACA1ciVzbbM03EJXmkJHCXayHi','Rhma','089668017778','','visitor','1',NULL,'2024-05-24 10:42:00','2024-06-09 02:20:45'),
+(51,'visitor2','$2y$10$NHujCp83sSdNTpKhQ59t6OQ4mTtACA1ciVzbbM03EJXmkJHCXayHi','Dzikri','089668017778','','visitor','1',NULL,'2024-05-24 11:04:10','2024-06-09 02:21:05');
 
 /*Table structure for table `views` */
 
@@ -175,7 +184,7 @@ CREATE TABLE `views` (
   KEY `id_article` (`id_article`),
   CONSTRAINT `views_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `tbl_users` (`id_user`),
   CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `views` */
 
