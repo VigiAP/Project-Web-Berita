@@ -138,7 +138,7 @@
                   style="min-width: 15rem;">
                   <div class="flex flex-wrap items-stretch w-full relative">
                     <input type="text"
-                      class="flex-shrink flex-grow flex-shrink max-w-full leading-5 w-px flex-1 relative py-2 px-5 text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600"
+                      class="flex-shrink flex-grow flex-shrink max-w-full leading-5 w-px flex-1 relative py-2 px-5 text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700"
                       name="text" placeholder="Search..." aria-label="search">
                     <div class="flex -mr-px">
 
@@ -200,69 +200,25 @@
           <div class="text-center py-4 w-full font-bold border-b border-gray-100">Pojok Berita</div>
           <ul id="side-menu" class="w-full float-none flex flex-col">
             <li class="relative">
-              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Home</a>
+              <a href="<?=base_url('Home/homePage')?>" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Home</a>
             </li>
-
-            <!-- dropdown with submenu-->
-            <li class="dropdown relative">
-              <a class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="javascript:;">
-                Berita
-              </a>
-
-              <!-- dropdown menu -->
-              <ul
-                class="dropdown-menu block rounded rounded-t-none top-full z-50 ml-4 py-0.5 text-left bg-white dark:bg-gray-800 mb-4"
-                style="min-width: 12rem">
-                <!--submenu-->
-                <li class="subdropdown relative">
-                  <a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="javascript:;">
-                    Dropdown item
-                  </a>
-
-                  <!--dropdown submenu-->
-                  <ul
-                    class="dropdown-menu block rounded rounded-t-none top-full z-50 ml-4 py-0.5 text-left bg-white dark:bg-gray-800"
-                    style="min-width: 12rem">
-                    <li><a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="#">Dropdown
-                        sub item</a></li>
-                    <li><a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="#">Dropdown
-                        sub item</a></li>
-                    <li><a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="#">Dropdown
-                        sub item</a></li>
-                    <li><a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="#">Dropdown
-                        sub item</a></li>
-                  </ul>
-                </li>
-                <!--end submenu-->
-                <li class="relative"><a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50"
-                    href="#">Dropdown item</a></li>
-                <li class="relative"><a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50"
-                    href="#">Dropdown item</a></li>
-              </ul>
-            </li>
-
             <li class="relative">
-              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Olahraga</a>
+              <a href="<?=base_url('Home/category/olahraga')?>" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Olahraga</a>
             </li>
-
             <li class="relative">
-              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Travel</a>
+              <a href="<?=base_url('Home/category/travel')?>" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Travel</a>
             </li>
-
             <li class="relative">
-              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Teknologi</a>
+              <a href="<?=base_url('Home/category/teknologi')?>" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Teknologi</a>
             </li>
-
             <li class="relative">
-              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Kesehatan</a>
+              <a href="<?=base_url('Home/category/kesehatan')?>" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Kesehatan</a>
             </li>
-
             <li class="relative">
-              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Otomotif</a>
+              <a href="<?=base_url('Home/category/otomotif')?>" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Otomotif</a>
             </li>
-
             <li class="relative">
-              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Lainnya</a>
+              <a href="<?=base_url('Home/listCategories')?>" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Lainnya</a>
             </li>
           </ul>
         </nav>

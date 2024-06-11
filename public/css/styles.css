@@ -2418,6 +2418,10 @@ input.tab:checked + .tab-content,
   order: -9999;
 }
 
+.order-last {
+  order: 9999;
+}
+
 .float-none {
   float: none;
 }
@@ -2699,6 +2703,10 @@ input.tab:checked + .tab-content,
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -3013,6 +3021,11 @@ input.tab:checked + .tab-content,
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .pb-3 {
@@ -4778,6 +4791,14 @@ iframe.wait-autoplay {
     width: 80%;
   }
 
+  .sm\:w-1\/2 {
+    width: 50%;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .sm\:border-b-0 {
     border-bottom-width: 0px;
   }
@@ -4821,11 +4842,19 @@ iframe.wait-autoplay {
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 1024px) {
   .lg\:order-last {
     order: 9999;
+  }
+
+  .lg\:order-first {
+    order: -9999;
   }
 
   .lg\:block {
@@ -4868,6 +4897,10 @@ iframe.wait-autoplay {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -4898,6 +4931,10 @@ iframe.wait-autoplay {
 }
 
 @media (min-width: 1280px) {
+  .xl\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
   .xl\:px-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;

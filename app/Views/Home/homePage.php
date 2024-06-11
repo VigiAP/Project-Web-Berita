@@ -5,9 +5,9 @@
   <main id="content">
 
     <!-- slider news -->
-    <div class="relative bg-gray-50" style="background-image: url("<? base_url('src/img/bg.jpg')?>");background-size: cover;background-position: center center;background-attachment: fixed">
+    <div class="relative bg-gray-50" style="background-image: url('<?= base_url('src/img/bg.jpg') ?>'); background-size: cover; background-position: center center; background-attachment: fixed">
       <div class="bg-black bg-opacity-70">
-        <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+        <div class="container mx-auto px-3 sm:px-4 xl:px-2">
           <div class="flex flex-row flex-wrap">
             <div class="flex-shrink max-w-full w-full py-12 overflow-hidden">
               <div class="w-full py-3">
@@ -45,7 +45,7 @@
     </div>
     <!-- block news -->
     <div class="bg-white py-6">
-      <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+      <div class="container mx-auto px-3 sm:px-4 xl:px-2">
         <div class="flex flex-row flex-wrap">
           <div class="flex-shrink max-w-full w-full overflow-hidden">
             <div class="w-full py-3">
@@ -55,7 +55,7 @@
             </div>
             <div class="flex flex-row flex-wrap -mx-3">
                <?php foreach($articles as $article): ?>
-              <div class="flex-shrink max-w-full w-full sm:w-1/3 lg:w-1/4 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
+              <div class="flex-shrink max-w-full w-full sm:w-1/2 lg:w-1/4 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                   <div class="flex flex-row sm:block hover-img">
                     <a href="<?=base_url('Home/singlePost')?>/<?=$article['id_article']?>">
                       <img class="max-w-full w-full mx-auto" src="<?= base_url('img/')?>/<?= $article['image']; ?>" alt="alt title">
@@ -77,10 +77,10 @@
     </div>
     <!-- block news -->
     <div class="bg-gray-50 py-6">
-      <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+      <div class="container mx-auto px-3 sm:px-4 xl:px-2">
         <div class="flex flex-row flex-wrap">
           <!-- Left -->
-          <div class="flex-shrink max-w-full w-full lg:w-2/3  overflow-hidden">
+          <div class="flex-shrink max-w-full w-full lg:w-2/3 overflow-hidden">
             <div class="w-full py-3">
               <h2 class="text-gray-800 text-2xl font-bold">
                 <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Olahraga
@@ -107,7 +107,7 @@
                 </div>
               </div>
             <?php foreach($artilcesSelectedByCategory2 as $article): ?>
-              <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
+              <div class="flex-shrink max-w-full w-full sm:w-1/2 lg:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="<?=base_url('Home/singlePost')?>/<?=$article['id_article']?>">
                     <img class="max-w-full w-full mx-auto" src="<?= base_url('img/')?>/<?= $article['image']; ?>" alt="alt title">
@@ -157,7 +157,7 @@
     </div>
      <!-- block news -->
     <div class="bg-white py-6">
-      <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+      <div class="container mx-auto px-3 sm:px-4 xl:px-2">
         <div class="flex flex-row flex-wrap">
           <div class="flex-shrink max-w-full w-full overflow-hidden">
             <div class="w-full py-3">
@@ -167,7 +167,7 @@
             </div>
             <div class="flex flex-row flex-wrap -mx-3">
                <?php foreach($artilcesSelectedByCategory3 as $article): ?>
-              <div class="flex-shrink max-w-full w-full sm:w-1/3 lg:w-1/4 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
+              <div class="flex-shrink max-w-full w-full sm:w-1/2 lg:w-1/4 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                   <div class="flex flex-row sm:block hover-img">
                     <a href="">
                       <img class="max-w-full w-full mx-auto" src="<?= base_url('img/')?>/<?= $article['image']; ?>" alt="alt title">
