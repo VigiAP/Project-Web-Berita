@@ -1665,6 +1665,15 @@ input.tab:checked + .tab-content,
   line-height: 1.25rem;
 }
 
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
 .card.image-full :where(figure) {
   overflow: hidden;
   border-radius: inherit;
@@ -2203,10 +2212,18 @@ input.tab:checked + .tab-content,
   line-height: 1.25rem;
 }
 
+.card-compact .card-title {
+  margin-bottom: 0.25rem;
+}
+
 .card-normal .card-body {
   padding: var(--padding-card, 2rem);
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.card-normal .card-title {
+  margin-bottom: 0.75rem;
 }
 
 .tooltip {
@@ -2322,6 +2339,10 @@ input.tab:checked + .tab-content,
 
 .relative {
   position: relative;
+}
+
+.sticky {
+  position: sticky;
 }
 
 .inset-0 {
@@ -2616,10 +2637,6 @@ input.tab:checked + .tab-content,
   height: 100vh;
 }
 
-.w-1\/4 {
-  width: 25%;
-}
-
 .w-12 {
   width: 3rem;
 }
@@ -2650,10 +2667,6 @@ input.tab:checked + .tab-content,
 
 .w-px {
   width: 1px;
-}
-
-.w-28 {
-  width: 7rem;
 }
 
 .max-w-full {
@@ -4761,10 +4774,6 @@ iframe.wait-autoplay {
     width: 33.333333%;
   }
 
-  .sm\:w-1\/5 {
-    width: 20%;
-  }
-
   .sm\:w-4\/5 {
     width: 80%;
   }
@@ -4803,10 +4812,6 @@ iframe.wait-autoplay {
 
   .md\:block {
     display: block;
-  }
-
-  .md\:w-1\/6 {
-    width: 16.666667%;
   }
 
   .md\:w-5\/6 {

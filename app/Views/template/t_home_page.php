@@ -66,22 +66,7 @@
                   style="min-width: 12rem;">
 
                   <!--dropdown submenu-->
-                  <ul
-                    class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100"
-                    style="min-width: 12rem;">
-                    <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                        href="404.html">404</a></li>
-                    <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                        href="author.html">Author</a></li>
-                    <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                        href="category.html">Category</a></li>
-                    <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                        href="search.html">Search</a></li>
-                    <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                        href="page.html">Page</a></li>
-                    <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100"
-                        href="contact-us.html">Contact</a></li>
-                  </ul>
+                  
               </li>
 
             </ul>
@@ -156,16 +141,17 @@
                       class="flex-shrink flex-grow flex-shrink max-w-full leading-5 w-px flex-1 relative py-2 px-5 text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600"
                       name="text" placeholder="Search..." aria-label="search">
                     <div class="flex -mr-px">
-                      <button
-                        class="flex items-center py-2 px-5 -ml-1 leading-5 text-gray-100 bg-black hover:text-white hover:bg-gray-900 hover:ring-0 focus:outline-none focus:ring-0"
-                        type="submit">
+
+                      <a href="<?= base_url('Home/search'); ?>"
+                        class="flex items-center py-2 px-5 -ml-1 leading-5 text-gray-100 bg-black hover:text-white hover:bg-gray-900 hover:ring-0 focus:outline-none focus:ring-0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                           class="bi bi-search" viewBox="0 0 16 16">
                           <path
                             d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
                           </path>
                         </svg>
-                      </button>
+                      </a>
+                      
                     </div>
                   </div>
                 </div>

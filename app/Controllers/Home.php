@@ -166,4 +166,12 @@ class Home extends BaseController
         $id_article = $this->request->getVar('id_article');
         echo json_encode($this->commentModel->getDataCommentsByArticleId($id_article));
     }
+
+    public function search(){
+        $data = [
+            'title' => 'Search | Pojok Berita',
+        ];
+
+        echo view('/Home/hasil_search', $data);
+    }
 }
