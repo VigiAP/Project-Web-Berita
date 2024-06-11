@@ -33930,3 +33930,1866 @@ ORDER BY `comments`.`id_comment` DESC', [...], false)
  9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:41 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:41 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:42 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:42 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:42 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:42 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:43 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:43 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:44 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:44 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:46 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:46 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:47 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:47 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:48 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:48 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:49 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:49 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:50 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:50 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:51 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:51 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:52 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:52 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:53 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:53 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:54 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:54 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:55 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:55 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:56 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:56 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:57 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:57 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:58 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:58 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:12:59 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:12:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:12:59 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:13:00 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:13:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:13:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:13:00 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:13:01 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:13:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:13:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:13:01 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:13:02 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:13:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:13:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:13:02 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+ERROR - 2024-06-11 09:13:03 --> mysqli_sql_exception: Table 'db_news.comments' doesn't exist in C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comment...', 0)
+#1 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comment...')
+#2 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comment...')
+#3 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comment...', Array, false)
+#4 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\vscode\ProjectSMT4WP\Project-Web-Berita\app\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+#6 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->getComments()
+#7 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\vscode\ProjectSMT4WP\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\vscode\ProjectSMT4WP\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\Proje...')
+#11 {main}
+CRITICAL - 2024-06-11 09:13:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 2 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:13:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 4 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-11 09:13:03 --> [Caused by] mysqli_sql_exception: Table 'db_news.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = \'homePage\'
+ORDER BY `comments`.`id_comment` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `comments`.`id_comment`, `comments`.`id_user`, `comments`.`id_article`, `comments`.`comment`, `comments`.`comment_date`, `tbl_users`.`name`
+FROM `comments`
+JOIN `tbl_users` ON `tbl_users`.`id_user` = `comments`.`id_user`
+WHERE `comments`.`id_article` = :comments.id_article:
+ORDER BY `comments`.`id_comment` DESC', [...], false)
+ 5 APPPATH\Models\CommentModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(167): App\Models\CommentModel->getDataCommentsByArticleId('homePage')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->getComments()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
