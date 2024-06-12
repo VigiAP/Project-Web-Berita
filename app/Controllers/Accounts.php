@@ -45,6 +45,7 @@ class Accounts extends BaseController
                         'jenisLog' => $result["role"],
                         'username' => $result["username"],
                         'name' => $result["name"],
+                        'image' => $result["image"],
                         'logged_in' => true
                     ];
                     $this->session->set($data);
@@ -293,36 +294,44 @@ class Accounts extends BaseController
         echo view('/Accounts/edit_profile', $data);
     }
 
-     public function update_profile()
+    public function update_profile()
     {
-            $id = $this->request->getVar('id');
-            $username = $this->request->getVar('username');
-            $name = $this->request->getVar('name');
-            $phone_no = $this->request->getVar('phone_no');
+        $id = $this->request->getVar('id');
+        $username = $this->request->getVar('username');
+        $name = $this->request->getVar('name');
+        $phone_no = $this->request->getVar('phone_no');
 
-            $rules = [
-                'name' => 'required',
-                'phone_no' => 'required',
-                'username' => 'required',
-            ];
+        $file = $this->request->getFile('image');
+        $tempfile = $file->getTempName();
+        $newName = $file->getRandomName();
 
-            $data = [
-                'name' => $name,
-                'username' => $username,
-                'phone_no' => $phone_no,
-            ];
 
-            $this->validation->setRules($rules);
-            if ($this->validation->run($data)) {
-                $validatedData = $this->validation->getValidated();
-                if ($this->userModel->editData($validatedData, $id)) {
-                    return redirect()->to('Accounts/profile')->with('success', 'User data saved successfully.');
-                } else {
-                    return redirect()->back()->with('error', 'User data failed to save.');
-                }
+        $rules = [
+            'name' => 'required',
+            'phone_no' => 'required',
+            'username' => 'required',
+            'image' => 'uploaded[image]|is_image[image]',
+        ];
+
+        $data = [
+            'name' => $name,
+            'username' => $username,
+            'phone_no' => $phone_no,
+            'image' => $newName,
+        ];
+
+        $this->validation->setRules($rules);
+        if ($this->validation->run($data)) {
+            move_uploaded_file($tempfile, '../public/'. 'img/' . $newName);
+            $validatedData = $this->validation->getValidated();
+            if ($this->userModel->editData($validatedData, $id)) {
+                return redirect()->to('Accounts/profile')->with('success', 'User data saved successfully.');
             } else {
-                return redirect()->to('Accounts/edit_profile')->withInput()->with('validation', $this->validation);
+                return redirect()->back()->with('error', 'User data failed to save.');
             }
+        } else {
+            return redirect()->to('Accounts/edit_profile')->withInput()->with('validation', $this->validation);
+        }
         
     }
 
@@ -335,6 +344,4 @@ class Accounts extends BaseController
 
         echo view('/Accounts/change_password', $data);
     }
-
-   
 }

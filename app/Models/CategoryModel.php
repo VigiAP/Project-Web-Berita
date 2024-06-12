@@ -17,7 +17,7 @@ class CategoryModel extends Model
     
     public function __construct()
     {
-        $db      = \Config\Database::connect();
+        $db = \Config\Database::connect();
         $this->builder = $db->table($this->table);
     }
 

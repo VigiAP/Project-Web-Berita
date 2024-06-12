@@ -29,6 +29,13 @@ class UserModel extends Model
         return $this->builder->where('username', $username)->get()->getResultArray();
     }
 
+    public function CountUserByRole()
+    {
+        $this->builder->select('role, COUNT(role) as total');
+        $this->builder->groupBy('role');
+        return $this->builder->get()->getResultArray();
+    }
+
     public function getDataUserById($id)
     {
         return $this->builder->where('id_user', $id)->get()->getResultArray();

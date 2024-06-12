@@ -10,32 +10,20 @@ class ViewModel extends Model
     protected $table = 'views';
     protected $primaryKey = 'id_view';
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['id_view', 'id_user', 'id_article'];
+    protected $allowedFields = ['id_view', 'id_user', 'id_article', 'view_date'];
     protected $builder;
+    protected $db;
     
     public function __construct()
     {
-        $db      = \Config\Database::connect();
+        $db = \Config\Database::connect();
+        $this->db = \Config\Database::connect();
         $this->builder = $db->table($this->table);
     }
-
-    // public function getDataCategories($id_category = false)
-    // {
-    //     if ($id_category === false) {
-    //         return $this->builder->orderBy('id_category', 'DESC')->get()->getResultArray();
-    //     }
-    //     return $this->builder->where('id_category', $id_category)->get()->getResultArray();
-    // }
-
-    // public function getDataCategoryById($id)
-    // {
-    //     return $this->builder->where('id_category', $id)->get()->getResultArray();
-    // }
-
-    // public function updateData($data, $id)
-    // {
-    //     return $this->builder->where('id_category', $id)->update($data);
-    // }
+    
+    public function CountViewArticleByDate() {
+       return $this->db->query("SELECT MONTH(view_date) AS MONTH, COUNT(*) AS views FROM views GROUP BY DATE_FORMAT(view_date, '%m')")->getResultArray();
+    }
 
     public function saveData($data)
     {
@@ -46,9 +34,5 @@ class ViewModel extends Model
         return $this->builder->where('id_article', $id)->countAllResults();
     
     }
-    
-    // public function deleteData($id)
-    // {
-    //     return ($this->builder->delete(['id_category' => $id])) ? 1 : 0;
-    // }
+
 }

@@ -1,5 +1,6 @@
 <?= $this->extend('/template/t_main'); ?>
 <?= $this->section('konten'); ?>
+
 <section class="content">
 <?php if (session()->get('jenisLog') == 'admin'): ?>
     <!-- admin -->
@@ -17,14 +18,30 @@
             </div>
         </div>
     </div>
+    <?php 
+    
+      foreach ($CountUserByRole as $role) {
+          $roleData[] = $role['total'];
+      }
+      $roleData = $roleData;
+      $sumData = array_sum($roleData); 
+      $jsonData = json_encode($roleData);
+      $totalUser = json_encode($sumData);
+      $totalPengunjung = json_encode(count($CountViewArticleByDate));
+      $month = json_encode(getMonth($CountViewArticleByDate)); 
+      $dataViewByMonth = json_encode(getCountDataByMonth($CountViewArticleByDate, 'views'));
+    ?>
     <script>
       $(function () {
-        var roleChartCanvas = $('#roleChart').get(0).getContext('2d')
+        var roleChartCanvas = $('#roleChart').get(0).getContext('2d');
+        var jsArray = <?php echo $jsonData; ?>;
+        var totalUser = <?php echo $totalUser; ?>;
+  
         var roleChartData = {
-          labels  : ['Admin', 'Author', 'Editor', 'Visitor'],
+          labels  : ['Admin', 'Author', 'Visitor', 'Editor'],
           datasets: [
             {
-              label               : 'Total Users',
+              label               : 'Total '+ totalUser + ' Users',
               backgroundColor     : [
                 'rgba(255, 99, 132, 0.8)',
                 'rgba(54, 162, 235, 0.8)',
@@ -38,7 +55,7 @@
                 'rgba(75, 192, 192, 1)'
               ],
               borderWidth         : 1,
-              data                : [50, 120, 70, 200] // Data dummy
+              data                : jsArray// Data dummy
             }
           ]
         }
@@ -85,14 +102,15 @@
         <script>
           $(function () {
             var visitorChartCanvas = $('#visitorChart').get(0).getContext('2d')
+            var totalPengunjung = <?php echo $dataViewByMonth; ?>;
             var visitorChartData = {
-              labels  : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+              labels  : <?php echo $month; ?>,
               datasets: [
                 {
                   label               : 'Jumlah Pengunjung',
                   backgroundColor     : 'rgba(60,141,188,0.9)',
                   borderColor         : 'rgba(60,141,188,0.8)',
-                  data                : [200, 450, 290, 367, 586, 425, 480, 520, 300, 450, 700, 900] // Data dummy
+                  data                : totalPengunjung // Data dummy
                 }
               ]
             }
@@ -123,9 +141,6 @@
     </div>
 <?php endif; ?>
 
-
-
-
     <?php if (session()->get('jenisLog') == 'author'): ?>
     <!-- author -->
     <div class="container-fluid">
@@ -142,35 +157,49 @@
             </div>
         </div>
     </div>
+    <?php 
+      $monthStatsAuthor = json_encode(getMonth2($DataStatistic)); 
+      $dataViewByMonth = json_encode(getCountDataByMonth($CountViewArticleByDate, 'views'));
+      $dataArticleByMonth = json_encode(getCountDataByMonth($CountArticleByDate, 'total_article'));
+      $dataCommentByMonth = json_encode(getCountDataByMonth($DataStatistic, 'total_comment'));
+      $dataLikeByMonth = json_encode(getCountDataByMonth($CountLikeByDate, 'total_likes'));
+
+      
+    ?>
     <script>
       $(function () {
+        const jsArray = <?php echo $monthStatsAuthor; ?>;
+        const dataViewByMonth = <?php echo $dataViewByMonth; ?>;
+        const dataArticleByMonth = <?php echo $dataArticleByMonth; ?>;
+        const dataCommentByMonth = <?php echo $dataCommentByMonth; ?>;
+        const dataLikeByMonth = <?php echo $dataLikeByMonth; ?>;
         var barChartCanvas = $('#barChart').get(0).getContext('2d')
         var barChartData = {
-          labels  : ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+          labels  : jsArray,
           datasets: [
             {
               label               : 'Total Artikel Dibuat',
               backgroundColor     : 'rgba(60,141,188,0.9)',
               borderColor         : 'rgba(60,141,188,0.8)',
-              data                : [28, 48, 40, 19, 86, 27, 90]
+              data                : dataArticleByMonth
             },
             {
               label               : 'Total Artikel Dilihat',
               backgroundColor     : 'rgba(210, 214, 222, 1)',
               borderColor         : 'rgba(210, 214, 222, 1)',
-              data                : [65, 59, 80, 81, 56, 55, 40]
+              data                : dataViewByMonth
             },
             {
               label               : 'Total Komentar',
               backgroundColor     : 'rgba(244, 67, 54, 0.8)',
               borderColor         : 'rgba(244, 67, 54, 0.8)',
-              data                : [30, 48, 40, 19, 86, 27, 90]
+              data                : dataCommentByMonth
             },
             {
               label               : 'Total Artikel Disukai',
               backgroundColor     : 'rgba(76, 175, 80, 0.8)',
               borderColor         : 'rgba(76, 175, 80, 0.8)',
-              data                : [20, 30, 45, 30, 42, 55, 25]
+              data                : dataLikeByMonth
             }
           ]
         }
