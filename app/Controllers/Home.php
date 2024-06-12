@@ -246,14 +246,12 @@ class Home extends BaseController
         echo json_encode($this->commentModel->getDataCommentsByArticleId($id_article));
     }
 
-<<<<<<< HEAD
     public function deleteComment() {
         $id_comment = $this->request->getVar('id_comment');
         echo json_encode($this->commentModel->deleteDataCommentById($id_comment));
     }
 
     
-=======
     public function search(){
         $data = [
             'title' => 'Search | Pojok Berita',
@@ -261,5 +259,4 @@ class Home extends BaseController
 
         echo view('/Home/hasil_search', $data);
     }
->>>>>>> f2eb84347be781f41991558b243a90e2a4aca53e
 }
