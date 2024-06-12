@@ -10,12 +10,14 @@ class LikeModel extends Model
     protected $table = 'likes';
     protected $primaryKey = 'id_like';
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['id_like', 'id_user', 'id_article'];
+    protected $allowedFields = ['id_like', 'id_user', 'id_article', 'like_date'];
     protected $builder;
+     protected $db;
     
     public function __construct()
     {
-        $db      = \Config\Database::connect();
+        $db = \Config\Database::connect();
+        $this->db = \Config\Database::connect();
         $this->builder = $db->table($this->table);
     }
 
@@ -27,24 +29,9 @@ class LikeModel extends Model
         return $this->builder->where('id_article', $id_article)->where('id_user', $id_user)->delete();
     }
 
-
-    // public function getDataCategories($id_category = false)
-    // {
-    //     if ($id_category === false) {
-    //         return $this->builder->orderBy('id_category', 'DESC')->get()->getResultArray();
-    //     }
-    //     return $this->builder->where('id_category', $id_category)->get()->getResultArray();
-    // }
-
-    // public function getDataCategoryById($id)
-    // {
-    //     return $this->builder->where('id_category', $id)->get()->getResultArray();
-    // }
-
-    // public function updateData($data, $id)
-    // {
-    //     return $this->builder->where('id_category', $id)->update($data);
-    // }
+    public function CountLikeByDate() {
+       return $this->db->query("SELECT MONTH(like_date) AS MONTH, COUNT(*) AS total_likes FROM likes`likes` GROUP BY DATE_FORMAT(like_date, '%m')")->getResultArray();
+    }
 
     public function saveData($data)
     {
@@ -56,8 +43,4 @@ class LikeModel extends Model
     
     }
     
-    // public function deleteData($id)
-    // {
-    //     return ($this->builder->delete(['id_category' => $id])) ? 1 : 0;
-    // }
 }

@@ -7,6 +7,7 @@ use App\Models\CategoryModel;
 use App\Models\LikeModel;
 use App\Models\ViewModel;
 use App\Models\CommentModel;
+use App\Models\UserModel;
 
 class Home extends BaseController
 {   
@@ -16,6 +17,7 @@ class Home extends BaseController
     protected $likeModel;
     protected $viewModel;
     protected $commentModel;
+    protected $userModel;
 
     public function __construct() {
         
@@ -25,6 +27,7 @@ class Home extends BaseController
         $this->likeModel = new LikeModel();
         $this->viewModel = new ViewModel();
         $this->commentModel = new CommentModel();
+        $this->userModel = new UserModel();
     }
 
     public function index()
@@ -36,9 +39,76 @@ class Home extends BaseController
         if(session()->get('jenisLog') == 'visitor') {
             return redirect()->to('/Home/homePage');
         } else {
+
+            $DataStatistic = [];
+            foreach($this->viewModel->CountViewArticleByDate() as $data) {
+                array_push($DataStatistic, $data);
+            }
+
+            foreach($this->articleModel->CountArticleByDate() as $data) {
+                array_push($DataStatistic, $data);
+            }
+
+            foreach($this->commentModel->CountCommentByDate() as $data) {
+                array_push($DataStatistic, $data);
+            }
+
+            foreach($this->likeModel->CountLikeByDate() as $data) {
+                array_push($DataStatistic, $data);
+            }
+            
+            
+            $newArray = array();
+
+            foreach ($DataStatistic as $entry) {
+                $month = $entry["MONTH"];
+                if (!isset($newArray[$month])) {
+                    $newArray[$month] = array(
+                        "month" => $month,
+                        "views" => 0,
+                        "total_article" => 0,
+                        "total_likes" => 0,
+                        "total_comment" => 0
+                    );
+                }
+
+                if (isset($entry["views"])) {
+                    $newArray[$month]["views"] += $entry["views"];
+                }
+                if (isset($entry["total_article"])) {
+                    $newArray[$month]["total_article"] += $entry["total_article"];
+                }
+                if (isset($entry["total_likes"])) {
+                    $newArray[$month]["total_likes"] += $entry["total_likes"];
+                }
+                if (isset($entry["total_comment"])) {
+                    $newArray[$month]["total_comment"] += $entry["total_comment"];
+                }
+            }
+
+            $finalArray = array();
+
+            foreach ($newArray as $monthData) {
+                $finalArray[] = array(
+                    "month" => $monthData["month"],
+                    "views" => $monthData["views"],
+                    "total_article" => $monthData["total_article"],
+                    "total_likes" => $monthData["total_likes"],
+                    "total_comment" => $monthData["total_comment"]
+                );
+            }
+
             $data = [
             'title' => 'Home | Pojok Berita',
+            'CountUserByRole' => $this->userModel->CountUserByRole(),
+            'CountViewArticleByDate' => $this->viewModel->CountViewArticleByDate(), 
+            'CountArticleByDate' => $this->articleModel->CountArticleByDate(),
+            'CountCommentByDate' => $this->commentModel->CountCommentByDate(),
+            'CountLikeByDate' => $this->likeModel->CountLikeByDate(),
+            'DataStatistic' => $finalArray,
+
             ];
+            
             echo view('/Dashboard/Home/index', $data);
         }
     }
@@ -60,6 +130,7 @@ class Home extends BaseController
     public function singlePost()
     {
         if($this->request->getVar('id_article')) {
+
             $id_article = $this->request->getVar('id_article');
             $id_user = session()->get('logged_in') ? session()->get('id') : '45';
             echo json_encode($this->likeModel->getDataLikeArticleByArticledAndUserId($id_user, $id_article));
@@ -84,7 +155,9 @@ class Home extends BaseController
                 // Set a cookie to expire in 24 hours
                 setcookie($cookieName, 'true', time() + (24 * 60 * 60), "/");
             }
+
         } else {
+
             $id_article = $this->request->getUri()->getSegment(3);
             $id_user = session()->get('logged_in') ? session()->get('id') : '45';
             $data = [
@@ -93,6 +166,7 @@ class Home extends BaseController
                 'randomArticleTitle' => $this->articleModel->getRandomArticleTitle(),
                 'getArticleLikesById' => $this->likeModel->getDataArticleLikesById($this->request->getUri()->getSegment(3)),
                 'getViewArticleById' => $this->viewModel->getDataViewArticleById($this->request->getUri()->getSegment(3)),
+                
             ];
 
             $cookieName = "article_view_$id_article"."_"."$id_user";
@@ -102,6 +176,7 @@ class Home extends BaseController
                 $data2 = [
                     'id_user' => $id_user,
                     'id_article' => $id_article,
+                    'view_date' => date('Y-m-d H:i:s')
                 ];
 
                 $this->viewModel->saveData($data2);
@@ -109,7 +184,8 @@ class Home extends BaseController
                 setcookie($cookieName, 'true', time() + (24 * 60 * 60), "/");
             }
             echo view('/Home/singlePost', $data);
-            }
+
+        }
     }
 
     public function likeArticle() {
@@ -120,10 +196,13 @@ class Home extends BaseController
         if($this->likeModel->getDataLikeArticleByArticledAndUserId($id_user, $id_article)) {
             echo json_encode($this->likeModel->deleteDataLikeArticleByArticledAndUserId($id_user, $id_article));
         } else{
+
             $data = [
                 'id_user' => $id_user,
                 'id_article' => $id_article,
+                'like_date' => date('Y-m-d H:i:s')
             ];
+
             echo json_encode($this->likeModel->saveData($data));
         }
     }
@@ -167,6 +246,14 @@ class Home extends BaseController
         echo json_encode($this->commentModel->getDataCommentsByArticleId($id_article));
     }
 
+<<<<<<< HEAD
+    public function deleteComment() {
+        $id_comment = $this->request->getVar('id_comment');
+        echo json_encode($this->commentModel->deleteDataCommentById($id_comment));
+    }
+
+    
+=======
     public function search(){
         $data = [
             'title' => 'Search | Pojok Berita',
@@ -174,4 +261,5 @@ class Home extends BaseController
 
         echo view('/Home/hasil_search', $data);
     }
+>>>>>>> f2eb84347be781f41991558b243a90e2a4aca53e
 }

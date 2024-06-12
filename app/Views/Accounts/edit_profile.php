@@ -17,7 +17,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin"
+                            <img src="<?= base_url('img/'); ?><?=session()->get('image');?>" alt="Admin"
                                 class="rounded-circle" width="150">
                             <div class="mt-3">
                                 <h4><?=ucwords($user[0]['name'])?></h4>

@@ -8,35 +8,18 @@ class CommentModel extends Model
 {
 
     protected $table = 'comments';
-    protected $primaryKey = 'id_view';
+    protected $primaryKey = 'id_comment';
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['id_view', 'id_user', 'id_article', 'comment', 'comment_date'];
+    protected $allowedFields = ['id_comment', 'id_user', 'id_article', 'comment', 'comment_date'];
     protected $builder;
+    protected $db;
     
     public function __construct()
     {
-        $db      = \Config\Database::connect();
+        $db = \Config\Database::connect();
+        $this->db = \Config\Database::connect();
         $this->builder = $db->table($this->table);
     }
-
-    // public function getDataCategories($id_category = false)
-    // {
-    //     if ($id_category === false) {
-    //         return $this->builder->orderBy('id_category', 'DESC')->get()->getResultArray();
-    //     }
-    //     return $this->builder->where('id_category', $id_category)->get()->getResultArray();
-    // }
-
-    // public function getDataCategoryById($id)
-    // {
-    //     return $this->builder->where('id_category', $id)->get()->getResultArray();
-    // }
-
-    // public function updateData($data, $id)
-    // {
-    //     return $this->builder->where('id_category', $id)->update($data);
-    // }
-
 
     public function getDataCommentsByArticleId($id_article)
     {
@@ -54,9 +37,13 @@ class CommentModel extends Model
         return $this->builder->where('id_article', $id)->countAllResults();
     
     }
-    
-    // public function deleteData($id)
-    // {
-    //     return ($this->builder->delete(['id_category' => $id])) ? 1 : 0;
-    // }
+      
+    public function deleteDataCommentById($id)
+    {
+        return ($this->builder->delete(['id_comment' => $id])) ? 1 : 0;
+    }
+
+    public function CountCommentByDate() {
+       return $this->db->query("SELECT MONTH(comment_date) AS MONTH, COUNT(*) AS total_comment FROM comments GROUP BY DATE_FORMAT(comment_date, '%m')")->getResultArray();
+    }
 }

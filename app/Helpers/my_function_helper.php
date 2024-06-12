@@ -65,5 +65,60 @@
         return $formattedDate;
     }
 
+    function getMonth($data) {
+        $arrMonth = [];
+        foreach($data as $value) {
+            $months = [
+                1 => 'Januari',
+                2 => 'Februari',
+                3 => 'Maret',
+                4 => 'April',
+                5 => 'Mei',
+                6 => 'Juni',
+                7 => 'Juli',
+                8 => 'Agustus',
+                9 => 'September',
+                10 => 'Oktober',
+                11 => 'November',
+                12 => 'Desember'
+            ];
+            array_push($arrMonth, $months[$value['MONTH']]);  
+        }
+       
+        return $arrMonth;
+    }
+
+    function getMonth2($data) {
+        $arrMonth = [];
+        foreach($data as $value) {
+            $months = [
+                1 => 'Januari',
+                2 => 'Februari',
+                3 => 'Maret',
+                4 => 'April',
+                5 => 'Mei',
+                6 => 'Juni',
+                7 => 'Juli',
+                8 => 'Agustus',
+                9 => 'September',
+                10 => 'Oktober',
+                11 => 'November',
+                12 => 'Desember'
+            ];
+            array_push($arrMonth, $months[$value['month']]);  
+        }
+       
+        return $arrMonth;
+    }
+
+    function getCountDataByMonth($data, $index) {
+        $newArray = [];
+        foreach($data as $value) {
+            array_push($newArray, $value[$index]);
+        }
+        return $newArray;
+    }
+
+
 
     

@@ -16,8 +16,9 @@ class ArticleModel extends Model
     
     public function __construct()
     {
+         $db = \Config\Database::connect();
         $this->db = \Config\Database::connect();
-        $this->builder = $this->db->table($this->table);
+        $this->builder = $db->table($this->table);
     }
 
     public function getDataArticles()
@@ -32,7 +33,7 @@ class ArticleModel extends Model
 
     public function getDataArticleById2($id)
     {
-        $this->builder->select('article.id_article, article.title, article.image, article.content, article.publication_date, tbl_users.name');
+        $this->builder->select('article.id_article, article.title, article.image, article.content, article.publication_date, tbl_users.name, tbl_users.image as user_image');
         $this->builder->join('tbl_users', 'tbl_users.id_user = article.id_user');
         $this->builder->where('article.approved', '1');
         return $this->builder->where('article.id_article', $id)->get()->getResultArray();
@@ -70,10 +71,13 @@ class ArticleModel extends Model
         return $this->builder->where('id_article', $id)->update($data);
     }
 
-
     public function deleteData($id)
     {
         return ($this->builder->delete(['id_article' => $id])) ? 1 : 0;
     } 
+
+    public function CountArticleByDate() {
+       return $this->db->query("SELECT MONTH(publication_date) AS MONTH, COUNT(*) AS total_article FROM article GROUP BY DATE_FORMAT(publication_date, '%m')")->getResultArray();
+    }
     
 }

@@ -8,7 +8,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin"
+                            <img src="<?= base_url('img/'); ?><?=session()->get('image');?>" alt="Admin"
                                 class="rounded-circle" width="150">
                             <div class="mt-3">
                                 <h4><?=ucwords($user[0]['name'])?></h4>
@@ -19,8 +19,6 @@
                     </div>
                 </div>
             </div>
-
-
             <div class="col-md-8">
                 <div class="card mb-3">
                     <div class="card-body">
@@ -60,14 +58,6 @@
                             </div>
                         </div>
                         <hr>
-                        <!-- <div class="row">
-                            <div class="col-sm-3">
-                                <h6 class="mb-0">Address</h6>
-                            </div>
-                            <div class="col-sm-9 text-secondary">
-                                Cikubang, Wanayasa, Purwakarta
-                            </div>
-                        </div> -->
                         <hr>
                         <div class="row">
                             <div class="col-sm-12">
