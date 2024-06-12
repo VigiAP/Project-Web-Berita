@@ -6,7 +6,7 @@
     <!-- block news -->
     <div class="bg-gray-50 py-6">
       <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
-        <div class="flex flex-row flex-wrap">
+        <div class="flex flex-col lg:flex-row flex-wrap">
           <!-- Left -->
           <div class="flex-shrink max-w-full w-full lg:w-2/3  overflow-hidden">
             <div class="w-full py-3">
@@ -34,9 +34,8 @@
             </div>
           </div>
 
-
           <!-- right -->
-          <div class="flex-shrink max-w-full w-full lg:w-1/3 lg:pl-8 lg:pt-14 lg:pb-8 order-first lg:order-last">
+          <div class="flex-shrink max-w-full w-full lg:w-1/3 lg:pl-8 lg:pt-14 lg:pb-8 order-last lg:order-last">
             <div class="w-full bg-white">
               <div class="mb-6">
                 <div class="p-4 bg-gray-100">
@@ -61,7 +60,6 @@
                 </ul>
               </div>
             </div>
-
         </div>
       </div>
     </div>

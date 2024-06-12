@@ -239,11 +239,65 @@
     <?php if (session()->get('jenisLog') == 'editor'): ?>
     <!-- editor -->
     <div class="container-fluid">
-        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Statistik Artikel Editor</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- Canvas for Bar Chart -->
+                        <canvas id="editorArticleChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+          $(function () {
+            var editorArticleChartCanvas = $('#editorArticleChart').get(0).getContext('2d')
+            var editorArticleChartData = {
+              labels  : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+              datasets: [
+                {
+                  label               : 'Artikel Diapprove',
+                  backgroundColor     : 'rgba(76, 175, 80, 0.8)',
+                  borderColor         : 'rgba(76, 175, 80, 1)',
+                  data                : [30, 45, 32, 40, 50, 70, 45, 60, 55, 30, 80, 70] // Data dummy
+                },
+                {
+                  label               : 'Artikel Tidak Diapprove',
+                  backgroundColor     : 'rgba(244, 67, 54, 0.8)',
+                  borderColor         : 'rgba(244, 67, 54, 1)',
+                  data                : [20, 25, 22, 30, 35, 40, 25, 35, 30, 20, 40, 30] // Data dummy
+                }
+              ]
+            }
+
+            var editorArticleChartOptions = {
+              maintainAspectRatio : false,
+              responsive : true,
+              legend: {
+                display: true
+              },
+              scales: {
+                xAxes: [{}],
+                yAxes: [{
+                  ticks: {
+                    beginAtZero: true
+                  }
+                }]
+              }
+            }
+
+            new Chart(editorArticleChartCanvas, {
+              type: 'bar',
+              data: editorArticleChartData,
+              options: editorArticleChartOptions
+            })
+          });
+        </script>
     </div><!-- /.container-fluid -->
 <?php endif; ?>
-
-
 
 </section>
 <?= $this->endSection(); ?>
