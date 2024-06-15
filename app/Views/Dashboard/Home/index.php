@@ -19,7 +19,6 @@
         </div>
     </div>
     <?php 
-    
       foreach ($CountUserByRole as $role) {
           $roleData[] = $role['total'];
       }
@@ -159,12 +158,10 @@
     </div>
     <?php 
       $monthStatsAuthor = json_encode(getMonth2($DataStatistic)); 
-      $dataViewByMonth = json_encode(getCountDataByMonth($CountViewArticleByDate, 'views'));
-      $dataArticleByMonth = json_encode(getCountDataByMonth($CountArticleByDate, 'total_article'));
+      $dataViewByMonth = json_encode(getCountDataByMonth($DataStatistic, 'views'));
+      $dataArticleByMonth = json_encode(getCountDataByMonth($DataStatistic, 'total_article'));
       $dataCommentByMonth = json_encode(getCountDataByMonth($DataStatistic, 'total_comment'));
-      $dataLikeByMonth = json_encode(getCountDataByMonth($CountLikeByDate, 'total_likes'));
-
-      
+      $dataLikeByMonth = json_encode(getCountDataByMonth($DataStatistic, 'total_likes'));
     ?>
     <script>
       $(function () {
