@@ -84,4 +84,11 @@ class ArticleModel extends Model
         return $this->db->query("SELECT MONTH(approved_date) AS MONTH, COUNT(*) AS $column FROM article WHERE approved = '$approveStatus' GROUP BY DATE_FORMAT(approved_date, '%m') ORDER BY MONTH(approved_date) ASC")->getResultArray();
     }
 
+    public function searchArticles($query) {
+        return $this->builder->like('title', $query)
+                             ->orLike('content', $query)
+                             ->get()
+                             ->getResultArray();
+    }
+    
 }
