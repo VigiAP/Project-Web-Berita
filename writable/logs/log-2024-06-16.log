@@ -1,0 +1,182 @@
+INFO - 2024-06-16 15:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-16 15:09:32 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect()
+#1 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 D:\2023\web-project-berita\Project-Web-Berita\app\Models\ArticleModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\2023\web-project-berita\Project-Web-Berita\app\Controllers\Home.php(160): App\Models\ArticleModel->getDataSomeArticles()
+#6 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->homePage()
+#7 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\2023\web-project-berita\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 D:\2023\web-project-berita\Project-Web-Berita\app\Models\ArticleModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\2023\web-project-berita\Project-Web-Berita\app\Controllers\Home.php(160): App\Models\ArticleModel->getDataSomeArticles()
+#5 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->homePage()
+#6 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 D:\2023\web-project-berita\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('...')
+#10 {main}
+CRITICAL - 2024-06-16 15:09:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH\Models\ArticleModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(160): App\Models\ArticleModel->getDataSomeArticles()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->homePage()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-16 15:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 15:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-16 15:10:00 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`)) in D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 D:\2023\web-project-berita\Project-Web-Berita\app\Models\viewModel.php(30): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\2023\web-project-berita\Project-Web-Berita\app\Controllers\Home.php(194): App\Models\ViewModel->saveData()
+#6 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+#7 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\2023\web-project-berita\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-06-16 15:10:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Models\viewModel.php(30): CodeIgniter\Database\BaseBuilder->insert()
+ 3 APPPATH\Controllers\Home.php(194): App\Models\ViewModel->saveData()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-16 15:10:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH\Models\viewModel.php(30): CodeIgniter\Database\BaseBuilder->insert()
+ 5 APPPATH\Controllers\Home.php(194): App\Models\ViewModel->saveData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-16 15:10:00 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Models\viewModel.php(30): CodeIgniter\Database\BaseBuilder->insert()
+ 6 APPPATH\Controllers\Home.php(194): App\Models\ViewModel->saveData()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-16 15:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 15:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-16 15:10:02 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`)) in D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+#4 D:\2023\web-project-berita\Project-Web-Berita\app\Models\viewModel.php(30): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\2023\web-project-berita\Project-Web-Berita\app\Controllers\Home.php(194): App\Models\ViewModel->saveData()
+#6 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+#7 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\2023\web-project-berita\Project-Web-Berita\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\2023\web-project-berita\Project-Web-Berita\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-06-16 15:10:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Models\viewModel.php(30): CodeIgniter\Database\BaseBuilder->insert()
+ 3 APPPATH\Controllers\Home.php(194): App\Models\ViewModel->saveData()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-16 15:10:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH\Models\viewModel.php(30): CodeIgniter\Database\BaseBuilder->insert()
+ 5 APPPATH\Controllers\Home.php(194): App\Models\ViewModel->saveData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+CRITICAL - 2024-06-16 15:10:02 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_news`.`views`, CONSTRAINT `views_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Models\viewModel.php(30): CodeIgniter\Database\BaseBuilder->insert()
+ 6 APPPATH\Controllers\Home.php(194): App\Models\ViewModel->saveData()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->singlePost()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-16 15:10:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 15:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 15:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 15:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 15:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 15:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 15:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 15:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-16 15:40:06 --> ErrorException: Undefined array key "not__yet_approved"
+in APPPATH\Helpers\my_function_helper.php on line 117.
+ 1 APPPATH\Helpers\my_function_helper.php(117): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\Dashboard\Home\index.php(254): getCountDataByMonth()
+ 3 SYSTEMPATH\View\View.php(228): include('D:\\2023\\web-project-berita\\Project-Web-Berita\\app\\Views\\Dashboard\\Home\\index.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Home.php(157): view()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\2023\\web-project-berita\\Project-Web-Berita\\public\\index.php')
+INFO - 2024-06-16 15:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 15:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 15:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 15:44:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 15:45:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 15:46:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 15:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 15:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 16:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 16:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 16:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 16:16:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 16:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 16:23:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 16:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 16:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 16:23:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-16 16:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

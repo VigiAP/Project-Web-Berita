@@ -32,7 +32,6 @@ class ViewModel extends Model
 
     public function getDataViewArticleById($id) {
         return $this->builder->where('id_article', $id)->countAllResults();
-    
     }
 
 }

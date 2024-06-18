@@ -55,8 +55,7 @@ class Home extends BaseController
 
             foreach($this->likeModel->CountLikeByDate() as $data) {
                 array_push($DataStatistic, $data);
-            }
-            
+            }        
             
             $newArray = array();
 
@@ -98,6 +97,58 @@ class Home extends BaseController
                 );
             }
 
+            $DataStatisticEditor = [];
+            foreach($this->articleModel->CountApproveArticleByDate(0, 'not_yet_approved') as $data1) {
+                array_push($DataStatisticEditor, $data1);
+            }
+            foreach($this->articleModel->CountApproveArticleByDate(1, 'approved') as $data2) {
+                array_push($DataStatisticEditor, $data2);
+            }
+            foreach($this->articleModel->CountApproveArticleByDate(2, 'not_approved') as $data3) {
+                array_push($DataStatisticEditor, $data3);
+            }
+
+            $newArray2 = array();
+            
+            foreach ($DataStatisticEditor as $entry2) {
+                $month = $entry2["MONTH"];
+                if (!isset($newArray2[$month])) {
+                    $newArray2[$month] = array(
+                        "month" => $month,
+                        "approved" => 0,
+                        "not_yet_approved" => 0,
+                        "not_approved" => 0,
+                    );
+                }
+
+                if (isset($entry2["not_approved"])) {
+                    $newArray2[$month]["not_approved"] += $entry2["not_approved"];
+                }
+                if (isset($entry2["not_yet_approved"])) {
+                    $newArray2[$month]["not_yet_approved"] += $entry2["not_yet_approved"];
+                }
+                if (isset($entry2["approved"])) {
+                    $newArray2[$month]["approved"] += $entry2["approved"];
+                }
+            }
+
+            
+           
+            $finalArray2 = array();
+             
+            foreach ($newArray2 as $monthData2) {
+                $finalArray2[] = array(
+                    "month" => $monthData2["month"],
+                    "approved" => $monthData2["approved"],
+                    "not_yet_approved" => $monthData2["not_yet_approved"],
+                    "not_approved" => $monthData2["not_approved"],
+                );
+            }
+            // fungsi untuk mengurutkan array dari yang terkecil
+            usort($finalArray2, function($a, $b) {
+                return $a['month'] - $b['month'];
+            });
+            
             $data = [
             'title' => 'Home | Pojok Berita',
             'CountUserByRole' => $this->userModel->CountUserByRole(),
@@ -106,7 +157,7 @@ class Home extends BaseController
             'CountCommentByDate' => $this->commentModel->CountCommentByDate(),
             'CountLikeByDate' => $this->likeModel->CountLikeByDate(),
             'DataStatistic' => $finalArray,
-
+            'DataStatisticEditor' => $finalArray2,
             ];
             
             echo view('/Dashboard/Home/index', $data);

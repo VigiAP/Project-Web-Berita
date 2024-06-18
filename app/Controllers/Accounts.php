@@ -72,75 +72,89 @@ class Accounts extends BaseController
         $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
         $phone_number = $this->request->getVar('phone_no');
+        $name = $this->request->getVar('name');
 
-        $rules = [
-            [
-                'username' => 'required|is_unique[tbl_users.username]',
-                'phone_no' => 'required',
-                'password' => 'required',
-            ],
-            [
-                'username' => [
-                    'required' => '{field} harus diisi',
-                    'is_unique' => '{field} sudah terdaftar',
-                ],
-                'phone_no' => [
-                    'required' => 'nomor hp harus diisi',
-                ],
-                'password' => [
-                    'required' => 'password harus diisi',
-                ],
-            ]
-        ];
+        // $rules = [
+        //     [
+        //         'username' => 'required|is_unique[tbl_users.username]',
+        //         'phone_no' => 'required',
+        //         'password' => 'required',
+        //     ],
+        //     [
+        //         'username' => [
+        //             'required' => '{field} harus diisi',
+        //             'is_unique' => '{field} sudah terdaftar',
+        //         ],
+        //         'phone_no' => [
+        //             'required' => 'nomor hp harus diisi',
+        //         ],
+        //         'password' => [
+        //             'required' => 'password harus diisi',
+        //         ],
+        //     ]
+        // ];
+        switch ($this->request->getVar('jk')) {
+            case 'male':
+                $image = 'user-boy.jpg';
+                break;
+            case 'female':
+                $image = 'user-women.jpg';
+                break;
+            default:
+                $image = 'user-anon.jpg';
+                break;
+        }
 
          $data = [
             'username' => $username,
             'password' => password_hash($password, PASSWORD_DEFAULT),
+            'image' => $image,
             'phone_no' => $phone_number,
+            'name' => $name,
         ];
         
-        $this->validation->setRules($rules[0], $rules[1]);
-        if ($this->validation->run($data)) {
-            $validatedData = $this->validation->getValidated();
-            if ($this->userModel->saveData($validatedData)) {
-                $curl = curl_init();
+        // $this->validation->setRules($rules[0], $rules[1]);
+        // if ($this->validation->run($data)) {
+        //     $validatedData = $this->validation->getValidated();
+            if ($this->userModel->saveData($data)) {
+                // $curl = curl_init();
 
-                curl_setopt_array($curl, array(
-                    CURLOPT_URL => 'https://api.fonnte.com/send',
-                    CURLOPT_RETURNTRANSFER => true,
-                    CURLOPT_ENCODING => '',
-                    CURLOPT_MAXREDIRS => 10,
-                    CURLOPT_TIMEOUT => 0,
-                    CURLOPT_FOLLOWLOCATION => true,
-                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                    CURLOPT_CUSTOMREQUEST => 'POST',
-                    CURLOPT_POSTFIELDS => array(
-                        'target' => $phone_number,
-                        'message' => "Anda telah terdaftar di POJOK BERITA! Berikut ini informasi login Anda: Username: $username & Password: $password Harap simpan informasi ini dengan baik untuk masuk ke akun Anda. Terima kasih telah bergabung dengan kami!  
-                        ",
-                    ),
-                    CURLOPT_HTTPHEADER => array(
-                        'Authorization: X6xx6zCLy9d!fL@dKpBC'
-                    ),
-                ));
-                $response = curl_exec($curl);
+                // curl_setopt_array($curl, array(
+                //     CURLOPT_URL => 'https://api.fonnte.com/send',
+                //     CURLOPT_RETURNTRANSFER => true,
+                //     CURLOPT_ENCODING => '',
+                //     CURLOPT_MAXREDIRS => 10,
+                //     CURLOPT_TIMEOUT => 0,
+                //     CURLOPT_FOLLOWLOCATION => true,
+                //     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                //     CURLOPT_CUSTOMREQUEST => 'POST',
+                //     CURLOPT_POSTFIELDS => array(
+                //         'target' => $phone_number,
+                //         'message' => "Anda telah terdaftar di POJOK BERITA! Berikut ini informasi login Anda: Username: $username & Password: $password Harap simpan informasi ini dengan baik untuk masuk ke akun Anda. Terima kasih telah bergabung dengan kami!  
+                //         ",
+                //     ),
+                //     CURLOPT_HTTPHEADER => array(
+                //         'Authorization: X6xx6zCLy9d!fL@dKpBC'
+                //     ),
+                // ));
+                // $response = curl_exec($curl);
                 
 
-                 if (curl_errno($curl)) {
-                  session()->setFlashdata('message', 'registerFailde');
-                   return redirect()->to('Accounts/register');
-                   $error_msg = curl_error($curl);
-                }
-                curl_close($curl);
+                //  if (curl_errno($curl)) {
+                //   session()->setFlashdata('message', 'registerFailde');
+                //    return redirect()->to('Accounts/register');
+                //    $error_msg = curl_error($curl);
+                // }
+                // curl_close($curl);
                 session()->setFlashdata('message', 'registerSuccess');
                 return redirect()->to('Accounts');
             } else {
                 session()->setFlashdata('message', 'registerFailde');
                 return redirect()->to('Accounts/register');
             }
-        } else {
-            return redirect()->to('Accounts/register')->withInput()->with('validation', $this->validation);
-        }
+        // } else {
+        //     return redirect()->to('Accounts/register')->withInput()->with('validation', $this->validation);
+        // }
     }
 
     public function forget()

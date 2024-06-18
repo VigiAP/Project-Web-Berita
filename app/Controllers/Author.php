@@ -79,14 +79,16 @@ class Author extends BaseController
                     'id_user' => session()->get('id'),
                     'content' => $content,
                     'image' => $newName,
-                    'publication_date' => date("Y-m-d")
+                    'publication_date' => date("Y-m-d"),
+                    'approved_date' => date("Y-m-d")
                 ];
             } else {
                 $data = [
                     'title' => $title,
                     'id_user' => session()->get('id'),
                     'content' => $content,
-                    'publication_date' => date("Y-m-d")
+                    'publication_date' => date("Y-m-d"),
+                     'approved_date' => date("Y-m-d")
                 ];
             }
             

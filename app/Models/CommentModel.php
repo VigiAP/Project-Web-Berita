@@ -23,7 +23,7 @@ class CommentModel extends Model
 
     public function getDataCommentsByArticleId($id_article)
     {
-        $this->builder->select('comments.id_comment, comments.id_user, comments.id_article, comments.comment, comments.comment_date, tbl_users.name');
+        $this->builder->select('comments.id_comment, comments.id_user, comments.id_article, comments.comment, comments.comment_date, tbl_users.name, tbl_users.image');
         $this->builder->join('tbl_users', 'tbl_users.id_user = comments.id_user');
         return $this->builder->orderBy('comments.id_comment', 'DESC')->where('comments.id_article', $id_article)->get()->getResultArray();
     }

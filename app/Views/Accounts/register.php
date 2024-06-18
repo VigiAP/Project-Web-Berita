@@ -16,6 +16,12 @@
                     </label>
                     <input type="text" placeholder="Username" class="w-full input input-bordered" name="username" value="<?= old('username');?>"/>
                 </div>
+                 <div>
+                    <label class="label -mt-2">
+                        <span class="text-base label-text">Username</span>
+                    </label>
+                    <input type="text" placeholder="Nama" class="w-full input input-bordered" name="name" value="<?= old('username');?>"/>
+                </div>
                 <div>
                     <label class="label -mt-2">
                         <span class="text-base label-text">Password</span>
@@ -29,19 +35,19 @@
                     <div class="flex space-x-4">
                         <div>
                             <label class="label cursor-pointer">
-                                <input type="radio" name="gender" value="male" class="radio radio-primary" checked>
+                                <input type="radio" name="jk" value="male" class="radio radio-primary" >
                                 <span class="label-text ml-2">Male</span>
                             </label>
                         </div>
                         <div>
                             <label class="label cursor-pointer">
-                                <input type="radio" name="gender" value="female" class="radio radio-primary">
+                                <input type="radio" name="jk" value="female" class="radio radio-primary">
                                 <span class="label-text ml-2">Female</span>
                             </label>
                         </div>
                         <div>
                             <label class="label cursor-pointer">
-                                <input type="radio" name="gender" value="unspecified" class="radio radio-primary">
+                                <input type="radio" name="jk" value="unspecified" class="radio radio-primary" checked>
                                 <span class="label-text ml-2">Prefer not to say</span>
                             </label>
                         </div>

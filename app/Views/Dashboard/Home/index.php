@@ -231,8 +231,6 @@
     </div><!-- /.container-fluid -->
     <?php endif; ?>
 
-
-
     <?php if (session()->get('jenisLog') == 'editor'): ?>
     <!-- editor -->
     <div class="container-fluid">
@@ -249,23 +247,41 @@
                 </div>
             </div>
         </div>
+         <?php
+            $monthStatusEditor = json_encode(getMonth2($DataStatisticEditor)); 
+            $dataApprovedByMonth = json_encode(getCountDataByMonth($DataStatisticEditor, 'approved'));
+            $dataNotApprovedByMonth = json_encode(getCountDataByMonth($DataStatisticEditor, 'not_approved'));
+            $dataNotYetApprovedByMonth = json_encode(getCountDataByMonth($DataStatisticEditor, 'not_yet_approved'));
+         ?>
         <script>
           $(function () {
+
+            const monthStatusEditor = <?php echo $monthStatusEditor; ?>;
+            const dataApprovedByMonth = <?php echo $dataApprovedByMonth; ?>;
+            const dataNotApprovedByMonth = <?php echo $dataNotApprovedByMonth; ?>;
+            const dataNotYetApprovedByMonth = <?php echo $dataNotYetApprovedByMonth; ?>;
+
             var editorArticleChartCanvas = $('#editorArticleChart').get(0).getContext('2d')
             var editorArticleChartData = {
-              labels  : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+              labels  : monthStatusEditor,
               datasets: [
                 {
                   label               : 'Artikel Diapprove',
                   backgroundColor     : 'rgba(76, 175, 80, 0.8)',
                   borderColor         : 'rgba(76, 175, 80, 1)',
-                  data                : [30, 45, 32, 40, 50, 70, 45, 60, 55, 30, 80, 70] // Data dummy
+                  data                : dataApprovedByMonth 
                 },
                 {
                   label               : 'Artikel Tidak Diapprove',
                   backgroundColor     : 'rgba(244, 67, 54, 0.8)',
                   borderColor         : 'rgba(244, 67, 54, 1)',
-                  data                : [20, 25, 22, 30, 35, 40, 25, 35, 30, 20, 40, 30] // Data dummy
+                  data                : dataNotApprovedByMonth 
+                },
+                {
+                  label               : 'Artikel Belum Diapprove',
+                  backgroundColor     : 'rgba(238, 158, 21, 0.8)',
+                  borderColor         : 'rgba(238, 158, 21, 0.5)',
+                  data                : dataNotYetApprovedByMonth 
                 }
               ]
             }

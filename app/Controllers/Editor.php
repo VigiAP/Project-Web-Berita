@@ -50,11 +50,13 @@ class Editor extends BaseController
         
         if($this->request->getUri()->getSegment(4) == 'yes') {
             $data = [
-                'approved' => '1'
+                'approved' => '1',
+                 'approved_date' => date("Y-m-d")
             ];
         } else {
             $data = [
-                'approved' => '2'
+                'approved' => '2',
+                'approved_date' => date("Y-m-d")
             ];
         }
         

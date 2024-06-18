@@ -10,7 +10,7 @@ class ArticleModel extends Model
     protected $table = 'article';
     protected $primaryKey = 'id_article';
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['id_article', 'id_user', 'title', 'content', 'image','publication_date','aproved'];
+    protected $allowedFields = ['id_article', 'id_user', 'title', 'content', 'image','publication_date', 'approved_date', 'aproved'];
     protected $builder;
     protected $db;
     
@@ -79,5 +79,9 @@ class ArticleModel extends Model
     public function CountArticleByDate() {
        return $this->db->query("SELECT MONTH(publication_date) AS MONTH, COUNT(*) AS total_article FROM article GROUP BY DATE_FORMAT(publication_date, '%m')")->getResultArray();
     }
-    
+
+    public function CountApproveArticleByDate($approveStatus, $column) {
+        return $this->db->query("SELECT MONTH(approved_date) AS MONTH, COUNT(*) AS $column FROM article WHERE approved = '$approveStatus' GROUP BY DATE_FORMAT(approved_date, '%m') ORDER BY MONTH(approved_date) ASC")->getResultArray();
+    }
+
 }

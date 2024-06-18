@@ -64,7 +64,8 @@ class Admin extends BaseController
             $username = $this->request->getVar('username');
             $phone_no = $this->request->getVar('phone_no');
             $role = $this->request->getVar('role');
-            $password = rand(1000, 9999);
+            // $password = rand(1000, 9999);
+            $password = '123';
             // Save the user data to the database
             $data = [
                 'name' => $name,
@@ -72,39 +73,40 @@ class Admin extends BaseController
                 'password' => password_hash($password, PASSWORD_DEFAULT),
                 'phone_no' => $phone_no,
                 'role' => $role,
+                'image' => 'user-anon.jpg'
             ];
 
             if ($this->userModel->saveData($data)) {
-                $curl = curl_init();
+                // $curl = curl_init();
 
-                curl_setopt_array($curl, array(
-                    CURLOPT_URL => 'https://api.fonnte.com/send',
-                    CURLOPT_RETURNTRANSFER => true,
-                    CURLOPT_ENCODING => '',
-                    CURLOPT_MAXREDIRS => 10,
-                    CURLOPT_TIMEOUT => 0,
-                    CURLOPT_FOLLOWLOCATION => true,
-                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                    CURLOPT_CUSTOMREQUEST => 'POST',
-                    CURLOPT_POSTFIELDS => array(
-                        'target' => $phone_no,
-                        'message' => "Anda telah terdaftar di POJOK BERITA! Berikut ini informasi login Anda: Username: $username & Password: $password Harap simpan informasi ini dengan baik untuk masuk ke akun Anda. Terima kasih telah bergabung dengan kami!  
-                        ",
-                    ),
-                    CURLOPT_HTTPHEADER => array(
-                        'Authorization: X6xx6zCLy9d!fL@dKpBC'
-                    ),
-                ));
-                $response = curl_exec($curl);
+                // curl_setopt_array($curl, array(
+                //     CURLOPT_URL => 'https://api.fonnte.com/send',
+                //     CURLOPT_RETURNTRANSFER => true,
+                //     CURLOPT_ENCODING => '',
+                //     CURLOPT_MAXREDIRS => 10,
+                //     CURLOPT_TIMEOUT => 0,
+                //     CURLOPT_FOLLOWLOCATION => true,
+                //     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                //     CURLOPT_CUSTOMREQUEST => 'POST',
+                //     CURLOPT_POSTFIELDS => array(
+                //         'target' => $phone_no,
+                //         'message' => "Anda telah terdaftar di POJOK BERITA! Berikut ini informasi login Anda: Username: $username & Password: $password Harap simpan informasi ini dengan baik untuk masuk ke akun Anda. Terima kasih telah bergabung dengan kami!  
+                //         ",
+                //     ),
+                //     CURLOPT_HTTPHEADER => array(
+                //         'Authorization: X6xx6zCLy9d!fL@dKpBC'
+                //     ),
+                // ));
+                // $response = curl_exec($curl);
                 
-                 if (curl_errno($curl)) {
-                    session()->setFlashdata('message', 'gagal');
+                //  if (curl_errno($curl)) {
+                //     session()->setFlashdata('message', 'gagal');
                      
-                    return redirect()->to('Admin/tambah_users');
-                   $error_msg = curl_error($curl);
+                //     return redirect()->to('Admin/tambah_users');
+                //    $error_msg = curl_error($curl);
  
-                }
-                curl_close($curl);
+                // }
+                // curl_close($curl);
                 session()->setFlashdata('message', 'success');
                 return redirect()->to('Admin/users');
             }
