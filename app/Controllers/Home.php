@@ -253,8 +253,13 @@ class Home extends BaseController
 
     
     public function search(){
+        $query = $this->request->getVar('query');
+        $articles = $this->articleModel->searchArticles($query);
+
         $data = [
             'title' => 'Search | Pojok Berita',
+            'query' => $query,
+            'articles' => $articles
         ];
 
         echo view('/Home/hasil_search', $data);

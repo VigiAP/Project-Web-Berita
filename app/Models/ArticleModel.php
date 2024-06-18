@@ -79,5 +79,12 @@ class ArticleModel extends Model
     public function CountArticleByDate() {
        return $this->db->query("SELECT MONTH(publication_date) AS MONTH, COUNT(*) AS total_article FROM article GROUP BY DATE_FORMAT(publication_date, '%m')")->getResultArray();
     }
+
+    public function searchArticles($query) {
+        return $this->builder->like('title', $query)
+                             ->orLike('content', $query)
+                             ->get()
+                             ->getResultArray();
+    }
     
 }
