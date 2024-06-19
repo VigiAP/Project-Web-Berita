@@ -138,7 +138,7 @@
                   <div class="flex flex-wrap items-stretch w-full relative">
                     <input type="text"
                       class="flex-shrink flex-grow flex-shrink max-w-full leading-5 w-px flex-1 relative py-2 px-5 text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 foc us:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700"
-                      name="text" placeholder="Search..." aria-label="search">
+                      name="query" placeholder="Search..." aria-label="search">
                     <div class="flex -mr-px">
 
                       <a href="<?= base_url('Home/search'); ?>"

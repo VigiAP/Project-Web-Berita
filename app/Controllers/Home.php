@@ -305,7 +305,12 @@ class Home extends BaseController
     
     public function search(){
         $query = $this->request->getVar('query');
-        $articles = $this->articleModel->searchArticles($query);
+
+        if ($query) {
+            $articles = $this->articleModel->searchArticles($query);
+        } else {
+            $articles = [];
+        }
 
         $data = [
             'title' => 'Search | Pojok Berita',
