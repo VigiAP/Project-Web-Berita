@@ -302,15 +302,9 @@ class Home extends BaseController
         echo json_encode($this->commentModel->deleteDataCommentById($id_comment));
     }
 
-    
     public function search(){
         $query = $this->request->getVar('query');
-
-        if ($query) {
-            $articles = $this->articleModel->searchArticles($query);
-        } else {
-            $articles = [];
-        }
+        $articles = $this->articleModel->searchArticles($query);
 
         $data = [
             'title' => 'Search | Pojok Berita',
@@ -320,4 +314,5 @@ class Home extends BaseController
 
         echo view('/Home/hasil_search', $data);
     }
+
 }
