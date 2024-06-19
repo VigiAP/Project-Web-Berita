@@ -132,7 +132,6 @@
                       d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
                   </svg>
                 </button>
-<<<<<<< HEAD
                 <div
                   class="dropdown-menu absolute left-auto right-0 top-full z-50 text-left bg-white text-gray-700 border border-gray-100 mt-1 p-3"
                   style="min-width: 15rem;">
@@ -154,7 +153,6 @@
                     </div>
                   </div>
                 </div>
-=======
                 <div class="dropdown-menu absolute left-auto right-0 top-full z-50 text-left bg-white text-gray-700 border border-gray-100 mt-1 p-3" style="min-width: 15rem;">
     <form action="<?= base_url('Home/search'); ?>" method="get" class="flex flex-wrap items-stretch w-full relative">
         <input type="text" name="query" class="flex-shrink flex-grow flex-shrink max-w-full leading-5 w-px flex-1 relative py-2 px-5 text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700" placeholder="Search..." aria-label="search" required>
@@ -165,7 +163,6 @@
         </button>
     </form>
 </div>
->>>>>>> d08020d5209c803ef57487107449451867329e33
               </div>
 
               <div class="relative hover:bg-gray-800 block lg:hidden">
