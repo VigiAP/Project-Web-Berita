@@ -1508,3 +1508,5 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
 10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\vscode\\ProjectSMT4WP\\Project-Web-Berita\\public\\index.php')
 >>>>>>> d08020d5209c803ef57487107449451867329e33
+INFO - 2024-06-18 17:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 17:42:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
