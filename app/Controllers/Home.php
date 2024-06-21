@@ -242,8 +242,7 @@ class Home extends BaseController
     public function likeArticle() {
         $id_user = $this->request->getVar('id_user');
         $id_article = $this->request->getVar('id_article');
-
-        
+ 
         if($this->likeModel->getDataLikeArticleByArticledAndUserId($id_user, $id_article)) {
             echo json_encode($this->likeModel->deleteDataLikeArticleByArticledAndUserId($id_user, $id_article));
         } else{
@@ -304,7 +303,8 @@ class Home extends BaseController
 
     
     public function search(){
-        $query = $this->request->getVar('query');
+       
+        $query = $this->request->getVar('search');
 
         if ($query) {
             $articles = $this->articleModel->searchArticles($query);

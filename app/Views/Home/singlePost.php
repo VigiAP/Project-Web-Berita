@@ -148,7 +148,6 @@
                   </p>
                 </div>
               </div>
-
               <!-- Comments -->
               <div>
                 <form class="w-full bg-white rounded-lg border p-2 mx-auto mt-10 my-10">

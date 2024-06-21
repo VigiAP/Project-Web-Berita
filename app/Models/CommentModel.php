@@ -35,7 +35,6 @@ class CommentModel extends Model
 
     public function getDataViewArticleById($id) {
         return $this->builder->where('id_article', $id)->countAllResults();
-    
     }
       
     public function deleteDataCommentById($id)
@@ -46,4 +45,5 @@ class CommentModel extends Model
     public function CountCommentByDate() {
        return $this->db->query("SELECT MONTH(comment_date) AS MONTH, COUNT(*) AS total_comment FROM comments GROUP BY DATE_FORMAT(comment_date, '%m')")->getResultArray();
     }
+    
 }
