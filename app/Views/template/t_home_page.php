@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php $sessionId = session()->get('id')?>
+
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8">
@@ -66,7 +67,7 @@
                   style="min-width: 12rem;">
 
                   <!--dropdown submenu-->
-                  
+
               </li>
 
             </ul>
@@ -100,23 +101,23 @@
             <!-- search form & mobile nav -->
             <div class="flex flex-row items-center text-gray-300 ">
               <?php if(session()->get('id')){?>
-                <div class="relative border-l border-gray-800 hover:bg-gray-900">
-                  <a href="<?= base_url('Accounts/logout'); ?>" class="block py-3 px-6 border-b-2 border-transparent">
-                    Logout
-                  </a>
-                </div>
+              <div class="relative border-l border-gray-800 hover:bg-gray-900">
+                <a href="<?= base_url('Accounts/logout'); ?>" class="block py-3 px-6 border-b-2 border-transparent">
+                  Logout
+                </a>
+              </div>
               <?php }else {?>
-                <div class="relative border-l border-gray-800 hover:bg-gray-900">
-                  <a href="<?= base_url('Accounts/'); ?>" class="block py-3 px-6 border-b-2 border-transparent">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                    </svg>
-                  </a>
-                </div>
+              <div class="relative border-l border-gray-800 hover:bg-gray-900">
+                <a href="<?= base_url('Accounts/'); ?>" class="block py-3 px-6 border-b-2 border-transparent">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                  </svg>
+                </a>
+              </div>
               <?php }?>
-               <div class="search-dropdown relative border-r lg:border-l border-gray-800 hover:bg-gray-900">
+              <div class="search-dropdown relative border-r lg:border-l border-gray-800 hover:bg-gray-900">
                 <button class="block py-3 px-6 border-b-2 border-transparent">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="open bi bi-search" viewBox="0 0 16 16">
@@ -132,17 +133,17 @@
                       d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
                   </svg>
                 </button>
-               
                 <div class="dropdown-menu absolute left-auto right-0 top-full z-50 text-left bg-white text-gray-700 border border-gray-100 mt-1 p-3" style="min-width: 15rem;">
-                    <form action="<?= base_url('Home/search'); ?>" method="get" class="flex flex-wrap items-stretch w-full relative">
-                        <input type="text" name="query" class="flex-shrink flex-grow flex-shrink max-w-full leading-5 w-px flex-1 relative py-2 px-5 text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700" placeholder="Search..." aria-label="search" required>
-                        <button type="submit" class="flex items-center py-2 px-5 -ml-1 leading-5 text-gray-100 bg-black hover:text-white hover:bg-gray-900 hover:ring-0 focus:outline-none focus:ring-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
+    <form action="<?= base_url('Home/search'); ?>" method="get" class="flex flex-wrap items-stretch w-full relative">
+        <input type="text" name="query" class="flex-shrink flex-grow flex-shrink max-w-full leading-5 w-px flex-1 relative py-2 px-5 text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700" placeholder="Search..." aria-label="search" required>
+        <button type="submit" class="flex items-center py-2 px-5 -ml-1 leading-5 text-gray-100 bg-black hover:text-white hover:bg-gray-900 hover:ring-0 focus:outline-none focus:ring-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+            </svg>
+        </button>
+    </form>
+</div>
+                
               </div>
 
               <div class="relative hover:bg-gray-800 block lg:hidden">
@@ -188,25 +189,32 @@
           <div class="text-center py-4 w-full font-bold border-b border-gray-100">Pojok Berita</div>
           <ul id="side-menu" class="w-full float-none flex flex-col">
             <li class="relative">
-              <a href="<?=base_url('Home/homePage')?>" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Home</a>
+              <a href="<?=base_url('Home/homePage')?>"
+                class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Home</a>
             </li>
             <li class="relative">
-              <a href="<?=base_url('Home/category/olahraga')?>" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Olahraga</a>
+              <a href="<?=base_url('Home/category/olahraga')?>"
+                class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Olahraga</a>
             </li>
             <li class="relative">
-              <a href="<?=base_url('Home/category/travel')?>" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Travel</a>
+              <a href="<?=base_url('Home/category/travel')?>"
+                class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Travel</a>
             </li>
             <li class="relative">
-              <a href="<?=base_url('Home/category/teknologi')?>" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Teknologi</a>
+              <a href="<?=base_url('Home/category/teknologi')?>"
+                class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Teknologi</a>
             </li>
             <li class="relative">
-              <a href="<?=base_url('Home/category/kesehatan')?>" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Kesehatan</a>
+              <a href="<?=base_url('Home/category/kesehatan')?>"
+                class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Kesehatan</a>
             </li>
             <li class="relative">
-              <a href="<?=base_url('Home/category/otomotif')?>" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Otomotif</a>
+              <a href="<?=base_url('Home/category/otomotif')?>"
+                class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Otomotif</a>
             </li>
             <li class="relative">
-              <a href="<?=base_url('Home/listCategories')?>" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Lainnya</a>
+              <a href="<?=base_url('Home/listCategories')?>"
+                class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Lainnya</a>
             </li>
           </ul>
         </nav>
@@ -341,8 +349,8 @@
     function convertToIndonesianFormat(datetime) {
       // Define an array of Indonesian month names
       const months = [
-          'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
-          'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
+        'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
+        'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
       ];
 
       // Create a Date object from the input string
@@ -362,32 +370,50 @@
 
       return formattedDate;
     }
+
     function timeAgo(datetime) {
       const now = new Date();
       const date = new Date(datetime);
       const diffInSeconds = Math.floor((now - date) / 1000);
-      
-      const intervals = [
-          { label: 'tahun', seconds: 31536000 },
-          { label: 'bulan', seconds: 2592000 },
-          { label: 'hari', seconds: 86400 },
-          { label: 'jam', seconds: 3600 },
-          { label: 'menit', seconds: 60 },
-          { label: 'detik', seconds: 1 }
+
+      const intervals = [{
+          label: 'tahun',
+          seconds: 31536000
+        },
+        {
+          label: 'bulan',
+          seconds: 2592000
+        },
+        {
+          label: 'hari',
+          seconds: 86400
+        },
+        {
+          label: 'jam',
+          seconds: 3600
+        },
+        {
+          label: 'menit',
+          seconds: 60
+        },
+        {
+          label: 'detik',
+          seconds: 1
+        }
       ];
 
       for (let interval of intervals) {
-          const count = Math.floor(diffInSeconds / interval.seconds);
-          if (count >= 1) {
-              if (count === 1) {
-                  return `satu ${interval.label} yang lalu`;
-              } else {
-                  return `${count} ${interval.label} yang lalu`;
-              }
+        const count = Math.floor(diffInSeconds / interval.seconds);
+        if (count >= 1) {
+          if (count === 1) {
+            return `satu ${interval.label} yang lalu`;
+          } else {
+            return `${count} ${interval.label} yang lalu`;
           }
+        }
       }
-    
-     return 'baru saja';
+
+      return 'baru saja';
     }
     const base_url = "http://localhost:8080/project-web-berita/public";
     $(document).ready(function () {
@@ -396,50 +422,23 @@
         const userId = $(this).data('user-id');
         const articleId = $(this).data('article-id');
 
-        if(userId && articleId) {
+        if (userId && articleId) {
           $("#icon").toggleClass("red");
           $("#icon").toggleClass("fa-solid");
           $.ajax({
-          url: "/Home/likeArticle",
-          type: 'POST',
-          data: {
-              id_user: userId,
-              id_article: articleId
-          },
-          success: function(response) {
-              // Handle the successful response here
-              console.log(response);
-          },
-          error: function(xhr, status, error) {
-              
-              console.error(error);
-          }
-        });
-        } else {
-          alert("Anda harus login terlebih dahulu");
-        } 
-      });
-
-      $('#tSubmit').on('click', function () {
-        event.preventDefault();
-        const userId = $(this).data('user');
-        const articleId = $(this).data('article');
-        const comment = $('#comment').val();
-        if(userId && articleId) {
-          $.ajax({
-            url: "/Home/comment",
+            url: "/Home/likeArticle",
             type: 'POST',
             data: {
-                id_user: userId,
-                id_article: articleId,
-                comment: comment
+              id_user: userId,
+              id_article: articleId
             },
-            success: function(response) {
-                const comment = $('#comment').val("");
+            success: function (response) {
+              // Handle the successful response here
+              console.log(response);
             },
-            error: function(xhr, status, error) {
-                
-                console.error(error);
+            error: function (xhr, status, error) {
+
+              console.error(error);
             }
           });
         } else {
@@ -447,7 +446,34 @@
         }
       });
 
-      
+      $('#tSubmit').on('click', function () {
+        event.preventDefault();
+        const userId = $(this).data('user');
+        const articleId = $(this).data('article');
+        const comment = $('#comment').val();
+        if (userId && articleId) {
+          $.ajax({
+            url: "/Home/comment",
+            type: 'POST',
+            data: {
+              id_user: userId,
+              id_article: articleId,
+              comment: comment
+            },
+            success: function (response) {
+              const comment = $('#comment').val("");
+            },
+            error: function (xhr, status, error) {
+
+              console.error(error);
+            }
+          });
+        } else {
+          alert("Anda harus login terlebih dahulu");
+        }
+      });
+
+
       function getArticleIdFromUrl() {
         const urlPath = window.location.pathname;
         const pathParts = urlPath.split('/');
@@ -457,47 +483,47 @@
       const articleId = getArticleIdFromUrl();
       if (articleId) {
         $.ajax({
-            url: `/Home/singlePost`,
-            type: 'GET',
-            format: 'json',
-            data: {
-                id_article: articleId
-            },
-            success: function(response) {
-                // Handle the successful response here
-               if(response == 1) {
-                $("#icon").toggleClass("red");
-                $("#icon").toggleClass("fa-solid");
-               }
-
-            },
-            error: function(xhr, status, error) {
-                console.error("AJAX Error: ", error);
-                console.error("Status: ", status);
-                console.error("Response: ", xhr.responseText);
+          url: `/Home/singlePost`,
+          type: 'GET',
+          format: 'json',
+          data: {
+            id_article: articleId
+          },
+          success: function (response) {
+            // Handle the successful response here
+            if (response == 1) {
+              $("#icon").toggleClass("red");
+              $("#icon").toggleClass("fa-solid");
             }
+
+          },
+          error: function (xhr, status, error) {
+            console.error("AJAX Error: ", error);
+            console.error("Status: ", status);
+            console.error("Response: ", xhr.responseText);
+          }
         });
       } else {
         console.error("id_article not found in the URL");
       }
-      
+
       setInterval(() => {
         const base_url = "http://localhost:8080/"
-        if(articleId) {
+        if (articleId) {
           $.ajax({
             url: `/Home/getComments`,
             type: 'GET',
             dataType: 'json',
             data: {
-                id_article: articleId
+              id_article: articleId
             },
-            success: function(data) { 
-                  let html = '';
-                  let sessionId = '<?php echo $sessionId;?>';
-                  let tHapus = ``;
-                  data.forEach(item => {
-                    if(item.id_user == sessionId){
-                      tHapus = `
+            success: function (data) {
+              let html = '';
+              let sessionId = '<?php echo $sessionId;?>';
+              let tHapus = ``;
+              data.forEach(item => {
+                if (item.id_user == sessionId) {
+                  tHapus = `
                               <a href="#" class="text-gray-500 hover:text-gray-700 flex items-center" id="tHapus" data-comment="${item.id_comment}">
                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-5 w-5 mr-2">
                                     <path
@@ -506,10 +532,10 @@
                                   Delete
                               </a> 
                       `;
-                    } else {
-                      tHapus = ``;
-                    }
-                    html += `<div class="w-full border px-6 py-4 rounded-lg my-2 ">
+                } else {
+                  tHapus = ``;
+                }
+                html += `<div class="w-full border px-6 py-4 rounded-lg my-2 ">
                       <div class="flex items-center mb-6">
                         <img src="${base_url}/img/${item.image}" alt="Avatar"
                           class="w-12 h-12 rounded-full mr-4">
@@ -523,48 +549,46 @@
                         ${tHapus}
                       </div>
                     </div>`;
-                  });
-                
-                $('#container').html(html);
+              });
+
+              $('#container').html(html);
             },
-            error: function(xhr, status, error) {
-                console.error("AJAX Error: ", error);
-                console.error("Status: ", status);
-                console.error("Response: ", xhr.responseText);
+            error: function (xhr, status, error) {
+              console.error("AJAX Error: ", error);
+              console.error("Status: ", status);
+              console.error("Response: ", xhr.responseText);
             }
-          }); 
-        }else{
+          });
+        } else {
           console.error("id_article not found in the URL");
         }
       }, 1000);
 
-       $('#container').on('click', '#tHapus', function () {
+      $('#container').on('click', '#tHapus', function () {
         event.preventDefault();
         const userId = $(this).data('user');
         const articleId = $(this).data('article');
         const commentId = $(this).data('comment');
 
         $.ajax({
-            url: `/Home/deleteComment`,
-            type: 'POST',
-            format: 'json',
-            data: {
-                id_article: articleId,
-                id_user: userId,
-                id_comment: commentId
-            },
-            success: function(response) {
-            },
-            error: function(xhr, status, error) {
-                console.error("AJAX Error: ", error);
-                console.error("Status: ", status);
-                console.error("Response: ", xhr.responseText);
-            }
+          url: `/Home/deleteComment`,
+          type: 'POST',
+          format: 'json',
+          data: {
+            id_article: articleId,
+            id_user: userId,
+            id_comment: commentId
+          },
+          success: function (response) {},
+          error: function (xhr, status, error) {
+            console.error("AJAX Error: ", error);
+            console.error("Status: ", status);
+            console.error("Response: ", xhr.responseText);
+          }
         });
-       });
+      });
 
     });
-
   </script>
 </body>
 

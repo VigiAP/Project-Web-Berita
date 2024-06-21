@@ -85,14 +85,10 @@ class ArticleModel extends Model
     }
 
     public function searchArticles($query) {
-        if ($query) {
-            return $this->builder->like('title', $query)
-                                 ->orLike('content', $query)
-                                 ->get()
-                                 ->getResultArray();
-        } else {
-            return [];
-        }
+        return $this->builder->like('title', $query)
+                             ->orLike('content', $query)
+                             ->get()
+                             ->getResultArray();
     }
-    
+
 }
